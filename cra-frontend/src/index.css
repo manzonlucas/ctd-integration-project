@@ -1,0 +1,68 @@
+/* CYAN #1DBEB4 */
+/* GRIS OSCURO #383B58 */
+/* GRIS CLARO #545776 */
+/* BLANCO #F3F1ED */
+
+* {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #F3F1ED;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header section.logo {
+  color: #545776;
+  display: flex;
+  align-items: center;
+}
+
+header section.user-buttons {
+  padding: 20px;
+}
+
+header section.user-buttons a {
+  color: #1DBEB4;
+  font-weight: bold;
+  background-color: #F3F1ED;
+  border: 2px solid #1DBEB4;
+  border-radius: 5px;
+  padding: 10px 120px;
+  margin: 20px;
+}
+
+header .user-logo {
+  background-color: #545776;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+main {
+  background-color: #F3F1ED;
+  height: 63vh;
+}
+
+.searchForm {
+  background-color: #545776;
+  height: 200px;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  color: #F3F1ED;
+  background-color: #1DBEB4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer section img {
+  padding: 10px;
+}
