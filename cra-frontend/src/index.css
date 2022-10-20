@@ -14,17 +14,31 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
 }
 
 header section.logo {
   color: #545776;
   display: flex;
   align-items: center;
+  padding: 15px 40px;
 }
 
 header section.user-buttons {
   padding: 20px;
+}
+
+header section.logo span {
+  position: absolute;
+  left: 123px;
+  right: 925px;
+  top: 39px;
+  bottom: 18px;
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  color: black;
 }
 
 header section.user-buttons a {
