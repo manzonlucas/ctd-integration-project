@@ -28,12 +28,19 @@ header section.logo {
   
 }
 
-header section.user-buttons {
+ul {
   display: flex;
   flex-grow: 1;
-  justify-content: space-around
-  
+  justify-content: space-around;
+  list-style: none;
+  padding: 0px 20px;
 }
+
+a{
+  text-decoration: none;
+}
+
+
 
 header section.logo span {
   left: 123px;
@@ -137,13 +144,17 @@ footer section span {
     
   }
 
+  ul {
+    padding: 0px 10px;
+  }
+
   @media (max-width: 760px) {
 
     .checkbtn{
 
       display: block;
     }
-  
+
     .user-buttons a {
       display: none;
     }
@@ -173,7 +184,6 @@ footer section span {
       padding: 15px 20px;
       
     }
-
   }
   
 

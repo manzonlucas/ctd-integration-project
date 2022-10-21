@@ -18,8 +18,10 @@ export default function Header() {
       <section className='user-buttons'>
         {!isLogged ?
           <>
-            <a href="/" class='Loginbtn'>Login</a>
-            <a href="/">Signup</a>
+          <ul>
+            <li><a href="/">Login</a></li>
+            <li><a href="/">Signup</a></li>
+            </ul>
           </> :
           <>
             <a href="/">
