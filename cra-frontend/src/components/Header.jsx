@@ -3,6 +3,12 @@ import { useState } from 'react';
 export default function Header() {
 
   const [isLogged, setIsLogged] = useState(false);
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+
+  function handleBurgerClick() {
+    setIsBurgerOpen(!isBurgerOpen);
+    console.log('burger click');
+  }
 
   return (
     <header>
@@ -15,13 +21,23 @@ export default function Header() {
         </a>
       </section>
 
-      <section className='user-buttons'>
+      <section
+        className={!isBurgerOpen ? 'user-buttons' : 'user-buttons-open'} >
+
+        {isBurgerOpen ?
+          <div>
+            <input type="checkbox" id='check' onClick={handleBurgerClick} />
+            <label htmlFor="check" className="checkbtn">
+              <i className="fa-solid fa-bars"></i>
+            </label>
+          </div> :
+          null
+        }
+
         {!isLogged ?
           <>
-            <ul>
-              <li><a href="/">Login</a></li>
-              <li><a href="/">Signup</a></li>
-            </ul>
+            <a href="/">Login</a>
+            <a href="/">Signup</a>
           </> :
           <>
             <a href="/">
@@ -35,11 +51,13 @@ export default function Header() {
           </>
         }
 
-        <input type="checkbox" id='check' />
+      </section>
+      <div>
+        <input type="checkbox" id='check' onClick={handleBurgerClick} />
         <label htmlFor="check" className="checkbtn">
           <i className="fa-solid fa-bars"></i>
         </label>
-      </section>
+      </div>
     </header >
   )
 }

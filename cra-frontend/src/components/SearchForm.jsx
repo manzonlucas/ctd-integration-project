@@ -6,7 +6,9 @@ export default function SearchForm() {
 
       <form action="">
         <select name="city">
-          <option value="" disabled selected>A donde vamos?</option>
+          {/* <select name="city" defaultValue={{ label: "A donde vamos?", value: 1 }}> */}
+          <option value="">Donde vamos?</option>
+
           {cities.map(city => {
             return (<option value={city.city}>
               {city.city}, {city.country}
