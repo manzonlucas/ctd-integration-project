@@ -6,6 +6,8 @@
 * {
   font-family: "Quicksand", sans-serif;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header {
@@ -23,16 +25,17 @@ header section.logo {
   display: flex;
   align-items: center;
   padding: 15px 40px;
+  
 }
 
 header section.user-buttons {
   display: flex;
   flex-grow: 1;
   justify-content: space-around
+  
 }
 
 header section.logo span {
-  /* position: absolute; */
   left: 123px;
   right: 925px;
   top: 39px;
@@ -45,6 +48,11 @@ header section.logo span {
   color: black;
 }
 
+header section.logo a {
+  text-decoration: none;
+}
+
+
 header section.user-buttons a {
   color: #1dbeb4;
   font-weight: bold;
@@ -52,6 +60,7 @@ header section.user-buttons a {
   border: 2px solid #1dbeb4;
   border-radius: 5px;
   padding: 10px 100px;
+  margin-left: 10px;
 }
 
 header .user-logo {
@@ -71,30 +80,101 @@ main {
   text-align: center;
 }
 
+.searchForm h1{
+  color: white;
+}
+
 footer {
   width: 100%;
   color: #f3f1ed;
   background-color: #1dbeb4;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 footer section img {
   padding: 10px;
+  padding-right: 30px;
+  
+}
+footer section span {
+  padding-left: 30px;
+  
 }
 
-@media (max-width: 768px) {
-  .user-buttons a {
-    display: none;
-  }
+.checkbtn{
 
-  header {
-    display: block;
-  }
+  font-size: 30px;
+  color: black;
+  float: right;
+  margin-right: 15px;
+  cursor: pointer;
+  display: none;
+}
 
-  .logo {
+#check{
+
+  display: none;
+}
+
+@media (max-width: 952px) {
+  
+  .logo a {
     justify-content: space-between;
   }
+
+  .logo span {
+    display: none;
+    
+  }
+  header section.logo {
+    flex-grow: 6;
+    color: #545776;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    
+  }
+
+  @media (max-width: 760px) {
+
+    .checkbtn{
+
+      display: block;
+    }
+  
+    .user-buttons a {
+      display: none;
+    }
+
+    .logo {
+      justify-content: space-between;
+    }
+  
+    .logo span {
+      display: none;
+    }
+
+    footer section img {
+      display: none;
+    }
+
+    footer{
+
+      height: 50px;
+    }
+
+    header section.logo {
+      flex-grow: 6;
+      color: #545776;
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      
+    }
+
+  }
+  
 
 }
