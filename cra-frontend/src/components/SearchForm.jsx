@@ -1,11 +1,27 @@
+import cities from '../cities.json'
 export default function SearchForm() {
   return (
     <section className='searchForm'>
       <h1>Busca ofertas en hoteles, casas y mucho más</h1>
+
       <form action="">
-        <input type="text" placeholder="A donde vamos?" />
-        <input type="text" placeholder="Check in / Check out" />
+        <select name="city">
+          <option value="" disabled selected>A donde vamos?</option>
+          {cities.map(city => {
+            return (<option value={city.city}>
+              {city.city}, {city.country}
+            </option>)
+          })}
+        </select>
+
+        <label htmlFor="check-in">Check in:</label>
+        <input type="date" id='check-in' name='check-in' />
+        <label htmlFor="check-out">Check in:</label>
+        <input type="date" id='check-out' name='check-out' />
+
+
         <button>Buscar</button>
+
       </form>
     </section>
   )

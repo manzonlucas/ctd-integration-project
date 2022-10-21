@@ -18,9 +18,9 @@ export default function Header() {
       <section className='user-buttons'>
         {!isLogged ?
           <>
-          <ul>
-            <li><a href="/">Login</a></li>
-            <li><a href="/">Signup</a></li>
+            <ul>
+              <li><a href="/">Login</a></li>
+              <li><a href="/">Signup</a></li>
             </ul>
           </> :
           <>
@@ -36,8 +36,8 @@ export default function Header() {
         }
 
         <input type="checkbox" id='check' />
-        <label for="check" class="checkbtn">
-        <i class="fa-solid fa-bars"></i>
+        <label htmlFor="check" className="checkbtn">
+          <i className="fa-solid fa-bars"></i>
         </label>
       </section>
     </header >
