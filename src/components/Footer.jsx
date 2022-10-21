@@ -1,10 +1,8 @@
-import './footer.module.css'
-
 export default function Footer() {
   return (
     <footer>
       <section>
-        <span>© Digital Booking</span>
+        <span>© 2021 Digital Booking</span>
       </section>
 
       <section>

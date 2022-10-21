@@ -1,30 +1,63 @@
 import { useState } from 'react';
-import styles from './header.module.css';
 
 export default function Header() {
 
   const [isLogged, setIsLogged] = useState(false);
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+
+  function handleBurgerClick() {
+    setIsBurgerOpen(!isBurgerOpen);
+    console.log('burger click');
+  }
 
   return (
     <header>
-      <a href="/">
-        <img src='/logo-sm.png' alt="" />
-        <span>Sentite como en tu hogar</span>
-      </a>
+      <section className='logo'>
+        <a href="/">
+          <img src='/logo1.png' alt="" />
+        </a>
+        <a href="/">
+          <span>Sentite como en tu hogar</span>
+        </a>
+      </section>
 
-      <section style={styles.header}>
+      <section
+        className={!isBurgerOpen ? 'user-buttons' : 'user-buttons-open'} >
+
+        {isBurgerOpen ?
+          <div>
+            <input type="checkbox" id='check' onClick={handleBurgerClick} />
+            <label htmlFor="check" className="checkbtn">
+              <i className="fa-solid fa-bars"></i>
+            </label>
+          </div> :
+          null
+        }
+
         {!isLogged ?
           <>
-            <span>Login</span>
-            <span>Sign up</span>
+            <a href="/">Login</a>
+            <a href="/">Signup</a>
           </> :
           <>
-            <span>Username</span>
-            <span>LM</span>
-            <span>Logout</span>
+            <a href="/">
+              <span className='user-logo'>LM</span>
+              Hola,
+              <span>
+                Lucas Manzón
+              </span>
+            </a>
+            <a href="/">Logout</a>
           </>
         }
+
       </section>
+      <div>
+        <input type="checkbox" id='check' onClick={handleBurgerClick} />
+        <label htmlFor="check" className="checkbtn">
+          <i className="fa-solid fa-bars"></i>
+        </label>
+      </div>
     </header >
   )
 }
