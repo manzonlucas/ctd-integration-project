@@ -18,7 +18,7 @@ export default function SearchForm() {
 
         <label htmlFor="check-in">Check in:</label>
         <input type="date" id='check-in' name='check-in' />
-        <label htmlFor="check-out">Check in:</label>
+        <label htmlFor="check-out">Check out:</label>
         <input type="date" id='check-out' name='check-out' />
 
 

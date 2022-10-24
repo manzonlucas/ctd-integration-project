@@ -76,7 +76,11 @@ header .user-logo {
 
 main {
   background-color: #f3f1ed;
-  height: 63vh;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
 }
 
 .searchForm {
@@ -89,6 +93,55 @@ main {
   color: white;
 }
 
+.card {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid black;
+  width: 635px;
+  height: 283px;
+  border-radius: 10px;
+}
+
+.card div {
+  width: 50%;
+  height: 100%;
+}
+
+.card img {
+  display: inline-block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.card div:nth-child(2) {
+  margin: auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card button {
+  margin: auto;
+  margin-bottom: 10px;
+  color: #f3f1ed;
+  background-color: #1dbeb4;
+  padding: 10px;
+  width: 80%;
+  border: none;
+  border-radius: 10px;
+}
+
 footer {
   width: 100%;
   color: #f3f1ed;
@@ -96,6 +149,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  bottom: 0;
 }
 
 footer section img {
@@ -122,6 +177,7 @@ footer section span {
   display: none;
 }
 
+
 @media (max-width: 952px) {
 
   .logo a {
@@ -144,7 +200,8 @@ footer section span {
     padding: 0px 10px;
   }
 
-  @media (max-width: 760px) {
+  /* TABLET */
+  @media (max-width: 768px) {
 
     .checkbtn {
 
@@ -194,7 +251,6 @@ footer section span {
     }
 
     footer {
-
       height: 50px;
     }
 
@@ -204,9 +260,71 @@ footer section span {
       display: flex;
       align-items: center;
       padding: 15px 20px;
-
     }
   }
+}
 
+/* MOBILE */
+@media (max-width: 414px) {
 
+  .checkbtn {
+
+    display: block;
+  }
+
+  .user-buttons {
+    display: none;
+  }
+
+  .user-buttons-open {
+    position: fixed;
+    height: 100vh;
+    width: 50%;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f1ed;
+
+    box-shadow: 1px -1px 28px 9px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px -1px 28px 9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px -1px 28px 9px rgba(0, 0, 0, 0.75);
+  }
+
+  .user-buttons-open a {
+    color: #1dbeb4;
+    font-weight: bold;
+    background-color: #f3f1ed;
+    border: 2px solid #1dbeb4;
+    border-radius: 5px;
+    padding: 10px 100px;
+    margin-left: 10px;
+
+  }
+
+  .logo {
+    justify-content: space-between;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  footer section img {
+    display: none;
+  }
+
+  footer {
+
+    height: 50px;
+  }
+
+  header section.logo {
+    flex-grow: 6;
+    color: #545776;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+
+  }
 }
