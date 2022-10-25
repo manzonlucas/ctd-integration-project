@@ -1,9 +1,9 @@
-import Card from "./Card";
+import CardProduct from "./CardProduct";
 
 export default function Main() {
   return (
     <main>
-      <Card />
+      <CardProduct />
     </main>
   )
 }

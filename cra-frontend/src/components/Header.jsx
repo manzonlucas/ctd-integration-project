@@ -12,11 +12,9 @@ export default function Header() {
 
   return (
     <header>
-      <section className='logo'>
-        <a href="/">
+      <section>
+        <a href="" className='logo-container'>
           <img src='/logo1.png' alt="" />
-        </a>
-        <a href="/">
           <span>Sentite como en tu hogar</span>
         </a>
       </section>

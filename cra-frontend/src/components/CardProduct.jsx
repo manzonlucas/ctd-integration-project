@@ -1,11 +1,12 @@
 import products from '../products.json';
 
-export default function Card() {
+export default function CardProduct() {
   return (
     <>
-      {products.map((product) => {
+      {products.map((product, index) => {
         return (
-          <article className="card">
+          <article className="card" key={index}>
+            {/* REEMPLAZAR INDEX POR ID UNA VEZ CONECTADO A DB */}
             <div>
               <img src="./img-placeholder.jpg" alt="" />
             </div>

@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "category": "cat1"
+  },
+  {
+    "id": 2,
+    "category": "cat2"
+  },
+  {
+    "id": 3,
+    "category": "cat3"
+  },
+  {
+    "id": 4,
+    "category": "cat4"
+  }
+]
