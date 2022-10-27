@@ -1,0 +1,94 @@
+h1 {
+  color: #1dbeb4;
+}
+
+.loginView,
+.signupView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 60vh;
+  margin: 50px;
+}
+
+.loginForm,
+.signupForm {
+  width: 40%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.signupForm {
+  height: 50%;
+  margin: 0;
+}
+
+.formItemDiv {
+  height: 40px;
+  width: 80%;
+  font-weight: bold;
+}
+
+.loginForm .formInput,
+.signupForm .formInput {
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.loginForm button,
+.signupForm button {
+  width: 50%;
+  font-weight: bold;
+  color: white;
+  background-color: #1dbeb4;
+  border: 2px solid white;
+  border-radius: 5px;
+  box-sizing: content-box;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* PC SMALL */
+@media (max-width: 1024px) {
+
+  .loginForm,
+  .signupForm {
+    width: 60%;
+  }
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+
+  .loginForm,
+  .signupForm {
+    width: 80%;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 414px) {
+
+  .loginView,
+  .signupView {
+    margin: 50px 0;
+  }
+
+  .loginForm,
+  .signupForm {
+    width: 100%;
+  }
+}
