@@ -1,20 +1,19 @@
-import Header from "./components/Header";
-import SearchForm from "./components/SearchForm";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
-import Categories from "./components/Categories";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
     <>
-      <Header />
-      <SearchForm />
-      <Categories />
-      <Main />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/signup" element={<Signup />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
-
-    // TO DO: RESPONSIVE
   );
 }
 

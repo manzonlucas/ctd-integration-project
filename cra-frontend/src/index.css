@@ -11,13 +11,21 @@
 }
 
 /* HEADER */
+
+/* Burger button hider */
+#check,
+.burgerButton {
+  display: none;
+}
+
 header {
-  background-color: #f3f1ed;
+  background-color: white;
   position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 25px;
 }
 
 header section {
@@ -27,7 +35,7 @@ header section {
   align-items: center;
 }
 
-a.logo-container {
+a.logo-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,34 +48,23 @@ a.logo-container {
   text-decoration: none;
 }
 
-.user-buttons a {
+.header-button {
   color: #1dbeb4;
   font-weight: bold;
-  background-color: #f3f1ed;
+  background-color: white;
   border: 2px solid #1dbeb4;
   border-radius: 5px;
-  padding: 10px 100px;
+  box-sizing: content-box;
+  padding: 10px 20px;
+  text-decoration: none;
 }
 
-/* BURGER */
-.checkbtn {
-  font-size: 30px;
-  color: black;
-  float: right;
-  margin-right: 15px;
-  cursor: pointer;
-  display: none;
-}
-
-#check {
-  display: none;
-}
-
-/* SEARCH FORM */
-section.searchForm {
+/* SEARCHBAR */
+.searchBar {
+  width: 100%;
   background-color: #545776;
   height: 150px;
-  padding: 50px;
+  padding: 20px;
   gap: 20px;
   text-align: center;
   display: flex;
@@ -76,25 +73,28 @@ section.searchForm {
   align-items: center;
 }
 
-section.searchForm h1 {
+.searchBar h1 {
   font-size: 2em;
   color: white;
 }
 
-section.searchForm form {
+.searchBar form {
   width: 80%;
-  /* height: 100px; */
-  margin: auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 
-section.searchForm form select,
-section.searchForm form input,
-section.searchForm form button,
-section.searchForm form .form-item {
+.formItem {
   height: 40px;
+  width: 30%;
+}
+
+.searchBarForm select,
+.searchBarForm input,
+.searchBarForm button {
+  width: 100%;
+  height: 100%;
   border: none;
   border-radius: 5px;
   box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.3);
@@ -102,20 +102,25 @@ section.searchForm form .form-item {
   -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
-section.searchForm form button {
-  color: #f3f1ed;
+form button {
+  color: white;
   font-weight: bold;
   background-color: #1dbeb4;
   border: none;
-  padding: 10px 100px;
 }
 
-
 /* CATEGORIES */
-
 section.categories {
-  background-color: #f3f1ed;
+  background-color: white;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+section.categories div.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -125,7 +130,7 @@ section.categories {
 .category {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   border: 1px solid black;
   width: 310px;
   height: 283px;
@@ -139,16 +144,20 @@ section.categories {
 
 .category img {
   display: inline-block;
-  margin: auto;
+  margin: 0;
   width: 100%;
-  height: 90%;
+  height: 80%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-/* MAIN */
-main {
+/* RECOMMENDATIONS */
+.recommendations {
   background-color: #f3f1ed;
+  padding: 30px;
+}
+
+.recommendations div.container {
   padding: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -217,113 +226,75 @@ footer {
   bottom: 0;
 }
 
-footer section img {
-  padding: 10px;
-  padding-right: 30px;
-
+.socialMediaIcon {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
 }
 
 footer section span {
   padding-left: 30px;
-
 }
 
-@media (max-width: 952px) {
-
-  .logo a {
-    justify-content: space-between;
-  }
-
-  .logo span {
+/* PC SMALL */
+@media (max-width: 1024px) {
+  .header-placeholder {
     display: none;
   }
 
-  header section.logo {
-    flex-grow: 6;
-    color: #545776;
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
+  .searchBar form {
+    width: 100%;
+  }
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+
+  /* TABLET HEADER */
+  .logo-container {
+    justify-content: flex-start;
   }
 
-  ul {
-    padding: 0px 10px;
+  .header-placeholder {
+    display: none;
   }
 
-  /* TABLET */
-  @media (max-width: 768px) {
-
-    .checkbtn {
-
-      display: block;
-    }
-
-    .user-buttons {
-      display: none;
-    }
-
-    .user-buttons-open {
-      position: fixed;
-      height: 100vh;
-      width: 50%;
-      top: 0px;
-      right: 0px;
-      display: flex;
-      flex-direction: column;
-      background-color: #f3f1ed;
-
-      box-shadow: 1px -1px 28px 9px rgba(0, 0, 0, 0.75);
-      -webkit-box-shadow: 1px -1px 28px 9px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 1px -1px 28px 9px rgba(0, 0, 0, 0.75);
-    }
-
-    .user-buttons-open a {
-      color: #1dbeb4;
-      font-weight: bold;
-      background-color: #f3f1ed;
-      border: 2px solid #1dbeb4;
-      border-radius: 5px;
-      padding: 10px 100px;
-      margin-left: 10px;
-
-    }
-
-    .logo {
-      justify-content: space-between;
-    }
-
-    .logo span {
-      display: none;
-    }
-
-    footer section img {
-      display: none;
-    }
-
-    footer {
-      height: 50px;
-    }
-
-    header section.logo {
-      flex-grow: 6;
-      color: #545776;
-      display: flex;
-      align-items: center;
-      padding: 15px 20px;
-    }
+  a.logo-link .slogan {
+    display: none;
   }
+
+  section.user-buttons {
+    justify-content: space-between;
+  }
+}
+
+/* TABLET SEARCHBAR */
+.searchBar h1 {
+  font-size: 1.5em;
+}
+
+/* TABLET FOOTER */
+footer {
+  height: 50px;
 }
 
 /* MOBILE */
 @media (max-width: 414px) {
 
-  .checkbtn {
-
-    display: block;
+  .user-buttons,
+  .slogan,
+  .socialMediaIcon {
+    display: none;
   }
 
-  .user-buttons {
-    display: none;
+  /* MOBILE BURGER */
+  .burgerButton {
+    font-size: 30px;
+    color: black;
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+    display: block;
   }
 
   .user-buttons-open {
@@ -349,24 +320,11 @@ footer section span {
     border-radius: 5px;
     padding: 10px 100px;
     margin-left: 10px;
-
   }
 
+  /* MOBILE HEADER */
   .logo {
     justify-content: space-between;
-  }
-
-  .logo span {
-    display: none;
-  }
-
-  footer section img {
-    display: none;
-  }
-
-  footer {
-
-    height: 50px;
   }
 
   header section.logo {
@@ -376,5 +334,26 @@ footer section span {
     align-items: center;
     padding: 15px 20px;
 
+  }
+
+  /* MOBILE SEARCHBAR */
+  .searchBar {
+    height: auto;
+  }
+
+  .searchBar form {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .formItem {
+    width: 100%;
+  }
+
+  .searchBar button {
+    padding: 0px;
   }
 }

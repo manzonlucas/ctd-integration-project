@@ -4,21 +4,14 @@ import categories from '../categories.json';
 export default function Categories() {
   return (
     <section className='categories'>
-      <p>Categories</p>
+      <h2>Buscar por tipo de alojamiento</h2>
 
-      {categories.length !== 4 ? <p>No hay exactamente 4 categorias</p> : null}
+      <div className="container">
+        {categories.length !== 4 ? <p style={{ color: 'red' }}>No hay exactamente 4 categorias</p> : null}
 
-      {categories.map((category, index) => {
-        return (
-          <article className="category" key={index}>
-            {/* REEMPLAZAR INDEX POR ID UNA VEZ CONECTADO A DB */}
-            <div>
-              <img src="./img-placeholder.jpg" alt="" />
-            </div>
-            <h2>{category.category}</h2>
-          </article >
-        )
-      })}
+        <CardCategory />
+
+      </div>
     </section>
   )
 }
