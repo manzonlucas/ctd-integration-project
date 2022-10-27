@@ -12,11 +12,14 @@ export default function Header() {
 
   return (
     <header>
-      <section>
-        <a href="" className='logo-container'>
+      <section className='logo-container'>
+        <a href="/" className='logo-link'>
           <img src='/logo1.png' alt="" />
-          <span>Sentite como en tu hogar</span>
+          <span className='slogan'>Sentite como en tu hogar</span>
         </a>
+      </section>
+
+      <section className='header-placeholder'>
       </section>
 
       <section
@@ -34,25 +37,23 @@ export default function Header() {
 
         {!isLogged ?
           <>
-            <a href="/">Login</a>
-            <a href="/">Signup</a>
-          </> :
+            <a href="/signup" className='header-button'>Crear cuenta</a>
+            <a href="/login" className='header-button'>Iniciar sesión</a>
+          </>
+          :
           <>
             <a href="/">
-              <span className='user-logo'>LM</span>
-              Hola,
-              <span>
-                Lucas Manzón
-              </span>
+              <span className='user-logo'> <b>UN</b> </span>
+              <span>Hola, Username</span>
             </a>
-            <a href="/">Logout</a>
+            <a href="/" className='header-button'>Logout</a>
           </>
         }
 
       </section>
       <div>
         <input type="checkbox" id='check' onClick={handleBurgerClick} />
-        <label htmlFor="check" className="checkbtn">
+        <label htmlFor="check" className="burgerButton">
           <i className="fa-solid fa-bars"></i>
         </label>
       </div>
