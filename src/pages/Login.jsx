@@ -4,25 +4,25 @@ export default function Login() {
   return (
     <>
       <Layout>
-        <h1>Crear cuenta</h1>
-        <form action="">
-          <label htmlFor="">Nombre</label>
-          <input type="text" />
-          <label htmlFor="">Apellido</label>
-          <input type="text" />
-          <label htmlFor="">Correo electrónico</label>
-          <input type="email" />
-          <label htmlFor="">Contraseña</label>
-          <input type="password" />
-          <label htmlFor="">Confirmar contraseña</label>
-          <input type="password" />
+        <section className="signupView">
+          <h1>Iniciar sesión</h1>
+          <form action="" className="signupForm">
 
-          <button>Crear cuenta</button>
-        </form>
+            <div className="formItemDiv">
+              <label htmlFor="email" >Correo electrónico</label>
+              <input type="email" id="email" name="email" className="formInput" />
+            </div>
 
-        <p>Ya tienes cuenta?
-          <a href="/login">Iniciar sesión</a>
-        </p>
+            <div className="formItemDiv">
+              <label htmlFor="password">Contraseña</label>
+              <input type="password" id="password" name="password" className="formInput" />
+            </div>
+
+            <button>Ingresar</button>
+          </form>
+
+          <p>Aún no tienes cuenta? <a href="/signup">Regístrate</a></p>
+        </section>
       </Layout>
     </>
   )

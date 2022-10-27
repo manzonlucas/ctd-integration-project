@@ -266,16 +266,17 @@ footer section span {
   section.user-buttons {
     justify-content: space-between;
   }
-}
 
-/* TABLET SEARCHBAR */
-.searchBar h1 {
-  font-size: 1.5em;
-}
+  /* TABLET SEARCHBAR */
+  .searchBar h1 {
+    font-size: 1.5em;
+  }
 
-/* TABLET FOOTER */
-footer {
-  height: 50px;
+  /* TABLET FOOTER */
+  footer {
+    height: 50px;
+  }
+
 }
 
 /* MOBILE */

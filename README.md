@@ -1,12 +1,4 @@
-# Certified Tech Developer - Final project
-
-Digital House's Certified Tech Developer carreer: (from Globant & Mercado Libre)
-https://www.digitalhouse.com/ar/productos/programacion/certified-tech-developer
-
-This final project consists in a small team of 5 developers, our work is to build an online marketplace focused on house short-term homestays and hotel rentals.
-My role is to develop the frontend according to provided issues, here I will be uploading a copy of the original project frontend branch.
-
-
+# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
