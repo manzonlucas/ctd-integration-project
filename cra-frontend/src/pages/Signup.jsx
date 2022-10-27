@@ -33,7 +33,7 @@ export default function Signup() {
               <input type="password" id="passwordConfirm" name="passwordConfirm" className="formInput" />
             </div>
 
-            <button>Crear cuenta</button>
+            <input type="submit" className="submitButton" value='Crea cuenta' />
           </form>
 
           <p>Ya tienes cuenta? <a href="/login">Iniciar sesión</a></p>
