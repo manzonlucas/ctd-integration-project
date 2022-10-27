@@ -14,8 +14,15 @@
 
 /* Burger button hider */
 #check,
-.burgerButton {
+.burgerButton,
+.checkbtn {
   display: none;
+}
+
+.divBurger {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
 }
 
 header {
@@ -302,10 +309,12 @@ footer section span {
     position: fixed;
     height: 100vh;
     width: 50%;
+    padding-top: 100px;
     top: 0px;
     right: 0px;
     display: flex;
     flex-direction: column;
+    justify-content: start;
     background-color: #f3f1ed;
 
     box-shadow: 1px -1px 28px 9px rgba(0, 0, 0, 0.75);
@@ -319,8 +328,8 @@ footer section span {
     background-color: #f3f1ed;
     border: 2px solid #1dbeb4;
     border-radius: 5px;
-    padding: 10px 100px;
-    margin-left: 10px;
+    padding: 10px 50px;
+    margin: 10px;
   }
 
   /* MOBILE HEADER */
@@ -334,7 +343,6 @@ footer section span {
     display: flex;
     align-items: center;
     padding: 15px 20px;
-
   }
 
   /* MOBILE SEARCHBAR */

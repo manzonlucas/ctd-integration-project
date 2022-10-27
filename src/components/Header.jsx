@@ -42,16 +42,17 @@ export default function Header() {
           </>
           :
           <>
-            <a href="/">
+            <a href="/" className='header-user'>
               <span className='user-logo'> <b>UN</b> </span>
               <span>Hola, Username</span>
             </a>
-            <a href="/" className='header-button'>Logout</a>
+            {/* <a href="/" className='header-button'>Cerrar sesión</a> */}
+            <a href="/" className='header-button'>Cerrar sesión</a>
           </>
         }
 
       </section>
-      <div>
+      <div className='divBurger'>
         <input type="checkbox" id='check' onClick={handleBurgerClick} />
         <label htmlFor="check" className="burgerButton">
           <i className="fa-solid fa-bars"></i>
