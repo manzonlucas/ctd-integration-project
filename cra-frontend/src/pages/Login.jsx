@@ -29,7 +29,7 @@ export default function Login() {
 
   function submitHandler(e) {
     e.preventDefault();
-    if (userInfo.email == userInDb.email && userInfo.password == userInDb.password) return navigate('/');
+    if (userInfo.email === userInDb.email && userInfo.password === userInDb.password) return navigate('/');
     else setLoginErrorMsg('Por favor vuelva a intentarlo, sus credenciales son inválidas.');
   }
 
