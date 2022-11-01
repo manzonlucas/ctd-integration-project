@@ -8,7 +8,10 @@ export default function CardCategory() {
           <article className="category" key={index}>
             {/* REEMPLAZAR INDEX POR ID UNA VEZ CONECTADO A DB */}
             <img src="./img-placeholder.jpg" alt="" />
-            <h2>{category.category}</h2>
+            <div className='categoryInfo'>
+              <h2>{category.category}</h2>
+              <p>100.000 hoteles</p>
+            </div>
           </article >
         )
       })}

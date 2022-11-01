@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function Header() {
 
-  const [isLogged, setIsLogged] = useState(false);
+  const [isLogged, setIsLogged] = useState(true);
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   function handleBurgerClick() {
