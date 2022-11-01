@@ -91,15 +91,14 @@
 
 .featuresContainer {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-bottom: 100px;
   gap: 10px;
 }
 
 .featuresItem {
-  background-color: pink;
-  width: 90%;
   height: 50px;
+  margin: auto;
 }
 
 /* POLITICAS */
@@ -125,4 +124,43 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+
+  /* CARACTERISTICAS */
+  .featuresContainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 100px;
+    gap: 10px;
+  }
+
+  /* POLITICAS */
+  .policiesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 100px;
+    gap: 10px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 414px) {
+
+  /* CARACTERISTICAS */
+  .featuresContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-bottom: 100px;
+  }
+
+  /* POLITICAS */
+  .policiesContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 100px;
+    gap: 10px;
+  }
 }
