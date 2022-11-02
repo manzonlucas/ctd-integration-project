@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import CarouselComp from "../components/CarouselComp";
 
 export default function ProductView() {
 
   const params = useParams();
   const [product, setProduct] = useState('');
-
+  const [carouselIsOpen, setcarouselIsOpen] = useState(false);
 
   // GET ITEMS FROM DB ENDPOINT
   // useEffect(() => {
@@ -23,9 +24,12 @@ export default function ProductView() {
     return RANKING.slice(5 - ranking, 10 - ranking);
   }
 
+  function handleClickCarouselState() {
+    setcarouselIsOpen(!carouselIsOpen);
+  }
+
   return (
     <>
-
       <Layout>
         <section className="productHeader">
           <div>
@@ -49,16 +53,21 @@ export default function ProductView() {
           </div>
         </section>
 
+        <div className={carouselIsOpen ? 'carouselOverlayShown' : ''} onClick={handleClickCarouselState} />
+        <section className={carouselIsOpen ? 'carouselDesktopShown' : 'carouselDesktopHidden'}>
+          <CarouselComp />
+        </section>
+
         <section className="imgContainer">
-          <img src="../room-placeholder.png" alt="Habitacion de ejemplo" className="mainImg" />
+          <img src="../hotelroom/room1.jpg" alt="Habitacion de ejemplo" className="mainImg" />
           <div className="secondaryImgs">
-            <img src="../img-placeholder.jpg" alt="Placeholder" className="gridItem" />
-            <img src="../img-placeholder.jpg" alt="Placeholder" className="gridItem" />
-            <img src="../img-placeholder.jpg" alt="Placeholder" className="gridItem" />
-            <img src="../img-placeholder.jpg" alt="Placeholder" className="gridItem" />
+            <img src="../hotelroom/room2.jpg" alt="Placeholder" className="gridItem" />
+            <img src="../hotelroom/room3.jpg" alt="Placeholder" className="gridItem" />
+            <img src="../hotelroom/room4.jpg" alt="Placeholder" className="gridItem" />
+            <img src="../hotelroom/room5.jpg" alt="Placeholder" className="gridItem" />
+            <button className="carouselOpener" onClick={handleClickCarouselState}>Ver mas</button>
           </div>
         </section>
-        <p className="carouselOpener">Ver mas</p>
 
         <section className="description">
           <h2>Alojate en el corazon de Buenos Aires</h2>

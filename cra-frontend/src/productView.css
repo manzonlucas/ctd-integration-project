@@ -67,8 +67,10 @@
 }
 
 .carouselOpener {
-  width: 100%;
-  text-align: end;
+  width: 20%;
+  margin: auto 0 auto auto;
+  text-align: center;
+  grid-column: 2 / 3;
 }
 
 /* DESCRIPCION */
