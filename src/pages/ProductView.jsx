@@ -53,8 +53,14 @@ export default function ProductView() {
           </div>
         </section>
 
+        {/* DESKTOP CAROUSEL */}
         <div className={carouselIsOpen ? 'carouselOverlayShown' : ''} onClick={handleClickCarouselState} />
         <section className={carouselIsOpen ? 'carouselDesktopShown' : 'carouselDesktopHidden'}>
+          <CarouselComp />
+        </section>
+
+        {/* TABLET/MOBILE CAROUSEL */}
+        <section className='carouselTabletMobile'>
           <CarouselComp />
         </section>
 
