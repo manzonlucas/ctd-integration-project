@@ -1,23 +1,17 @@
-import { useParams } from "react-router-dom";
-import Layout from "../components/Layout";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import CarouselComp from "../components/CarouselComp";
+
+import Layout from "../components/Layout";
+import CarouselMaster from "../components/CarouselMaster";
+import ImgGrid from "../components/ImgGrid";
 
 export default function ProductView() {
 
-  const params = useParams();
   const [product, setProduct] = useState('');
   const [carouselIsOpen, setcarouselIsOpen] = useState(false);
-
-  // GET ITEMS FROM DB ENDPOINT
-  // useEffect(() => {
-  //   const product = getItemsById(params.id);
-  //   setProduct(product);
-  // }, [])
+  const params = useParams();
 
   const RANKING = '★★★★★☆☆☆☆☆';
   function getRanking(ranking) {
@@ -53,27 +47,9 @@ export default function ProductView() {
           </div>
         </section>
 
-        {/* DESKTOP CAROUSEL */}
-        <div className={carouselIsOpen ? 'carouselOverlayShown' : ''} onClick={handleClickCarouselState} />
-        <section className={carouselIsOpen ? 'carouselDesktopShown' : 'carouselDesktopHidden'}>
-          <CarouselComp />
-        </section>
+        <CarouselMaster handleClickCarouselState={handleClickCarouselState} carouselIsOpen={carouselIsOpen} />
 
-        {/* TABLET/MOBILE CAROUSEL */}
-        <section className='carouselTabletMobile'>
-          <CarouselComp />
-        </section>
-
-        <section className="imgContainer">
-          <img src="../hotelroom/room1.jpg" alt="Habitacion de ejemplo" className="mainImg" />
-          <div className="secondaryImgs">
-            <img src="../hotelroom/room2.jpg" alt="Placeholder" className="gridItem" />
-            <img src="../hotelroom/room3.jpg" alt="Placeholder" className="gridItem" />
-            <img src="../hotelroom/room4.jpg" alt="Placeholder" className="gridItem" />
-            <img src="../hotelroom/room5.jpg" alt="Placeholder" className="gridItem" />
-            <button className="carouselOpener" onClick={handleClickCarouselState}>Ver mas</button>
-          </div>
-        </section>
+        <ImgGrid handleClickCarouselState={handleClickCarouselState} />
 
         <section className="description">
           <h2>Alojate en el corazon de Buenos Aires</h2>
