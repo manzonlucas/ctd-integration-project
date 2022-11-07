@@ -66,10 +66,24 @@ a.logo-link {
   text-decoration: none;
 }
 
+.loggedUserBlock {
+  color: #545776;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.loggedUserBlock .userName {
+  color: #1dbeb4;
+}
+
 .user-logo {
+  font-size: 1.5em;
   color: white;
   border-radius: 50%;
   padding: 5px;
+  margin: auto 10px;
   background-color: #545776;
 }
 

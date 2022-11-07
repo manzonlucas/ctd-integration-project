@@ -34,7 +34,7 @@
     display: inline-block;
   }
 
-  div .imgContainer {
+  div .imgGrid {
     display: none;
   }
 }
@@ -45,7 +45,7 @@
     display: inline-block;
   }
 
-  div .imgContainer {
+  div .imgGrid {
     display: none;
   }
 }
