@@ -54,7 +54,7 @@ export default function Login() {
             <div className="formItemDiv">
               <label htmlFor="password">Contraseña</label>
               <input type="password" id="password" name="password" className="formInput" onChange={passwordHandler} />
-              {loginInput.password.length > 6 ? '' : <p style={{ color: 'red', fontWeight: 'normal' }}>La contraseña debe tener mas de 6 caracteres</p>}
+              {/* {loginInput.password.length > 6 ? '' : <p style={{ color: 'red', fontWeight: 'normal' }}>La contraseña debe tener mas de 6 caracteres</p>} */}
             </div>
 
             <input type="submit" className="submitButton" value='Ingresar' />
