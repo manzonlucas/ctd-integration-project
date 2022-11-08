@@ -130,6 +130,29 @@ a.logo-link {
   -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
+.dateRangeInputShow {
+  display: block;
+}
+
+.dateRangeInputHide {
+  display: none;
+}
+
+.dateRangeInput {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 10px auto;
+  outline: 1px solid #383B58;
+  background: white;
+}
+
+.rdrMonths,
+.rdrMonthsHorizontal {
+  justify-content: space-around;
+}
+
 form button {
   color: white;
   font-weight: bold;
@@ -251,7 +274,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: fixed;
   bottom: 0;
 }
 
@@ -301,11 +324,14 @@ footer section span {
     font-size: 1.5em;
   }
 
+  .dateRangeInput {
+    width: 80%;
+  }
+
   /* TABLET FOOTER */
   footer {
     height: 50px;
   }
-
 }
 
 /* MOBILE */
@@ -336,7 +362,6 @@ footer section span {
     right: 0px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
     background-color: #f3f1ed;
 
     box-shadow: 1px -1px 28px 9px rgba(0, 0, 0, 0.75);
