@@ -1,11 +1,11 @@
 import { useParams, Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 import Layout from "../components/Layout";
-import CarouselMaster from "../components/CarouselMaster";
-import ImgGrid from "../components/ImgGrid";
+import CarouselMaster from "../components/Product/CarouselMaster";
+import ImgGrid from "../components/Product/ImgGrid";
 
 export default function ProductView() {
 
