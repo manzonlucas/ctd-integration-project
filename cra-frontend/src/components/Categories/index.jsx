@@ -1,5 +1,5 @@
 import CardCategory from './CardCategory';
-import categories from '../categories.json';
+import categories from '../../categories.json';
 
 export default function Categories() {
   return (
