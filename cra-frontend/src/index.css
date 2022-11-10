@@ -23,6 +23,7 @@
   display: inline-block;
   position: absolute;
   right: 20px;
+  z-index: 2;
 }
 
 header {
@@ -33,6 +34,7 @@ header {
   align-items: center;
   width: 100%;
   padding: 25px;
+  z-index: 1;
 }
 
 header section {
@@ -66,10 +68,24 @@ a.logo-link {
   text-decoration: none;
 }
 
+.loggedUserBlock {
+  color: #545776;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.loggedUserBlock .userName {
+  color: #1dbeb4;
+}
+
 .user-logo {
+  font-size: 1.5em;
   color: white;
   border-radius: 50%;
   padding: 5px;
+  margin: auto 10px;
   background-color: #545776;
 }
 
@@ -104,7 +120,6 @@ a.logo-link {
   width: 30%;
 }
 
-.searchBarForm select,
 .searchBarForm input,
 .searchBarForm button {
   width: 100%;
@@ -114,6 +129,77 @@ a.logo-link {
   box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.searchBarForm .dropdown {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  background-color: white;
+  border: none;
+  position: relative;
+}
+
+.searchBarForm h2 {
+  font-size: 1em;
+  margin: auto;
+  color: grey;
+  user-select: none
+}
+
+.searchBarForm .citiesList {
+  position: absolute;
+  top: 50px;
+  display: none;
+  width: 100%;
+}
+
+.searchBarForm .citiesListShow {
+  display: block;
+}
+
+.searchBarForm .city {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  height: 40px;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid grey;
+  border-top: none;
+}
+
+.searchBarForm .city:hover {
+  background-color: #545776;
+  color: #f3f1ed;
+}
+
+.dateRangeInputShow {
+  display: block;
+}
+
+.dateRangeInputHide {
+  display: none;
+}
+
+.dateRangeInput {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 10px auto;
+  outline: 1px solid #383B58;
+  background: white;
+}
+
+.rdrMonths,
+.rdrMonthsHorizontal {
+  justify-content: space-around;
 }
 
 form button {
@@ -237,7 +323,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: fixed;
   bottom: 0;
 }
 
@@ -287,11 +373,14 @@ footer section span {
     font-size: 1.5em;
   }
 
+  .dateRangeInput {
+    width: 80%;
+  }
+
   /* TABLET FOOTER */
   footer {
     height: 50px;
   }
-
 }
 
 /* MOBILE */
@@ -322,7 +411,6 @@ footer section span {
     right: 0px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
     background-color: #f3f1ed;
 
     box-shadow: 1px -1px 28px 9px rgba(0, 0, 0, 0.75);

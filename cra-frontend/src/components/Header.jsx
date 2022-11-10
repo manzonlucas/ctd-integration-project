@@ -1,8 +1,11 @@
 import { useState } from 'react';
+import { UserContext } from "../contexts/UserContext";
+import { useContext } from "react";
+import { Link } from 'react-router-dom';
 
 export default function Header() {
 
-  const [isLogged, setIsLogged] = useState(true);
+  const { user, setUser } = useContext(UserContext);
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   function handleBurgerClick() {
@@ -10,13 +13,29 @@ export default function Header() {
     console.log('burger click');
   }
 
+  function userInitials() {
+    const firstLetter = user.name[0];
+    const secondLetter = user.lastName[0];
+    return firstLetter + secondLetter;
+  }
+
+  function clickHandlerLogout() {
+    setUser({
+      email: '',
+      password: '',
+      name: '',
+      lastName: '',
+      isLogged: false
+    })
+  }
+
   return (
     <header>
       <section className='logo-container'>
-        <a href="/" className='logo-link'>
+        <Link to={'/'} className='logo-link'>
           <img src='/logo1.png' alt="" />
           <span className='slogan'>Sentite como en tu hogar</span>
-        </a>
+        </Link>
       </section>
 
       <section className='header-placeholder'>
@@ -35,19 +54,32 @@ export default function Header() {
           null
         }
 
-        {!isLogged ?
+        {!user.isLogged ?
           <>
-            <a href="/signup" className='header-button'>Crear cuenta</a>
-            <a href="/login" className='header-button'>Iniciar sesión</a>
+            <Link to='/signup' className='header-button'>
+              Crear cuenta
+            </Link>
+            <Link to='/login' className='header-button'>
+              Iniciar sesión
+            </Link>
           </>
           :
           <>
-            <a href="/" className='header-user'>
-              <span className='user-logo'> <b>UN</b> </span>
-              <span>Hola, Username</span>
-            </a>
-            {/* <a href="/" className='header-button'>Cerrar sesión</a> */}
-            <a href="/" className='header-button'>Cerrar sesión</a>
+            <Link to='/' className='loggedUserBlock'>
+              <span className='user-logo'>
+                {userInitials()}
+              </span>
+              <div>
+                <p>Hola,</p>
+                <span className='userName'>
+                  {`${user.name} ${user.lastName}`}
+                </span>
+              </div>
+            </Link>
+
+            <Link to='/' className='header-button' onClick={clickHandlerLogout}>
+              Cerrar sesión
+            </Link>
           </>
         }
 

@@ -1,4 +1,5 @@
 import Layout from "../components/Layout";
+import { Link } from "react-router-dom";
 
 export default function Signup() {
   return (
@@ -36,7 +37,10 @@ export default function Signup() {
             <input type="submit" className="submitButton" value='Crea cuenta' />
           </form>
 
-          <p>Ya tienes cuenta? <a href="/login">Iniciar sesión</a></p>
+          <p>Ya tienes cuenta?</p>
+          <Link to='/login' >
+            Iniciar sesión
+          </Link>
         </section>
       </Layout>
     </>
