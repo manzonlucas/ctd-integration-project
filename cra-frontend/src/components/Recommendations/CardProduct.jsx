@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import products from '../../products.json';
 
-export default function CardProduct() {
+export default function CardProduct({ product }) {
   return (
     <>
       {products.map((product, index) => {
