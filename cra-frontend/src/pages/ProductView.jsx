@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,13 +9,29 @@ import ImgGrid from "../components/Product/ImgGrid";
 
 export default function ProductView() {
 
+  const baseUrl = 'http://localhost:8080/';
   const [product, setProduct] = useState('');
   const [carouselIsOpen, setcarouselIsOpen] = useState(false);
+  const [features, setFeatures] = useState([]);
   const params = useParams();
 
   const RANKING = '★★★★★☆☆☆☆☆';
   function getRanking(ranking) {
     return RANKING.slice(5 - ranking, 10 - ranking);
+  }
+
+  useEffect(() => {
+    fetchFeatures();
+    // fetchProducts();
+    // fetchCities();
+    // fetchCategories();
+    console.log(features);
+  }, []);
+
+  function fetchFeatures() {
+    fetch(baseUrl + 'caracteristica')
+      .then(response => response.json())
+      .then(data => setFeatures(data));
   }
 
   function handleClickCarouselState() {
@@ -67,17 +83,9 @@ export default function ProductView() {
         </section>
 
         <section className="features">
-          <h3>Qué ofrece este lugar? Listar todas las caracteristicas existentes y asignar un icono a cada una</h3>
+          <h3>Qué ofrece este lugar?</h3>
           <div className="featuresContainer">
-            <p className="featuresItem">Caracteristica desde backend</p>
-            <p className="featuresItem">Caracteristica desde backend</p>
-            <p className="featuresItem">Caracteristica desde backend</p>
-            <p className="featuresItem">Caracteristica desde backend</p>
-            <p className="featuresItem">Caracteristica desde backend</p>
-            <p className="featuresItem">Caracteristica desde backend</p>
-            <p className="featuresItem">Caracteristica desde backend</p>
-            <p className="featuresItem">Caracteristica desde backend</p>
-            <p className="featuresItem">Caracteristica desde backend</p>
+            {features.map(feature => <p>{feature.nombre}</p>)}
           </div>
         </section>
 
