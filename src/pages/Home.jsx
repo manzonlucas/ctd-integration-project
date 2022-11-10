@@ -8,6 +8,7 @@ export default function Home() {
 
   const baseUrl = 'http://localhost:8080/';
 
+  const [products, setProducts] = useState([]);
   const [cities, setCities] = useState([]);
   const [categories, setCategories] = useState([]);
 
@@ -16,6 +17,12 @@ export default function Home() {
     fetchCities();
     fetchCategories();
   }, [])
+
+  function fetchProducts() {
+    fetch(baseUrl + 'producto')
+      .then(response => response.json())
+      .then(data => setProducts(data));
+  }
 
   function fetchCategories() {
     fetch(baseUrl + 'categoria')
@@ -34,7 +41,7 @@ export default function Home() {
       <Layout>
         <SearchBar cities={cities} />
         <Categories categories={categories} />
-        <Recommendations />
+        <Recommendations products={products} />
       </Layout>
     </>
   )

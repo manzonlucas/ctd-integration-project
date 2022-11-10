@@ -41,7 +41,7 @@ export default function Login() {
 
   return (
     <>
-      <Layout>
+      <Layout >
         <section className="signupView">
           <h1>Iniciar sesión</h1>
           <form action="" className="signupForm" onSubmit={submitHandler}>
