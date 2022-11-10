@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import products from '../../products.json';
 
 export default function CardProduct() {
@@ -17,7 +18,7 @@ export default function CardProduct() {
                 <p>Ubicación: {product.location}</p>
                 <p>Descripción: {product.description} </p>
               </div>
-              <button>Ver detalle</button>
+              <Link to={'/producto/1'} className='moreInfo'>Ver detalle</Link>
             </div>
           </article >
         )

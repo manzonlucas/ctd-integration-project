@@ -9,18 +9,19 @@ export default function Home() {
   const baseUrl = 'http://localhost:8080/';
 
   const [cities, setCities] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     // fetchProducts();
     fetchCities();
-    console.log(cities);
+    fetchCategories();
   }, [])
 
-  // function fetchProducts() {
-  // fetch(baseUrl + 'producto/findall')
-  // .then(response => response.json())
-  // .then(data => );
-  // }
+  function fetchCategories() {
+    fetch(baseUrl + 'categoria')
+      .then(response => response.json())
+      .then(data => setCategories(data));
+  }
 
   function fetchCities() {
     fetch(baseUrl + 'ciudad')
@@ -32,7 +33,7 @@ export default function Home() {
     <>
       <Layout>
         <SearchBar cities={cities} />
-        <Categories />
+        <Categories categories={categories} />
         <Recommendations />
       </Layout>
     </>
