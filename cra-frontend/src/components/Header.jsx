@@ -56,12 +56,17 @@ export default function Header() {
 
         {!user.isLogged ?
           <>
-            <Link to='/signup' className='header-button'>
-              Crear cuenta
-            </Link>
-            <Link to='/login' className='header-button'>
-              Iniciar sesión
-            </Link>
+            {window.location.pathname !== '/signup' ?
+              <Link to='/signup' className='header-button'>
+                Crear cuenta
+              </Link>
+              : ''}
+
+            {window.location.pathname !== '/login' ?
+              <Link to='/login' className='header-button'>
+                Iniciar sesión
+              </Link>
+              : ''}
           </>
           :
           <>
