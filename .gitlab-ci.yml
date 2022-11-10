@@ -31,4 +31,3 @@ frontend_deploy_job:
       - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
       - aws s3 sync ./cra-frontend/build s3://$S3_BUCKET_NAME --delete
 
-
