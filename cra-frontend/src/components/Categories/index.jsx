@@ -1,7 +1,7 @@
 import CardCategory from './CardCategory';
-import categories from '../../categories.json';
+// import categories from '../../categories.json';
 
-export default function Categories() {
+export default function Categories({ categories }) {
   return (
     <section className='categories'>
       <h2>Buscar por tipo de alojamiento</h2>
@@ -9,7 +9,7 @@ export default function Categories() {
       <div className="container">
         {categories.length !== 4 ? <p style={{ color: 'red' }}>No hay exactamente 4 categorias</p> : null}
 
-        <CardCategory />
+        <CardCategory categories={categories} />
 
       </div>
     </section>
