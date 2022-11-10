@@ -19,7 +19,7 @@ frontend_build_job:
 test-backend: 
   stage: test   
   script:
-    - echo "Running unit tests..."
+    - echo "Running unit tests...."
 
 frontend_deploy_job:
   stage: deploy
