@@ -14,8 +14,11 @@ export default function Categories() {
       <div className="container">
         {categories.length !== 4 ? <p style={{ color: 'red' }}>No hay exactamente 4 categorias</p> : null}
 
-        <CardCategory categories={categories} />
-
+        {categories.map((category, index) => {
+          return (
+            <CardCategory key={index} category={category} />
+          )
+        })}
       </div>
     </section>
   )

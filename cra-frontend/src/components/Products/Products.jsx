@@ -8,7 +8,6 @@ export default function Products() {
   return (
     < section className="recommendations" >
 
-      {console.log(products)}
       <h2>Recomendaciones</h2>
       <div className="container">
         {products.map((product, index) => {
