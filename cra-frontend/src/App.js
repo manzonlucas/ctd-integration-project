@@ -19,7 +19,8 @@ function App() {
     isLogged: false
   });
 
-  const baseUrl = 'http://localhost:8080/';
+  // const baseUrl = 'http://localhost:8080/';
+  const baseUrl = 'http://18.191.158.71:8080/';
   const [products, setProducts] = useState([]);
   const [cities, setCities] = useState([]);
   const [categories, setCategories] = useState([]);
