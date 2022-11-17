@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import axios from 'axios';
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -39,9 +40,13 @@ function App() {
   }
 
   function fetchCategories() {
-    fetch(baseUrl + 'categoria')
-      .then(response => response.json())
-      .then(data => setCategories(data));
+    axios.get(baseUrl + 'categoria')
+      .then(response => {
+        setCategories(response.data)
+      })
+    // fetch(baseUrl + 'categoria')
+    // .then(response => response.json())
+    // .then(data => setCategories(data));
   }
 
   function fetchCities() {
@@ -65,5 +70,4 @@ function App() {
     </>
   );
 }
-
 export default App;
