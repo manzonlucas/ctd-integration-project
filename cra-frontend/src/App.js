@@ -39,11 +39,9 @@ function App() {
     setProducts(productsMock);
   }
 
-  function fetchCategories() {
-    axios.get(baseUrl + 'categoria')
-      .then(response => {
-        setCategories(response.data)
-      })
+  async function fetchCategories() {
+    const response = await axios.get(baseUrl + 'categoria');
+    setCategories(response.data);
     // fetch(baseUrl + 'categoria')
     // .then(response => response.json())
     // .then(data => setCategories(data));
