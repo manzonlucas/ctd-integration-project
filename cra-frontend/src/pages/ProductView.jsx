@@ -85,7 +85,7 @@ export default function ProductView() {
         <section className="features">
           <h3>Qué ofrece este lugar?</h3>
           <div className="featuresContainer">
-            {features.map(feature => <p>{feature.nombre}</p>)}
+            {features.map(feature => <p key={feature.id}>{feature.nombre}</p>)}
           </div>
         </section>
 

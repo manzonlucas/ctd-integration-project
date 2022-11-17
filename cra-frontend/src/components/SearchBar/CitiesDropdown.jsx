@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { UserContext } from "../../contexts/UserContext";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+
 // import cities from '../../cities.json';
 
-export default function CitiesDropdown({ query, setQuery, cities }) {
+export default function CitiesDropdown({ query, setQuery }) {
 
+  const { cities } = useContext(UserContext);
   const [citiesDisplay, setCitiesDisplay] = useState(false);
-  const [h2Placeholder, setH2Placeholder] = useState('A donde vamos?')
+  const [h2Placeholder, setH2Placeholder] = useState('A donde vamos?');
 
   function handleClickDropdown() {
     setCitiesDisplay(!citiesDisplay);
@@ -26,6 +31,8 @@ export default function CitiesDropdown({ query, setQuery, cities }) {
           {cities.map((city, index) => {
             return (
               <li value={city.city} id={index} key={index} className='city'>
+
+                <FontAwesomeIcon icon={faLocationDot} style={{ display: "inline-block", marginRight: '5px' }} />
                 {city.nombre}, {city.pais}
               </li>)
           })}
