@@ -25,7 +25,6 @@ export default function ProductView() {
     // fetchProducts();
     // fetchCities();
     // fetchCategories();
-    console.log(features);
   }, []);
 
   function fetchFeatures() {
