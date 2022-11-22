@@ -9,7 +9,7 @@ export default function CitiesDropdown({ query, setQuery }) {
 
   const { cities } = useContext(UserContext);
   const [citiesDisplay, setCitiesDisplay] = useState(false);
-  const [h2Placeholder, setH2Placeholder] = useState('A donde vamos?');
+  const [h2Placeholder, setH2Placeholder] = useState('Destino');
 
   function handleClickDropdown() {
     setCitiesDisplay(!citiesDisplay);

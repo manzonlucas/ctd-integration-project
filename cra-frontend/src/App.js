@@ -41,7 +41,7 @@ function App() {
 
   async function fetchCategories() {
     const response = await axios.get(baseUrl + 'categoria');
-    setCategories(response.data);
+    await setCategories(response.data);
     // fetch(baseUrl + 'categoria')
     // .then(response => response.json())
     // .then(data => setCategories(data));
