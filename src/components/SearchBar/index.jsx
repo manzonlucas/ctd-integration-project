@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Calendar from "./Calendar";
 import CitiesDropdown from "./CitiesDropdown";
 
-export default function SearchBar({ cities }) {
+export default function SearchBar() {
 
   const [query, setQuery] = useState({
     destination: '',
@@ -44,7 +44,6 @@ export default function SearchBar({ cities }) {
           <CitiesDropdown
             query={query}
             setQuery={setQuery}
-            cities={cities}
           />
 
           <div className="formItem">
@@ -53,11 +52,12 @@ export default function SearchBar({ cities }) {
               readOnly
               placeholder=" Check-in / Check-out"
               onClick={handleClickDateInput}
+              className='searchBarFormInput'
             />
           </div>
 
           <div className="formItem">
-            <button onClick={handleSearch}>Buscar</button>
+            <button onClick={handleSearch} className='searchBarFormButton'>Buscar</button>
           </div>
         </form>
       </section>

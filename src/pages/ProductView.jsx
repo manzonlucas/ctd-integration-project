@@ -6,6 +6,9 @@ import { faChevronLeft, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import Layout from "../components/Layout";
 import CarouselMaster from "../components/Product/CarouselMaster";
 import ImgGrid from "../components/Product/ImgGrid";
+import CitiesDropdown from "../components/SearchBar/CitiesDropdown";
+import { DateRange } from "react-date-range";
+import Reservation from "../components/Product/Reservation";
 
 export default function ProductView() {
 
@@ -25,7 +28,6 @@ export default function ProductView() {
     // fetchProducts();
     // fetchCities();
     // fetchCategories();
-    console.log(features);
   }, []);
 
   function fetchFeatures() {
@@ -85,7 +87,7 @@ export default function ProductView() {
         <section className="features">
           <h3>Qué ofrece este lugar?</h3>
           <div className="featuresContainer">
-            {features.map(feature => <p>{feature.nombre}</p>)}
+            {features.map(feature => <p key={feature.id}>{feature.nombre}</p>)}
           </div>
         </section>
 
@@ -113,6 +115,8 @@ export default function ProductView() {
             </article>
           </div>
         </section>
+
+        <Reservation />
 
       </Layout >
     </>

@@ -5,9 +5,9 @@ export default function Signup() {
   return (
     <>
       <Layout>
-        <section className="loginView">
+        <section className="formView">
           <h1>Crear cuenta</h1>
-          <form action="" className="loginForm">
+          <form action="" className="form">
 
             <div className="formItemDiv">
               <label htmlFor="name">Nombre</label>

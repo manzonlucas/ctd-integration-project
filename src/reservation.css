@@ -1,0 +1,64 @@
+.reservationGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 800px;
+  width: 80%;
+  margin: auto;
+}
+
+.reservationForm {
+  grid-area: 1 / 1 / 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 250px;
+}
+
+.reservationForm form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.reservationForm .formItemDiv {
+  width: 40%;
+  height: 50px;
+}
+
+.formItemDiv input {
+  height: 30px;
+}
+
+.reservationDate {
+  grid-area: 2 / 1 / 4 / 3;
+}
+
+.rdrCalendarWrapper {
+  width: 100%;
+  /* height: 100%; */
+}
+
+.reservationDetails {
+  grid-area: 1 / 3 / 4 / 4;
+}
+
+.reservationItem {
+  border-radius: 20px;
+  margin: 20px;
+
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.reservationDetails img {
+  width: 100%;
+  border-radius: 10px;
+  display: inline-block;
+  object-fit: cover;
+}

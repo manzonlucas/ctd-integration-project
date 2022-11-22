@@ -42,9 +42,9 @@ export default function Login() {
   return (
     <>
       <Layout >
-        <section className="signupView">
+        <section className="formView">
           <h1>Iniciar sesión</h1>
-          <form action="" className="signupForm" onSubmit={submitHandler}>
+          <form action="" className="form" onSubmit={submitHandler}>
 
             <div className="formItemDiv">
               <label htmlFor="email" >Correo electrónico</label>
