@@ -2,6 +2,7 @@ h1 {
   color: #1dbeb4;
 }
 
+.formView,
 .loginView,
 .signupView {
   display: flex;
@@ -12,8 +13,7 @@ h1 {
   margin: 50px;
 }
 
-.loginForm,
-.signupForm {
+.form {
   width: 40%;
   height: 100%;
   margin: auto;
@@ -34,8 +34,7 @@ h1 {
   font-weight: bold;
 }
 
-.loginForm .formInput,
-.signupForm .formInput {
+.formInput {
   width: 100%;
   height: 100%;
   font-weight: bold;
@@ -82,13 +81,9 @@ h1 {
 /* MOBILE */
 @media (max-width: 414px) {
 
-  .loginView,
-  .signupView {
+  .formView {
     margin: 50px 0;
-  }
-
-  .loginForm,
-  .signupForm {
     width: 100%;
   }
+
 }

@@ -110,7 +110,7 @@ a.logo-link {
   color: white;
 }
 
-form {
+.searchBar form {
   width: 80%;
   display: flex;
   justify-content: space-around;
@@ -119,7 +119,7 @@ form {
 
 .formItem {
   height: 40px;
-  flex-grow: 0.3;
+  width: 30%;
 }
 
 .searchBarFormInput,

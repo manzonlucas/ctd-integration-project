@@ -6,6 +6,8 @@ import { faChevronLeft, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import Layout from "../components/Layout";
 import CarouselMaster from "../components/Product/CarouselMaster";
 import ImgGrid from "../components/Product/ImgGrid";
+import CitiesDropdown from "../components/SearchBar/CitiesDropdown";
+import { DateRange } from "react-date-range";
 
 export default function ProductView() {
 
@@ -111,6 +113,56 @@ export default function ProductView() {
               Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía
             </article>
           </div>
+        </section>
+
+        <section className="reservation">
+
+          <section className="formView">
+            <h1>Completá tus datos</h1>
+            <form action="" className="form" >
+
+              <div className="formItemDiv">
+                <label htmlFor="name" >Nombre</label>
+                <input type="text" id="name" name="name" className="formInput" />
+              </div>
+
+              <div className="formItemDiv">
+                <label htmlFor="lastName">Apellido</label>
+                <input type="text" id="lastName" name="lastName" className="formInput" />
+              </div>
+
+              <div className="formItemDiv">
+                <label htmlFor="email" >Correo electrónico</label>
+                <input type="email" id="email" name="email" className="formInput" />
+              </div>
+
+              <div className="formItemDiv" style={{ fontSize: '1em' }}>
+                <CitiesDropdown />
+              </div>
+
+              <input type="submit" className="submitButton" value='Reservar' />
+            </form>
+
+          </section>
+
+          <div className="reservationDate" >
+            <DateRange
+              // onChange={handleDateChange}
+              moveRangeOnFirstSelection={false}
+              // ranges={date}
+              months={window.innerWidth > 414 ? 2 : 1}
+              direction='horizontal'
+              rangeColors={['#545776']}
+              color='#545776'
+              minDate={new Date()}
+              className='dateRangeInput'
+            />
+          </div>
+
+          <div className="reservationDetails">
+
+          </div>
+
         </section>
 
       </Layout >
