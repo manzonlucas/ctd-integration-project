@@ -1,11 +1,13 @@
 import { DateRange } from "react-date-range";
-import { useState, useContext } from "react";
+import { useParams } from "react-router-dom";
+import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import '../../reservation.css'
 
 export default function Reservation() {
 
-  const { products } = useContext(UserContext);
+  const { id } = useParams();
+  const { products, user } = useContext(UserContext);
 
   const [query, setQuery] = useState({
     destination: '',
@@ -23,8 +25,11 @@ export default function Reservation() {
 
   function handleDateChange(e) {
     setDate([e.selection]);
-    setQuery({ ...query, startDate: date[0].startDate, endDate: date[0].endDate });
   }
+
+  useEffect(() => {
+    setQuery({ ...query, startDate: date[0].startDate, endDate: date[0].endDate });
+  }, [date])
 
   return (
 
@@ -35,22 +40,23 @@ export default function Reservation() {
 
         <div className="formItemDiv">
           <label htmlFor="name">Nombre</label>
-          <input type="text" id="name" name="name" className="formInput" />
+          <input type="text" id="name" name="name" className="formInput" value={user.name} disabled />
         </div>
 
         <div className="formItemDiv">
           <label htmlFor="lastName">Apellido</label>
-          <input type="text" id="lastName" name="lastName" className="formInput" />
+          <input type="text" id="lastName" name="lastName" className="formInput" value={user.lastName} disabled />
         </div>
 
         <div className="formItemDiv">
           <label htmlFor="email" >Correo electrónico</label>
-          <input type="email" id="email" name="email" className="formInput" />
+          <input type="email" id="email" name="email" className="formInput" value={user.email} disabled />
         </div>
 
         <div className="formItemDiv">
           <label htmlFor="city">Ciudad</label>
-          <input type="text" id="city" name="city" className="formInput" />
+          {/* TO DO: EL USER TIENE CIUDAD EN SUS DATOS EN DB? */}
+          <input type="text" id="city" name="city" className="formInput" value={'Traer desde DB'} disabled />
         </div>
 
       </form>
@@ -73,6 +79,19 @@ export default function Reservation() {
       <div className="reservationDetails reservationItem">
         <h4>Detalle de la reserva</h4>
         <img src="../hotelroom/room1.jpg" alt="Habitacion de ejemplo" />
+
+        <p>{products[id - 1].category}</p>
+        <p>{products[id - 1].title}</p>
+        <p>{products[id - 1].location}</p>
+
+        {query.startDate && query.endDate ?
+          <>
+            <p>Check-in: {query.startDate.toDateString()}</p>
+            <p>Check-out: {query.endDate.toDateString()}</p>
+          </>
+          :
+          ''
+        }
 
         <input type="submit" className="submitButton" value='Iniciar reserva' />
       </div>

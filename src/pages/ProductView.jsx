@@ -40,7 +40,6 @@ export default function ProductView() {
   if (isLoading) {
     return (
       <Layout>
-        {console.log(isLoading)}
         <p>Loading</p>
       </Layout>
     )
@@ -50,7 +49,7 @@ export default function ProductView() {
     <Layout>
       <section className="productHeader">
         <div>
-          <p>Categoria</p>
+          <h4>{products[id].category}</h4>
           <h2>{products[id].title}</h2>
         </div>
         <div>
