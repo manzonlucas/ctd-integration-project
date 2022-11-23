@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Calendar from "./Calendar";
 import CitiesDropdown from "./CitiesDropdown";
+import { UserContext } from "../../contexts/UserContext";
 
 export default function SearchBar() {
+
+  // TO DO: TRAER METODO DESDE APP.JS QUE PERMITA BUSCAR PRODUCTOS CON DETERMINADA CIUDAD POR ID
+  const { fetchProductsByCityId } = useContext(UserContext);
 
   const [query, setQuery] = useState({
     destination: '',
@@ -32,6 +36,7 @@ export default function SearchBar() {
   function handleSearch(e) {
     e.preventDefault();
     console.log(query);
+    // setProducts(query.destination)
   }
 
   return (
