@@ -15,7 +15,6 @@ export default function Products() {
             <CardProduct key={index} product={product} />
           )
         })}
-
       </div>
     </section >
   )

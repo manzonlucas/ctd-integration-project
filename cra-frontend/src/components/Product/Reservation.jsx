@@ -1,9 +1,7 @@
-import CitiesDropdown from "../SearchBar/CitiesDropdown";
 import { DateRange } from "react-date-range";
 import { useState, useContext } from "react";
-import '../../reservation.css'
 import { UserContext } from "../../contexts/UserContext";
-import Categories from "../Categories";
+import '../../reservation.css'
 
 export default function Reservation() {
 
@@ -32,38 +30,34 @@ export default function Reservation() {
 
     <section className="reservationGrid">
 
+      <form className="reservationForm reservationItem">
+        <h4>Completá tus datos</h4>
 
-      <section className="reservationForm reservationItem">
-        <h2>Completá tus datos</h2>
-        <form action="">
+        <div className="formItemDiv">
+          <label htmlFor="name">Nombre</label>
+          <input type="text" id="name" name="name" className="formInput" />
+        </div>
 
-          <div className="formItemDiv">
-            <label htmlFor="name" >Nombre</label>
-            <input type="text" id="name" name="name" className="formInput" />
-          </div>
+        <div className="formItemDiv">
+          <label htmlFor="lastName">Apellido</label>
+          <input type="text" id="lastName" name="lastName" className="formInput" />
+        </div>
 
-          <div className="formItemDiv">
-            <label htmlFor="lastName">Apellido</label>
-            <input type="text" id="lastName" name="lastName" className="formInput" />
-          </div>
+        <div className="formItemDiv">
+          <label htmlFor="email" >Correo electrónico</label>
+          <input type="email" id="email" name="email" className="formInput" />
+        </div>
 
-          <div className="formItemDiv">
-            <label htmlFor="email" >Correo electrónico</label>
-            <input type="email" id="email" name="email" className="formInput" />
-          </div>
+        <div className="formItemDiv">
+          <label htmlFor="city">Ciudad</label>
+          <input type="text" id="city" name="city" className="formInput" />
+        </div>
 
-          <div className="formItemDiv">
-            <CitiesDropdown
-              query={query}
-              setQuery={setQuery}
-            />
-          </div>
-
-        </form>
-
-      </section>
+      </form>
 
       <div className="reservationDate reservationItem" >
+        <h4>Seleccioná tu fecha de reserva</h4>
+
         <DateRange
           onChange={handleDateChange}
           moveRangeOnFirstSelection={false}
@@ -77,13 +71,12 @@ export default function Reservation() {
       </div>
 
       <div className="reservationDetails reservationItem">
-        <h2>Detalle de la reserva</h2>
+        <h4>Detalle de la reserva</h4>
         <img src="../hotelroom/room1.jpg" alt="Habitacion de ejemplo" />
 
+        <input type="submit" className="submitButton" value='Iniciar reserva' />
       </div>
 
-
-      <input type="submit" className="submitButton" value='Reservar' />
-    </section>
+    </section >
   )
 }
