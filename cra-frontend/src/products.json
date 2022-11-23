@@ -2,7 +2,7 @@
   {
     "id": "1",
     "img": "",
-    "category": "cat1",
+    "category": "Categoria 1 mock",
     "title": "Producto mock 1",
     "location": "city1",
     "description": "Pounce on unsuspecting person purr when give birth.."
@@ -10,9 +10,9 @@
   {
     "id": "2",
     "img": "",
-    "category": "cat2",
-    "title": "tit2",
-    "location": "city2",
+    "category": "Categoria del alojamiento",
+    "title": "Titulo del alojamiento",
+    "location": "Ciudad del alojamiento",
     "description": "Pounce on unsuspecting person purr when give birth.."
   },
   {

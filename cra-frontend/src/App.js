@@ -58,7 +58,6 @@ function App() {
       })
   }
 
-
   async function fetchCategories() {
     const response = await axios.get(baseUrl + 'categoria');
     await setCategories(response.data);
