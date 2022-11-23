@@ -1,19 +1,22 @@
 [
   {
+    "id": "1",
     "img": "",
-    "category": "cat1",
-    "title": "tit1",
+    "category": "Categoria 1 mock",
+    "title": "Producto mock 1",
     "location": "city1",
     "description": "Pounce on unsuspecting person purr when give birth.."
   },
   {
+    "id": "2",
     "img": "",
-    "category": "cat2",
-    "title": "tit2",
-    "location": "city2",
+    "category": "Categoria del alojamiento",
+    "title": "Titulo del alojamiento",
+    "location": "Ciudad del alojamiento",
     "description": "Pounce on unsuspecting person purr when give birth.."
   },
   {
+    "id": "3",
     "img": "",
     "category": "cat3",
     "title": "tit3",
@@ -21,6 +24,7 @@
     "description": "Pounce on unsuspecting person purr when give birth.."
   },
   {
+    "id": "4",
     "img": "",
     "category": "cat4",
     "title": "tit4",
@@ -28,6 +32,7 @@
     "description": "Pounce on unsuspecting person purr when give birth.."
   },
   {
+    "id": "5",
     "img": "",
     "category": "cat5",
     "title": "tit5",
@@ -35,6 +40,7 @@
     "description": "Pounce on unsuspecting person purr when give birth.."
   },
   {
+    "id": "6",
     "img": "",
     "category": "cat6",
     "title": "tit6",
@@ -42,6 +48,7 @@
     "description": "Pounce on unsuspecting person purr when give birth.."
   },
   {
+    "id": "7",
     "img": "",
     "category": "cat7",
     "title": "tit7",
@@ -49,6 +56,7 @@
     "description": "Pounce on unsuspecting person purr when give birth.."
   },
   {
+    "id": "8",
     "img": "",
     "category": "cat8",
     "title": "tit8",

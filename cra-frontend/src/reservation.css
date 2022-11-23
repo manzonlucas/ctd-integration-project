@@ -6,28 +6,13 @@
   grid-row-gap: 0px;
   height: 800px;
   width: 80%;
-  margin: auto;
+  margin: auto auto 50px auto;
 }
 
 .reservationForm {
   grid-area: 1 / 1 / 2 / 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 250px;
-}
-
-.reservationForm form {
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  gap: 50px;
-}
-
-.reservationForm .formItemDiv {
-  width: 40%;
-  height: 50px;
+  gap: 10px;
 }
 
 .formItemDiv input {
@@ -49,7 +34,14 @@
 
 .reservationItem {
   border-radius: 20px;
-  margin: 20px;
+  margin: 10px;
+  padding: 20px;
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 
   box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
@@ -61,4 +53,24 @@
   border-radius: 10px;
   display: inline-block;
   object-fit: cover;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+  .reservationGrid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formItemDiv input {
+    height: 30px;
+    width: 100%;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 414px) {
+  .reservationItem {
+    width: 100%;
+  }
 }

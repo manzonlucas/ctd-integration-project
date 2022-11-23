@@ -15,7 +15,7 @@ export default function CardProduct({ product, index }) {
           <p>Ubicación: {product.location}</p>
           <p>Descripción: {product.description} </p>
         </div>
-        <Link to={'/producto/1'} className='moreInfo'>Ver detalle</Link>
+        <Link to={`/producto/${product.id}`} className='moreInfo'>Ver detalle</Link>
       </div>
     </article >
   )
