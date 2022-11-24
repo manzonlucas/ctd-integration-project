@@ -8,6 +8,7 @@ import { UserContext } from './contexts/UserContext';
 import { useState, useEffect } from 'react';
 import userImport from './userDb.json';
 import productsMock from './products.json';
+import SuccessfulReservation from './pages/SuccessfulReservation';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
 
   // const baseUrl = 'http://localhost:8080/';
   const baseUrl = 'http://ec2-18-191-158-71.us-east-2.compute.amazonaws.com:8080/api/';
+  // producto?categoria=hoteles
   const [products, setProducts] = useState([]);
   const [cities, setCities] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -33,29 +35,29 @@ function App() {
     fetchCategories();
   }, [])
 
-  function fetchProducts() {
-    // fetch(baseUrl + 'producto')
-    // .then(response => response.json())
-    // .then(data => setProducts(data));
+  async function fetchProducts() {
 
-    const fakeProductsFetch = async () => {
-      try {
-        // const res = await .....;
-        // return res;
-        return new Promise((res, rej) => {
-          setTimeout(() => res(productsMock), 3000)
-        })
-      } catch (err) {
-        throw new Error("error.unknown");
-      }
-    };
+    const response = await axios.get(baseUrl + 'producto/findall');
+    await setProducts(response.data.resultados);
+    setIsLoading(false);
+    // const fakeProductsFetch = async () => {
+    // try {
+    // const res = await .....;
+    // return res;
+    //     return new Promise((res, rej) => {
+    //       setTimeout(() => res(productsMock), 3000)
+    //     })
+    //   } catch (err) {
+    //     throw new Error("error.unknown");
+    //   }
+    // };
 
-    fakeProductsFetch()
-      .then(response => {
-        setProducts(response);
-        setIsLoading(false);
-        console.log(isLoading);
-      })
+    // fakeProductsFetch()
+    //   .then(response => {
+    //     setProducts(response);
+    //     setIsLoading(false);
+    //     console.log(isLoading);
+    //   })
   }
 
   async function fetchCategories() {
@@ -84,13 +86,14 @@ function App() {
 
   return (
     <>
-      <UserContext.Provider value={{ userDb, user, setUser, products, fetchProducts, isLoading, fetchProductsByCityId, cities, categories }}>
+      <UserContext.Provider value={{ userDb, user, setUser, products, fetchProducts, isLoading, setIsLoading, fetchProductsByCityId, cities, categories }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/signup" element={<Signup />}></Route>
             <Route path='producto/:id' element={<ProductView />}></Route>
+            <Route path="/successful" element={<SuccessfulReservation/>}></Route>
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>

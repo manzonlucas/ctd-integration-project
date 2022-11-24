@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
 
 import Layout from "../components/Layout";
 import CarouselMaster from "../components/Product/CarouselMaster";
@@ -11,9 +12,9 @@ import { UserContext } from "../contexts/UserContext";
 
 export default function ProductView() {
 
-  const { products, fetchProducts, isLoading } = useContext(UserContext);
+  const baseUrl = 'http://ec2-18-191-158-71.us-east-2.compute.amazonaws.com:8080/api/';
+  const { isLoading, setIsLoading } = useContext(UserContext);
 
-  const baseUrl = 'http://localhost:8080/';
   const [carouselIsOpen, setcarouselIsOpen] = useState(false);
   const [features, setFeatures] = useState([]);
   const { id } = useParams();
@@ -23,15 +24,20 @@ export default function ProductView() {
     return RANKING.slice(5 - ranking, 10 - ranking);
   }
 
+  const [product, setProduct] = useState('');
+
+  async function getProductById(id) {
+    const response = await axios.get(baseUrl + 'producto/' + id);
+    setProduct(response.data);
+    setIsLoading(false);
+  }
+
+
   useEffect(() => {
     // fetchFeatures();
+    setIsLoading(true);
+    setProduct(getProductById(id));
   }, []);
-
-  function fetchFeatures() {
-    fetch(baseUrl + 'caracteristica')
-      .then(response => response.json())
-      .then(data => setFeatures(data));
-  }
 
   function handleClickCarouselState() {
     setcarouselIsOpen(!carouselIsOpen);
@@ -49,8 +55,8 @@ export default function ProductView() {
     <Layout>
       <section className="productHeader">
         <div>
-          <h4>{products[id].category}</h4>
-          <h2>{products[id].title}</h2>
+          <h4>{product.categoria}</h4>
+          <h4>{product.titulo}</h4>
         </div>
         <div>
           <Link to='/'>
@@ -62,7 +68,7 @@ export default function ProductView() {
       <section className="productSubheader">
         <div>
           <FontAwesomeIcon icon={faLocationDot} style={{ display: "inline-block", marginRight: '5px' }} />
-          <span>Ubicacion a 400mts de CABA</span>
+          <span>{product.ciudad}</span>
         </div>
         <div>
           <p className="ranking">{getRanking(3)}</p>
@@ -74,24 +80,17 @@ export default function ProductView() {
       <ImgGrid handleClickCarouselState={handleClickCarouselState} />
 
       <section className="description">
-        <h2>Alojate en el corazon de Buenos Aires</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, quis! Eum ipsa aperiam vero, perspiciatis, iusto ab assumenda dignissimos est iste inventore facilis! Porro sapiente sequi, ullam quisquam unde omnis!
-          Suscipit consectetur, officiis earum voluptatum, eaque quae id aspernatur maxime eos praesentium odit porro magnam pariatur voluptas non! Reprehenderit consequatur ab deleniti non debitis atque officiis facilis earum cum dolores?
-          Sit ipsam nulla quaerat quasi ipsa consequatur odit molestias quo. Nihil nam veniam vero quasi suscipit ducimus officiis, tempore placeat obcaecati facere fuga tenetur eaque, illum, libero similique exercitationem ea!
-          Reiciendis cumque omnis ipsum corporis explicabo consequatur similique saepe quasi aliquid, totam at a voluptas quis quod sequi consequuntur mollitia quas facilis deleniti aspernatur. Ex ullam error illum expedita sit.
-          Error, dolorum reprehenderit velit tempora non in cum quas labore. Quaerat ad illum corporis magnam distinctio, veritatis sequi et optio quo deserunt magni est veniam iste consequatur facilis porro esse!
-          Nobis labore culpa doloremque autem deleniti placeat sunt inventore non sapiente, repudiandae rem soluta mollitia quas et cupiditate suscipit fugit laborum similique. Natus voluptatum voluptatibus dolores rerum non alias iste?
-          Voluptatum incidunt odit ducimus reiciendis error commodi quasi totam! Corrupti assumenda obcaecati quod facilis beatae voluptate soluta asperiores unde, excepturi, exercitationem dolorem amet atque praesentium mollitia hic, non vero debitis!
-          Delectus quisquam, omnis, earum atque nobis illum ea tempore laudantium cupiditate inventore dolore recusandae nulla minima illo praesentium impedit consequuntur optio magni cum magnam nisi animi quidem. Cum, pariatur magnam.
-          Quae iure aperiam autem recusandae unde sapiente ipsum temporibus aliquid magnam reiciendis est quo assumenda asperiores modi, dolorum consequuntur tenetur dolore! Porro, placeat itaque quas labore dolor eum nihil sunt.
-          A dicta corrupti illum est cumque deserunt ea voluptates veniam nemo eius temporibus necessitatibus velit fugit rem expedita dolorem commodi ratione, omnis natus porro sit. Ut odio a temporibus quisquam.
-        </p>
+        <p>{product.descripcion}</p>
       </section>
 
       <section className="features">
         <h3>Qué ofrece este lugar?</h3>
         <div className="featuresContainer">
-          {features.map(feature => <p key={feature.id}>{feature.nombre}</p>)}
+
+          {product.caracteristicas ?
+            product.caracteristicas.map((feature, id) => {
+              return <p key={feature.id}>{feature.nombre}</p>
+            }) : ''}
         </div>
       </section>
 
@@ -122,7 +121,7 @@ export default function ProductView() {
 
       <section className="reservation">
         <h3>Hacé tu reserva</h3>
-        <Reservation />
+        <Reservation product={product} />
       </section>
 
     </Layout >
