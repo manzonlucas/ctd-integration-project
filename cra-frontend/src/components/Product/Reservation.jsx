@@ -4,7 +4,7 @@ import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import '../../reservation.css'
 
-export default function Reservation() {
+export default function Reservation({ product }) {
 
   const { id } = useParams();
   const { products, user } = useContext(UserContext);
@@ -80,9 +80,9 @@ export default function Reservation() {
         <h4>Detalle de la reserva</h4>
         <img src="../hotelroom/room1.jpg" alt="Habitacion de ejemplo" />
 
-        <p>{products[id - 1].category}</p>
-        <p>{products[id - 1].title}</p>
-        <p>{products[id - 1].location}</p>
+        <p>{product.categoria}</p>
+        <p>{product.titulo}</p>
+        <p>{product.ciudad}</p>
 
         {query.startDate && query.endDate ?
           <>

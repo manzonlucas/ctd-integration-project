@@ -6,15 +6,17 @@ export default function CardProduct({ product, index }) {
     <article className="card" key={index}>
       {/* REEMPLAZAR INDEX POR ID UNA VEZ CONECTADO A DB */}
       <div>
-        <img src="./img-placeholder.jpg" alt="" />
+        <img src={product.imagenes[0].url} alt="" />
       </div>
       <div>
         <div className='product-info'>
-          <p>Categoría: {product.category}</p>
-          <p>Nombre: {product.title}</p>
-          <p>Ubicación: {product.location}</p>
-          <p>Descripción: {product.description} </p>
+          <p>{product.categoria.toUpperCase()}</p>
+          <p>{product.titulo}</p>
+          {/* TO DO ICONO DE UBICACION */}
+          <p>{product.ciudad}</p>
+          <p>{product.descripcion} </p>
         </div>
+        {/* TODO CHEQUEAR ESTE LINK */}
         <Link to={`/producto/${product.id}`} className='moreInfo'>Ver detalle</Link>
       </div>
     </article >

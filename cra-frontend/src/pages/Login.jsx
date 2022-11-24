@@ -33,7 +33,6 @@ export default function Login() {
       console.log('wrong credentials');
       setLoginErrorMsg('Por favor vuelva a intentarlo, sus credenciales son inválidas.');
     } else {
-      console.log(userDb[foundIndex]);
       setUser(userDb[foundIndex]);
       navigate('/');
     }
