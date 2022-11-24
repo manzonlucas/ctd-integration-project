@@ -33,7 +33,7 @@ export default function Header() {
     <header>
       <section className='logo-container'>
         <Link to={'/'} className='logo-link'>
-          <img src='/logo1.png' alt="" />
+          <img src='https://imagenesg4c7.s3.us-east-2.amazonaws.com/public/logo1.png' alt="" />
           <span className='slogan'>Sentite como en tu hogar</span>
         </Link>
       </section>
