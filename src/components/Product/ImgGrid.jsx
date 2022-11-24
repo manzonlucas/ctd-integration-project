@@ -15,5 +15,4 @@ export default function ImgGrid({ handleClickCarouselState, product }) {
       </section >
     );
   }
-
 }
