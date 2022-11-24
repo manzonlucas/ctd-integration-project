@@ -1,5 +1,5 @@
 import { DateRange } from "react-date-range";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import '../../reservation.css'
@@ -93,7 +93,9 @@ export default function Reservation({ product }) {
           ''
         }
 
-        <input type="submit" className="submitButton" value='Iniciar reserva' />
+        <Link to={'/successful'} className='okButton'>
+          <p>Iniciar reserva</p>
+        </Link>
       </div>
 
     </section >

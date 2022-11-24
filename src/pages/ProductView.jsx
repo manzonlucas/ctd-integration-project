@@ -16,7 +16,6 @@ export default function ProductView() {
   const { isLoading, setIsLoading } = useContext(UserContext);
 
   const [carouselIsOpen, setcarouselIsOpen] = useState(false);
-  const [features, setFeatures] = useState([]);
   const { id } = useParams();
 
   const RANKING = '★★★★★☆☆☆☆☆';
@@ -31,7 +30,6 @@ export default function ProductView() {
     setProduct(response.data);
     setIsLoading(false);
   }
-
 
   useEffect(() => {
     // fetchFeatures();
@@ -75,9 +73,9 @@ export default function ProductView() {
         </div>
       </section>
 
-      <CarouselMaster handleClickCarouselState={handleClickCarouselState} carouselIsOpen={carouselIsOpen} />
+      <CarouselMaster handleClickCarouselState={handleClickCarouselState} carouselIsOpen={carouselIsOpen} product={product} />
 
-      <ImgGrid handleClickCarouselState={handleClickCarouselState} />
+      <ImgGrid handleClickCarouselState={handleClickCarouselState} product={product} />
 
       <section className="description">
         <p>{product.descripcion}</p>
@@ -86,7 +84,6 @@ export default function ProductView() {
       <section className="features">
         <h3>Qué ofrece este lugar?</h3>
         <div className="featuresContainer">
-
           {product.caracteristicas ?
             product.caracteristicas.map((feature, id) => {
               return <p key={feature.id}>{feature.nombre}</p>
