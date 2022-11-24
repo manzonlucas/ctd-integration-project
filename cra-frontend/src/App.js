@@ -7,7 +7,6 @@ import ProductView from './pages/ProductView';
 import { UserContext } from './contexts/UserContext';
 import { useState, useEffect } from 'react';
 import userImport from './userDb.json';
-import productsMock from './products.json';
 import SuccessfulReservation from './pages/SuccessfulReservation';
 
 function App() {
@@ -93,7 +92,7 @@ function App() {
             <Route path="/login" element={<Login />}></Route>
             <Route path="/signup" element={<Signup />}></Route>
             <Route path='producto/:id' element={<ProductView />}></Route>
-            <Route path="/successful" element={<SuccessfulReservation/>}></Route>
+            <Route path="/successful" element={<SuccessfulReservation />}></Route>
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>
