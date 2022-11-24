@@ -1,14 +1,19 @@
-export default function ImgGrid({ handleClickCarouselState }) {
-  return (
-    <section className="imgGrid">
-      <img src="../hotelroom/room1.jpg" alt="Habitacion de ejemplo" className="mainImg" />
-      <div className="secondaryImgs">
-        <img src="../hotelroom/room2.jpg" alt="Placeholder" className="gridItem" />
-        <img src="../hotelroom/room3.jpg" alt="Placeholder" className="gridItem" />
-        <img src="../hotelroom/room4.jpg" alt="Placeholder" className="gridItem" />
-        <img src="../hotelroom/room5.jpg" alt="Placeholder" className="gridItem" />
-        <button className="carouselOpener" onClick={handleClickCarouselState}>Ver mas</button>
-      </div>
-    </section>
-  )
+export default function ImgGrid({ handleClickCarouselState, product }) {
+
+  if (product.imagenes) {
+    return (
+      <section className="imgGrid">
+        <img src={product.imagenes[0].url} alt="" className="mainImg" />
+
+        <div className="secondaryImgs">
+          {product.imagenes.slice(1).map((img) => {
+            return <img key={img.id} src={img.url} className="gridItem" />
+          })
+          }
+        </div>
+        < button className="carouselOpener" onClick={handleClickCarouselState}>Ver mas</button>
+      </section >
+    );
+  }
+
 }
