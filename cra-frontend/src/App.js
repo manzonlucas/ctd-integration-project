@@ -18,6 +18,7 @@ function App() {
     password: '',
     name: '',
     lastName: '',
+    city: '',
     isLogged: false
   });
 
@@ -78,7 +79,7 @@ function App() {
   // A CARGO DE BACK. HACER GET ENVIANDO ID Y ACTUALIZANDO CONTENIDO DE STATE PRODUCTS CON SETPRODUCTS
   //  IMPLEMENTAR EN PRODUCTS.JSX
   function fetchProductsByCityId(id) {
-    // fetch(baseUrl + 'ciudad')
+    // fetch(baseUrl + ????? + id)
     // .then(response => response.json())
     // .then(data => setProducts(data));
   }

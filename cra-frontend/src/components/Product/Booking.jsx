@@ -2,7 +2,7 @@ import { DateRange } from "react-date-range";
 import { useParams, Link } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
-import '../../reservation.css'
+import '../../booking.css'
 
 export default function Reservation({ product }) {
 
@@ -56,7 +56,7 @@ export default function Reservation({ product }) {
         <div className="formItemDiv">
           <label htmlFor="city">Ciudad</label>
           {/* TO DO: EL USER TIENE CIUDAD EN SUS DATOS EN DB? */}
-          <input type="text" id="city" name="city" className="formInput" value={'Traer desde DB'} disabled />
+          <input type="text" id="city" name="city" className="formInput" value={user.city} disabled />
         </div>
 
       </form>

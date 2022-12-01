@@ -5,7 +5,7 @@ import { UserContext } from "../../contexts/UserContext";
 
 export default function SearchBar() {
 
-  // TO DO: TRAER METODO DESDE APP.JS QUE PERMITA BUSCAR PRODUCTOS CON DETERMINADA CIUDAD POR ID
+  // TO DO: CONECTAR A BACKEND
   const { fetchProductsByCityId } = useContext(UserContext);
 
   const [query, setQuery] = useState({

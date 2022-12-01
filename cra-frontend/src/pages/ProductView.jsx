@@ -3,11 +3,10 @@ import { useEffect, useState, useContext } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
-
 import Layout from "../components/Layout";
 import CarouselMaster from "../components/Product/CarouselMaster";
 import ImgGrid from "../components/Product/ImgGrid";
-import Reservation from "../components/Product/Reservation";
+import Booking from "../components/Product/Booking";
 import { UserContext } from "../contexts/UserContext";
 
 export default function ProductView() {
@@ -118,7 +117,7 @@ export default function ProductView() {
 
       <section className="reservation">
         <h3>Hacé tu reserva</h3>
-        <Reservation product={product} />
+        <Booking product={product} />
       </section>
 
     </Layout >
