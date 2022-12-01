@@ -1,4 +1,5 @@
 .successfulContainer {
+    text-decoration: none;
     height: 72vh;
     display: flex;
     align-items: center;
@@ -6,6 +7,7 @@
 }
 
 .successful {
+    text-decoration: none;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -27,10 +29,10 @@
 }
 
 .okButton {
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
     color: white;
     font-size: 16px;
     background-color: #1DBEB4;
@@ -42,4 +44,8 @@
     box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.okButton Link {
+    text-decoration: none;
 }
