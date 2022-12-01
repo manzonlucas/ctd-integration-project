@@ -78,7 +78,7 @@ export default function Reservation({ product }) {
 
       <div className="reservationDetails reservationItem">
         <h4>Detalle de la reserva</h4>
-        <img src="../hotelroom/room1.jpg" alt="Habitacion de ejemplo" />
+        <img src="https://imagenesg4c7.s3.us-east-2.amazonaws.com/public/hotelroom/room2.jpg" alt="Habitacion de ejemplo" />
 
         <p>{product.categoria}</p>
         <p>{product.titulo}</p>

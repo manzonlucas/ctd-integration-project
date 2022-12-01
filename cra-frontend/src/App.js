@@ -8,6 +8,7 @@ import { UserContext } from './contexts/UserContext';
 import { useState, useEffect } from 'react';
 import userImport from './userDb.json';
 import SuccessfulReservation from './pages/SuccessfulReservation';
+import SuccessfulProductCreation from './pages/SuccessfulProductCreation';
 
 function App() {
 
@@ -94,6 +95,7 @@ function App() {
             <Route path="/signup" element={<Signup />}></Route>
             <Route path='producto/:id' element={<ProductView />}></Route>
             <Route path="/successful" element={<SuccessfulReservation />}></Route>
+            <Route path="/successfulProduct" element={<SuccessfulProductCreation />}></Route>
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>
