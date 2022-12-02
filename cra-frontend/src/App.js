@@ -50,7 +50,7 @@ function App() {
     setCities(response.data);
   }
 
-  // TEMPLATE LISTO, CHEQUEAR EL ENDPOINT PQ EL ACTUAL SOLO TRAE LA CIUDAD EN LUGAR DE LISTADO DE PRODUCTOS
+  // TEMPLATE LISTO, CHEQUEAR EL ENDPOINT PORQUE EL ACTUAL SOLO TRAE LA CIUDAD EN LUGAR DE LISTADO DE PRODUCTOS
   async function fetchProductsByCityId(id) {
     const response = await axios.get(baseUrl + 'ciudad/' + id);
     console.log(response);
