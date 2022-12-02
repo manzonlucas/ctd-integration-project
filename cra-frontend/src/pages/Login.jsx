@@ -4,17 +4,15 @@ import { useNavigate, Link } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
 import { useContext } from "react";
 import axios from 'axios';
+import { baseUrl } from '../services/api';
 
 export default function Login() {
 
-
   const { userDb, user, setUser } = useContext(UserContext);
-
   const [loginInput, setLoginInput] = useState({ email: '', password: '' });
+  const [loginErrorMsg, setLoginErrorMsg] = useState('');
 
   const navigate = useNavigate();
-
-  const [loginErrorMsg, setLoginErrorMsg] = useState('');
 
   function emailHandler(e) {
     setLoginInput({ ...loginInput, email: e.target.value })
@@ -27,33 +25,48 @@ export default function Login() {
   function submitHandler(e) {
     e.preventDefault();
     login(loginInput);
+    // loginSimulator(loginInput);
   }
 
   // TO DO API LOGIN:
-  // async function loginRequest() {
-  //   const baseUrl = 'http://ec2-18-191-158-71.us-east-2.compute.amazonaws.com:8080/api/';
+  async function login(credentials) {
+    const jwtSimulator = 'this is a JWT';
 
-  //   try {
-  //     const response = await axios
-  //       .get(
-  //         baseUrl + '/usuario', {
-  //         params: { loginInput }
-  //       });
-  //     console.log(response);
-  //   }
-  //   catch (error) {
-  //     console.log(error);
-  // }
-  // }
+    try {
+      // const response = await axios
+      // .get(
+      // chequear endpoint
+      // baseUrl + '/usuario', {
+      // chequear estructura que se debe enviar
+      // params: { credentials }
+      // });
+      // console.log(response);
 
-  function login(userInput) {
+      // Si API devuelve 200:
+      if (loginSimulator(credentials)) {
+        console.log(credentials);
+        console.log(jwtSimulator);
+        localStorage.setItem('jwt', JSON.stringify(jwtSimulator));
+        navigate('/');
+      }
+      // Si API no loggea
+      else {
+        console.log('wrong credentials');
+        setLoginErrorMsg('Por favor vuelva a intentarlo, sus credenciales son inválidas.');
+      }
+    }
+    catch (error) {
+      console.log(error);
+    }
+  }
+
+  function loginSimulator(userInput) {
     const foundedIndex = userDb.findIndex(user => userInput.email === user.email && userInput.password === user.password);
-    if (foundedIndex === -1) {
-      console.log('wrong credentials');
-      setLoginErrorMsg('Por favor vuelva a intentarlo, sus credenciales son inválidas.');
-    } else {
+    if (foundedIndex !== -1) {
       setUser(userDb[foundedIndex]);
-      navigate('/');
+      return true;
+    } else {
+      return false
     }
   }
 

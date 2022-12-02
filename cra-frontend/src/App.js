@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react';
 import userImport from './userDb.json';
 import SuccessfulReservation from './pages/SuccessfulReservation';
 import SuccessfulProductCreation from './pages/SuccessfulProductCreation';
+import { baseUrl } from './services/api';
 
 function App() {
 
@@ -23,7 +24,6 @@ function App() {
     isLogged: false
   });
 
-  const baseUrl = 'http://ec2-18-191-158-71.us-east-2.compute.amazonaws.com:8080/api/';
   const [products, setProducts] = useState([]);
   const [cities, setCities] = useState([]);
   const [categories, setCategories] = useState([]);
