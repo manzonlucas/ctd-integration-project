@@ -12,7 +12,8 @@ export default function Categories() {
       <h2>Buscar por tipo de alojamiento</h2>
 
       <div className="container">
-        {categories.length !== 4 ? console.log('No hay precisamente 4 categorias') : null}
+        {/* Aviso pedido en el 1er sprint si las categorias no eran exactamente 4*/}
+        {/* {categories.length !== 4 ? console.log('No hay precisamente 4 categorias') : null} */}
 
         {categories.map((category, index) => {
           return (

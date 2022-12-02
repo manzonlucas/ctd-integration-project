@@ -3,8 +3,10 @@ import Layout from "../components/Layout";
 import { useNavigate, Link } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
 import { useContext } from "react";
+import axios from 'axios';
 
 export default function Login() {
+
 
   const { userDb, user, setUser } = useContext(UserContext);
 
@@ -27,13 +29,30 @@ export default function Login() {
     login(loginInput);
   }
 
+  // TO DO API LOGIN:
+  // async function loginRequest() {
+  //   const baseUrl = 'http://ec2-18-191-158-71.us-east-2.compute.amazonaws.com:8080/api/';
+
+  //   try {
+  //     const response = await axios
+  //       .get(
+  //         baseUrl + '/usuario', {
+  //         params: { loginInput }
+  //       });
+  //     console.log(response);
+  //   }
+  //   catch (error) {
+  //     console.log(error);
+  // }
+  // }
+
   function login(userInput) {
-    const foundIndex = userDb.findIndex(user => userInput.email === user.email && userInput.password === user.password);
-    if (foundIndex === -1) {
+    const foundedIndex = userDb.findIndex(user => userInput.email === user.email && userInput.password === user.password);
+    if (foundedIndex === -1) {
       console.log('wrong credentials');
       setLoginErrorMsg('Por favor vuelva a intentarlo, sus credenciales son inválidas.');
     } else {
-      setUser(userDb[foundIndex]);
+      setUser(userDb[foundedIndex]);
       navigate('/');
     }
   }
@@ -54,6 +73,7 @@ export default function Login() {
               <label htmlFor="password">Contraseña</label>
               <input type="password" id="password" name="password" className="formInput" onChange={passwordHandler} />
               {/* {loginInput.password.length > 6 ? '' : <p style={{ color: 'red', fontWeight: 'normal' }}>La contraseña debe tener mas de 6 caracteres</p>} */}
+              {/* Profesor Gustavo dijo que saquemos este mensaje, para no dar indicios en caso de intentos ilegitimos de login */}
             </div>
 
             <input type="submit" className="submitButton" value='Ingresar' />

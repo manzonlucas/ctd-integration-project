@@ -23,9 +23,7 @@ function App() {
     isLogged: false
   });
 
-  // const baseUrl = 'http://localhost:8080/';
   const baseUrl = 'http://ec2-18-191-158-71.us-east-2.compute.amazonaws.com:8080/api/';
-  // producto?categoria=hoteles
   const [products, setProducts] = useState([]);
   const [cities, setCities] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -37,57 +35,36 @@ function App() {
   }, [])
 
   async function fetchProducts() {
-
     const response = await axios.get(baseUrl + 'producto/findall');
-    await setProducts(response.data.resultados);
+    setProducts(response.data.resultados);
     setIsLoading(false);
-    // const fakeProductsFetch = async () => {
-    // try {
-    // const res = await .....;
-    // return res;
-    //     return new Promise((res, rej) => {
-    //       setTimeout(() => res(productsMock), 3000)
-    //     })
-    //   } catch (err) {
-    //     throw new Error("error.unknown");
-    //   }
-    // };
-
-    // fakeProductsFetch()
-    //   .then(response => {
-    //     setProducts(response);
-    //     setIsLoading(false);
-    //     console.log(isLoading);
-    //   })
   }
 
   async function fetchCategories() {
     const response = await axios.get(baseUrl + 'categoria');
-    await setCategories(response.data);
-
-    // IDEM SIN AXIOS
-    // fetch(baseUrl + 'categoria')
-    // .then(response => response.json())
-    // .then(data => setCategories(data));
+    setCategories(response.data);
   }
 
-  function fetchCities() {
-    fetch(baseUrl + 'ciudad')
-      .then(response => response.json())
-      .then(data => setCities(data));
+  async function fetchCities() {
+    const response = await axios.get(baseUrl + 'ciudad');
+    setCities(response.data);
   }
 
-  // A CARGO DE BACK. HACER GET ENVIANDO ID Y ACTUALIZANDO CONTENIDO DE STATE PRODUCTS CON SETPRODUCTS
-  //  IMPLEMENTAR EN PRODUCTS.JSX
-  function fetchProductsByCityId(id) {
-    // fetch(baseUrl + ????? + id)
-    // .then(response => response.json())
-    // .then(data => setProducts(data));
+  // TEMPLATE LISTO, CHEQUEAR EL ENDPOINT PQ EL ACTUAL SOLO TRAE LA CIUDAD EN LUGAR DE LISTADO DE PRODUCTOS
+  async function fetchProductsByCityId(id) {
+    const response = await axios.get(baseUrl + 'ciudad/' + id);
+    console.log(response);
+    // setProducts(response);
+  }
+
+  async function fetchProductsByCategoryName(name) {
+    const response = await axios.get(baseUrl + 'producto?categoria=' + name);
+    setProducts(response.data.resultados);
   }
 
   return (
     <>
-      <UserContext.Provider value={{ userDb, user, setUser, products, fetchProducts, isLoading, setIsLoading, fetchProductsByCityId, cities, categories }}>
+      <UserContext.Provider value={{ userDb, user, setUser, products, fetchProducts, isLoading, setIsLoading, fetchProductsByCityId, fetchProductsByCategoryName, cities, categories }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />}></Route>

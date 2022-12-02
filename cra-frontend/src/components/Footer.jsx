@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer>
       <div>
-        <span>© 2021 Digital Booking</span>
+        <span>© 2022 Digital Booking</span>
       </div>
 
       <div className="socialMediaContainer">

@@ -5,7 +5,6 @@ import { UserContext } from "../../contexts/UserContext";
 
 export default function SearchBar() {
 
-  // TO DO: CONECTAR A BACKEND
   const { fetchProductsByCityId } = useContext(UserContext);
 
   const [query, setQuery] = useState({
@@ -35,8 +34,7 @@ export default function SearchBar() {
 
   function handleSearch(e) {
     e.preventDefault();
-    console.log(query);
-    // fetchProductsByCityId(query.destination.id);
+    fetchProductsByCityId(query.destination);
   }
 
   return (
