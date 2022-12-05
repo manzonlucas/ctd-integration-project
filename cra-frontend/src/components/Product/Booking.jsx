@@ -4,7 +4,7 @@ import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import '../../booking.css'
 
-export default function Reservation({ product }) {
+export default function Booking({ product }) {
 
   const { id } = useParams();
   const { products, user } = useContext(UserContext);

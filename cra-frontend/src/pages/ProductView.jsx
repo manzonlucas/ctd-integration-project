@@ -10,6 +10,7 @@ import Features from "../components/Product/Features";
 import Description from "../components/Product/Description";
 import ProductSubheader from "../components/Product/ProductSubheader";
 import ProductHeader from "../components/Product/ProductHeader";
+import AvailableDates from "../components/Product/AvailableDates";
 
 export default function ProductView() {
 
@@ -82,7 +83,8 @@ export default function ProductView() {
         </div>
       </section>
 
-      <Booking product={product} />
+      <AvailableDates product={product} />
+      {/* <Booking product={product} /> */}
 
     </Layout >
   )
