@@ -106,6 +106,10 @@ h3 {
   margin: auto;
 }
 
+.featureIcon {
+  margin: auto 5px;
+}
+
 /* POLITICAS */
 .policies {
   width: 90%;

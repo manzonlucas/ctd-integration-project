@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
+import { UserContext } from "../contexts/UserContext";
 import axios from 'axios';
 import Layout from "../components/Layout";
 import CarouselMaster from "../components/Product/CarouselMaster";
 import ImgGrid from "../components/Product/ImgGrid";
 import Booking from "../components/Product/Booking";
-import { UserContext } from "../contexts/UserContext";
 import Features from "../components/Product/Features";
 import Description from "../components/Product/Description";
 import ProductSubheader from "../components/Product/ProductSubheader";
