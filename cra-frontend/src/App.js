@@ -10,6 +10,7 @@ import userImport from './userDb.json';
 import SuccessfulReservation from './pages/SuccessfulReservation';
 import SuccessfulProductCreation from './pages/SuccessfulProductCreation';
 import { baseUrl } from './services/api';
+import Booking from './components/Product/Booking';
 
 function App() {
 
@@ -73,6 +74,7 @@ function App() {
             <Route path='producto/:id' element={<ProductView />}></Route>
             <Route path="/successful" element={<SuccessfulReservation />}></Route>
             <Route path="/successfulProduct" element={<SuccessfulProductCreation />}></Route>
+            <Route path="producto/:id/booking" element={<Booking />}></Route>
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>

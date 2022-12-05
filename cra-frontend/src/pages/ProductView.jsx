@@ -5,16 +5,15 @@ import axios from 'axios';
 import Layout from "../components/Layout";
 import CarouselMaster from "../components/Product/CarouselMaster";
 import ImgGrid from "../components/Product/ImgGrid";
-import Booking from "../components/Product/Booking";
 import Features from "../components/Product/Features";
 import Description from "../components/Product/Description";
 import ProductSubheader from "../components/Product/ProductSubheader";
 import ProductHeader from "../components/Product/ProductHeader";
 import AvailableDates from "../components/Product/AvailableDates";
+import { baseUrl } from "../services/api";
 
 export default function ProductView() {
 
-  const baseUrl = 'http://ec2-18-191-158-71.us-east-2.compute.amazonaws.com:8080/api/';
   const { isLoading, setIsLoading } = useContext(UserContext);
   const [product, setProduct] = useState('');
   const [carouselIsOpen, setcarouselIsOpen] = useState(false);
@@ -84,7 +83,6 @@ export default function ProductView() {
       </section>
 
       <AvailableDates product={product} />
-      {/* <Booking product={product} /> */}
 
     </Layout >
   )

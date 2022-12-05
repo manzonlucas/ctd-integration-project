@@ -51,7 +51,7 @@ export default function AvailableDates({ product }) {
 
         <div className="itemContainer w-30">
           <p>Agregá tus fechas de viaje para obtener precios exacto</p>
-          <Link to={'/successful'} className='okButton'>
+          <Link to={'booking'} className='okButton'>
             <p>Iniciar reserva</p>
           </Link>
         </div>
