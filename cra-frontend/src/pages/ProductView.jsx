@@ -1,28 +1,23 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import Layout from "../components/Layout";
 import CarouselMaster from "../components/Product/CarouselMaster";
 import ImgGrid from "../components/Product/ImgGrid";
 import Booking from "../components/Product/Booking";
 import { UserContext } from "../contexts/UserContext";
+import Features from "../components/Product/Features";
+import Description from "../components/Product/Description";
+import ProductSubheader from "../components/Product/ProductSubheader";
+import ProductHeader from "../components/Product/ProductHeader";
 
 export default function ProductView() {
 
   const baseUrl = 'http://ec2-18-191-158-71.us-east-2.compute.amazonaws.com:8080/api/';
   const { isLoading, setIsLoading } = useContext(UserContext);
-
+  const [product, setProduct] = useState('');
   const [carouselIsOpen, setcarouselIsOpen] = useState(false);
   const { id } = useParams();
-
-  const RANKING = '★★★★★☆☆☆☆☆';
-  function getRanking(ranking) {
-    return RANKING.slice(5 - ranking, 10 - ranking);
-  }
-
-  const [product, setProduct] = useState('');
 
   async function getProductById(id) {
     const response = await axios.get(baseUrl + 'producto/' + id);
@@ -31,7 +26,6 @@ export default function ProductView() {
   }
 
   useEffect(() => {
-    // fetchFeatures();
     setIsLoading(true);
     setProduct(getProductById(id));
   }, []);
@@ -50,45 +44,18 @@ export default function ProductView() {
 
   return (
     <Layout>
-      <section className="productHeader">
-        <div>
-          <h4>{product.categoria}</h4>
-          <h4>{product.titulo}</h4>
-        </div>
-        <div>
-          <Link to='/'>
-            <FontAwesomeIcon icon={faChevronLeft} className='icon' />
-          </Link>
-        </div>
-      </section>
 
-      <section className="productSubheader">
-        <div>
-          <FontAwesomeIcon icon={faLocationDot} style={{ display: "inline-block", marginRight: '5px' }} />
-          <span>{product.ciudad}</span>
-        </div>
-        <div>
-          <p className="ranking">{getRanking(3)}</p>
-        </div>
-      </section>
+      <ProductHeader product={product} />
+
+      <ProductSubheader product={product} />
 
       <CarouselMaster handleClickCarouselState={handleClickCarouselState} carouselIsOpen={carouselIsOpen} product={product} />
 
       <ImgGrid handleClickCarouselState={handleClickCarouselState} product={product} />
 
-      <section className="description">
-        <p>{product.descripcion}</p>
-      </section>
+      <Description product={product} />
 
-      <section className="features">
-        <h3>Qué ofrece este lugar?</h3>
-        <div className="featuresContainer">
-          {product.caracteristicas ?
-            product.caracteristicas.map((feature, id) => {
-              return <p key={feature.id}>{feature.nombre}</p>
-            }) : ''}
-        </div>
-      </section>
+      <Features product={product} />
 
       <section className="policies">
         <h3>Qué tenes que saber</h3>
@@ -115,10 +82,7 @@ export default function ProductView() {
         </div>
       </section>
 
-      <section className="reservation">
-        <h3>Hacé tu reserva</h3>
-        <Booking product={product} />
-      </section>
+      <Booking product={product} />
 
     </Layout >
   )
