@@ -14,7 +14,7 @@ export default function CardCategory({ category }) {
       <img src={category.url_imagen} alt="" />
       <div className='categoryInfo'>
         <h2>{formatText(category.tipo)}</h2>
-        <p>100.000 opciones</p>
+        <p>10.000 opciones</p>
       </div>
     </article >
   )
