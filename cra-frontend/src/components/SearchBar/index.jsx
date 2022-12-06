@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 export default function SearchBar() {
 
-  const { fetchProductsByCityId } = useContext(UserContext);
+  const { fetchProductsByCityId, fetchProductsByDate } = useContext(UserContext);
 
   const [query, setQuery] = useState({
     destination: '',
@@ -39,8 +39,9 @@ export default function SearchBar() {
 
   function handleSearch(e) {
     e.preventDefault();
+    // PENDING BACKEND
     fetchProductsByCityId(query.destination);
-    console.log(query);
+    fetchProductsByDate(query.startDate, query.endDate);
   }
 
   return (
