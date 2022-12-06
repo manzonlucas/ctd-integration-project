@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { formatText } from '../../util';
 
 export default function CardProduct({ product, index }) {
   return (
@@ -10,7 +11,7 @@ export default function CardProduct({ product, index }) {
       </div>
       <div>
         <div className='product-info'>
-          <p>{product.categoria.toUpperCase()}</p>
+          <p>{formatText(product.categoria.toUpperCase())}</p>
           <p>{product.titulo}</p>
           {/* TO DO ICONO DE UBICACION */}
           <p>{product.ciudad}</p>
