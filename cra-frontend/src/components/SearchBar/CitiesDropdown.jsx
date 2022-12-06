@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
@@ -6,8 +6,9 @@ import { formatText } from "../../util";
 
 export default function CitiesDropdown({ query, setQuery }) {
   const { cities } = useContext(UserContext);
+  const [citiesList, setCitiesList] = useState([]);
   const [citiesDisplay, setCitiesDisplay] = useState(false);
-  const [h2Placeholder, setH2Placeholder] = useState("Destino");
+  const [actualDestination, setActualDestination] = useState("");
 
   function handleClickDropdown() {
     setCitiesDisplay(!citiesDisplay);
@@ -15,17 +16,43 @@ export default function CitiesDropdown({ query, setQuery }) {
 
   function handleClickOption(e) {
     setQuery({ ...query, destination: e.target.id });
-    setH2Placeholder(e.target.innerText);
+    setActualDestination(e.target.innerText);
+    // setCitiesList(actualDestination);
+  }
+
+  useEffect(() => {
+    setCitiesList(cities);
+  }, [cities]);
+
+  function handleSearch(e) {
+    const q = e.target.value.trim().toLowerCase();
+    setActualDestination(e.target.value);
+
+    const search = cities.filter((city) => {
+      return (
+        city.nombre.toLowerCase().includes(q) ||
+        city.pais.toLowerCase().includes(q)
+      );
+    });
+
+    setCitiesList(search);
   }
 
   return (
     <>
       <div onClick={handleClickDropdown} className="formItem dropdown">
-        <h2>{h2Placeholder}</h2>
+        <input
+          type="text"
+          className="w-100 m-auto p-10 border-none"
+          onChange={handleSearch}
+          placeholder="Destino"
+          value={actualDestination}
+        />
+
         <ul
           className={citiesDisplay ? "citiesList citiesListShow" : "citiesList"}
         >
-          {cities.map((city) => {
+          {citiesList.map((city) => {
             return (
               <li
                 value={city.city}

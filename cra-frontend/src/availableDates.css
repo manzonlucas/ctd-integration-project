@@ -39,6 +39,10 @@
   width: 90%;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 /* MARGIN */
 .m-auto {
   margin: auto;
@@ -54,6 +58,12 @@
 
 .inline-block {
   display: inline-block;
+}
+
+/* PADDING */
+
+.p-10 {
+  padding: 10px;
 }
 
 /* CURSOR */
@@ -75,4 +85,10 @@
   box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* BORDER */
+.border-none {
+  border: none;
+  outline: none;
 }
