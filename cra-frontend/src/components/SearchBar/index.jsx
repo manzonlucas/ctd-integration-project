@@ -35,6 +35,7 @@ export default function SearchBar() {
   function handleSearch(e) {
     e.preventDefault();
     fetchProductsByCityId(query.destination);
+    console.log(query);
   }
 
   return (

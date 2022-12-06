@@ -10,14 +10,18 @@ export default function CitiesDropdown({ query, setQuery }) {
   const [citiesDisplay, setCitiesDisplay] = useState(false);
   const [actualDestination, setActualDestination] = useState("");
 
-  function handleClickDropdown() {
+  function changeDropdownDisplay() {
     setCitiesDisplay(!citiesDisplay);
   }
 
   function handleClickOption(e) {
     setQuery({ ...query, destination: e.target.id });
     setActualDestination(e.target.innerText);
-    // setCitiesList(actualDestination);
+    changeDropdownDisplay();
+
+    // FIX THIS AND DIV ONBLUR
+    // console.log('clicked!');
+    // e.stopPropagation(e);
   }
 
   useEffect(() => {
@@ -27,6 +31,7 @@ export default function CitiesDropdown({ query, setQuery }) {
   function handleSearch(e) {
     const q = e.target.value.trim().toLowerCase();
     setActualDestination(e.target.value);
+    setCitiesDisplay(true);
 
     const search = cities.filter((city) => {
       return (
@@ -34,13 +39,17 @@ export default function CitiesDropdown({ query, setQuery }) {
         city.pais.toLowerCase().includes(q)
       );
     });
-
     setCitiesList(search);
   }
 
   return (
     <>
-      <div onClick={handleClickDropdown} className="formItem dropdown">
+      <div
+        onFocus={changeDropdownDisplay}
+        // FIX THIS
+        // onBlur={changeDropdownDisplay}
+        className="formItem dropdown"
+      >
         <input
           type="text"
           className="w-100 m-auto p-10 border-none"
