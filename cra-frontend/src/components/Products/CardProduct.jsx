@@ -14,8 +14,10 @@ export default function CardProduct({ product, index }) {
           <p>{product.titulo}</p>
           {/* TO DO ICONO DE UBICACION */}
           <p>{product.ciudad}</p>
-          <p>{product.descripcion} </p>
+          <p>{product.descripcion.length > 150 ? `${product.descripcion.substring(0, 150)}...` : product.descripcion}
+          </p>
         </div>
+
         {/* TODO CHEQUEAR ESTE LINK */}
         <Link to={`/producto/${product.id}`} className='moreInfo'>Ver detalle</Link>
       </div>
