@@ -56,7 +56,12 @@ export default function Booking() {
         <section className="reservationGrid">
 
           <form className="reservationForm reservationItem">
-            <h4>Completá tus datos</h4>
+
+            {/* H4 segun figma: */}
+            {/* <h4>Completá tus datos</h4> */}
+
+            {/* H4 segun profesor Gustavo, informacion dinamica tomada de los datos del user logueado, no permite editar */}
+            <h4>Tus datos</h4>
 
             <div className="formItemDiv">
               <label htmlFor="name">Nombre</label>
@@ -106,8 +111,8 @@ export default function Booking() {
 
             {query.startDate && query.endDate ?
               <>
-                <p>Check-in: {query.startDate.toDateString()}</p>
-                <p>Check-out: {query.endDate.toDateString()}</p>
+                <p>Check-in: {query.startDate.toLocaleDateString('es-ES')}</p>
+                <p>Check-out: {query.endDate.toLocaleDateString('es-ES')}</p>
               </>
               :
               ''

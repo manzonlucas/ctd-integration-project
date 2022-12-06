@@ -50,10 +50,21 @@ export default function AvailableDates({ product }) {
         </div>
 
         <div className="itemContainer w-30">
-          <p>Agregá tus fechas de viaje para obtener precios exacto</p>
-          <Link to={'booking'} className='okButton'>
-            <p>Iniciar reserva</p>
-          </Link>
+          {user.isLogged ?
+            <>
+              <p>Agregá tus fechas de viaje para obtener precios exacto</p>
+              <Link to={'booking'} className='okButton'>
+                <p>Iniciar reserva</p>
+              </Link>
+            </>
+            :
+            <>
+              <p>Debes iniciar sesión para iniciar una reserva</p>
+              <Link to={'/login'} className='okButton'>
+                <p>Iniciar sesión</p>
+              </Link>
+            </>
+          }
         </div>
       </div>
 
