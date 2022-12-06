@@ -22,6 +22,7 @@
   -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
+/* WIDTH */
 .w-30 {
   width: 30%;
 }
@@ -38,10 +39,40 @@
   width: 90%;
 }
 
+/* MARGIN */
 .m-auto {
   margin: auto;
 }
 
+.m-sides {
+  margin: auto 5px;
+}
+
 .m-bottom {
   margin-bottom: 100px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/* CURSOR */
+.cursor-default {
+  cursor: default
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* OTROS */
+.underline {
+  text-decoration: underline;
+}
+
+/* STANDARD SHADOW */
+.shadow {
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
 }

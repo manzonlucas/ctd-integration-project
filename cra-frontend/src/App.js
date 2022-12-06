@@ -15,6 +15,7 @@ import Booking from './components/Product/Booking';
 function App() {
 
   const [isLoading, setIsLoading] = useState(true);
+  const [actualCategory, setActualCategory] = useState('');
   const [userDb, setUserDb] = useState(userImport);
   const [user, setUser] = useState({
     email: '',
@@ -39,6 +40,7 @@ function App() {
     const response = await axios.get(baseUrl + 'producto/findall');
     setProducts(response.data.resultados);
     setIsLoading(false);
+    setActualCategory('');
   }
 
   async function fetchCategories() {
@@ -61,11 +63,12 @@ function App() {
   async function fetchProductsByCategoryName(name) {
     const response = await axios.get(baseUrl + 'producto?categoria=' + name);
     setProducts(response.data.resultados);
+    setActualCategory(name);
   }
 
   return (
     <>
-      <UserContext.Provider value={{ userDb, user, setUser, products, fetchProducts, isLoading, setIsLoading, fetchProductsByCityId, fetchProductsByCategoryName, cities, categories }}>
+      <UserContext.Provider value={{ userDb, user, setUser, products, fetchProducts, isLoading, setIsLoading, fetchProductsByCityId, fetchProductsByCategoryName, cities, categories, actualCategory }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />}></Route>

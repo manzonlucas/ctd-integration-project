@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { formatText } from "../../util";
 
 export default function CitiesDropdown({ query, setQuery }) {
   const { cities } = useContext(UserContext);
@@ -24,7 +25,7 @@ export default function CitiesDropdown({ query, setQuery }) {
         <ul
           className={citiesDisplay ? "citiesList citiesListShow" : "citiesList"}
         >
-          {cities.map((city, index) => {
+          {cities.map((city) => {
             return (
               <li
                 value={city.city}
@@ -37,7 +38,7 @@ export default function CitiesDropdown({ query, setQuery }) {
                   icon={faLocationDot}
                   style={{ display: "inline-block", marginRight: "5px" }}
                 />
-                {city.nombre}, {city.pais}
+                {formatText(city.nombre)}, {formatText(city.pais)}
               </li>
             );
           })}

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export default function CardProduct({ product, index }) {
   return (
 
-    <article className="card" key={index}>
+    <article className="card shadow" key={index}>
       {/* REEMPLAZAR INDEX POR ID UNA VEZ CONECTADO A DB */}
       <div>
         <img src={product.imagenes[0].url} alt="" />
