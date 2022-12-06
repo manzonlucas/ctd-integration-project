@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import Calendar from "./Calendar";
 import CitiesDropdown from "./CitiesDropdown";
 import { UserContext } from "../../contexts/UserContext";
+import { useEffect } from "react";
 
 export default function SearchBar() {
 
@@ -22,6 +23,10 @@ export default function SearchBar() {
   ]);
 
   const [isCalendarVisible, setIsCalendarVisible] = useState(false);
+
+  useEffect(() => {
+    setQuery({ ...query, startDate: date[0].startDate, endDate: date[0].endDate });
+  }, [date])
 
   function handleClickDateInput() {
     setIsCalendarVisible(!isCalendarVisible);
@@ -54,9 +59,15 @@ export default function SearchBar() {
             <input
               type="text"
               readOnly
-              placeholder=" Check-in / Check-out"
               onClick={handleClickDateInput}
-              className='searchBarFormInput'
+              // FIX
+              // onBlur={handleClickDateInput}
+              className='searchBarFormInput m-5 p-10 border-none'
+
+              value={
+                query.startDate && query.endDate ?
+                  `Check-in: ${query.startDate.toLocaleDateString('es-ES')} - Check-out: ${query.endDate.toLocaleDateString('es-ES')}`
+                  : 'Check-in: - Check-out: '}
             />
           </div>
 
@@ -68,6 +79,7 @@ export default function SearchBar() {
 
       <Calendar
         isCalendarVisible={isCalendarVisible}
+        setIsCalendarVisible={setIsCalendarVisible}
         handleDateChange={handleDateChange}
         date={date}
       />
