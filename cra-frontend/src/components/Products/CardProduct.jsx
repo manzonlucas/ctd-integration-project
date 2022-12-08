@@ -11,16 +11,16 @@ export default function CardProduct({ product, index }) {
       </div>
       <div>
         <div className='product-info'>
-          <p>{formatText(product.categoria.toUpperCase())}</p>
-          <p>{product.titulo}</p>
+          <p className='name-info'>{formatText(product.categoria.toUpperCase())}</p>
+          <p className='titulo-info'>{product.titulo}</p>
           {/* TO DO ICONO DE UBICACION */}
-          <p>{product.ciudad}</p>
-          <p>{product.descripcion.length > 150 ? `${product.descripcion.substring(0, 150)}...` : product.descripcion}
+          <p className='ciudad-info'>{product.ciudad}</p>
+          <p className='descripcion-info'>{product.descripcion.length > 150 ? `${product.descripcion.substring(0, 150)}...` : product.descripcion}
           </p>
         </div>
 
         {/* TODO CHEQUEAR ESTE LINK */}
-        <Link to={`/producto/${product.id}`} className='moreInfo'>Ver detalle</Link>
+        <Link style={{textDecoration: "none"}} to={`/producto/${product.id}`} className='moreInfo'>Ver detalle</Link>
       </div>
     </article >
   )
