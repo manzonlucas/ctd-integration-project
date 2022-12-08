@@ -33,6 +33,9 @@ export default function Features({ product }) {
       case 1:
         return <FontAwesomeIcon icon={faPersonSwimming} className="featureIcon" />;
 
+      case 2:
+        return <FontAwesomeIcon icon={faCar} className="featureIcon" />;
+
       case 3:
         return <FontAwesomeIcon icon={faSnowflake} className="featureIcon" />;
 
