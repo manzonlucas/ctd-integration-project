@@ -110,7 +110,7 @@ a.logo-link {
   color: white;
 }
 
-form {
+.searchBar form {
   width: 80%;
   display: flex;
   justify-content: space-around;
@@ -119,7 +119,7 @@ form {
 
 .formItem {
   height: 40px;
-  flex-grow: 0.3;
+  width: 30%;
 }
 
 .searchBarFormInput,
@@ -233,36 +233,16 @@ section.categories div.container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width:  280px;
-  height: 255px;
+  width: 310px;
+  height: 283px;
   border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
 
 .categoryInfo {
   width: 100%;
   height: 100%;
   padding-left: 10px;
-}
-
-.categoryInfo p {
-color: gray;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 16px;
-
-}
-
-.categoryInfo h2{
-padding-top: 8px;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 23px;
-color: #383B58;
 }
 
 .category img {
@@ -275,21 +255,9 @@ color: #383B58;
 }
 
 /* RECOMMENDATIONS */
-
-.recommendations h2{
-  padding-top: 19px;
-  padding-left: 20px;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  color: #383B58;
-
-}
 .recommendations {
   background-color: #f3f1ed;
-  padding: 10px;
+  padding: 30px;
 }
 
 .recommendations div.container {
@@ -297,20 +265,20 @@ color: #383B58;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 20px;
+  gap: 30px;
 }
 
 .card {
   display: flex;
   justify-content: space-around;
-  width: 600px;
-  height: 300px;
+  border: 1px solid black;
+  width: 635px;
+  height: 283px;
   border-radius: 10px;
-  background-color: white;
 }
 
 .card div {
-  width: 80%;
+  width: 50%;
   height: 100%;
 }
 
@@ -321,10 +289,10 @@ color: #383B58;
   height: 100%;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  border-radius: 10px;
 }
 
 .card div:nth-child(2) {
+  margin: auto;
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -337,58 +305,6 @@ color: #383B58;
   flex-direction: column;
   justify-content: center;
 }
-
-
-
-.name-info {
-  display: flex;
-  justify-content: start;
-  line-height: 18px;
-  color: #383B58;
-  opacity: 0.5;
-  
-}
-
-.titulo-info {
-display: flex;
-justify-content: start;
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 28px;
-color: #383B58;
-}
-
-.ciudad-info {
-  font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 16px;
-color: #383B58;
-
-}
-
-.descripcion-info {
-  font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 16px;
-color: #383B58;
-}
-
-.moreInfo{
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 19px;
-text-align: center;
-color: #FFFFFF;
-}
-
-
 
 .card .moreInfo {
   margin: auto;
@@ -493,12 +409,11 @@ footer section span {
     position: fixed;
     height: 100vh;
     width: 50%;
-    padding-top: 102px;
+    padding-top: 100px;
     top: 0px;
     right: 0px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     background-color: #f3f1ed;
 
     box-shadow: 1px -1px 28px 9px rgba(0, 0, 0, 0.75);

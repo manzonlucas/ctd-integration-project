@@ -1,0 +1,94 @@
+.flex {
+  display: flex;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.itemContainer {
+  border-radius: 20px;
+  margin: 10px;
+  padding: 20px;
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* WIDTH */
+.w-30 {
+  width: 30%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* MARGIN */
+.m-auto {
+  margin: auto;
+}
+
+.m-sides {
+  margin: auto 5px;
+}
+
+.m-bottom {
+  margin-bottom: 100px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/* PADDING */
+
+.p-10 {
+  padding: 10px;
+}
+
+/* CURSOR */
+.cursor-default {
+  cursor: default
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* OTROS */
+.underline {
+  text-decoration: underline;
+}
+
+/* STANDARD SHADOW */
+.shadow {
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* BORDER */
+.border-none {
+  border: none;
+  outline: none;
+}
