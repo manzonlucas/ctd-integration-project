@@ -40,7 +40,6 @@ export default function AvailableDates({ product }) {
           <DateRange
             onChange={handleDateChange}
             moveRangeOnFirstSelection={false}
-            ranges={date}
             months={window.innerWidth > 414 ? 2 : 1}
             direction='horizontal'
             rangeColors={['#545776']}
