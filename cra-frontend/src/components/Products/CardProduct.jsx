@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { formatText } from '../../util';
 import FeaturesCards from "./FeaturesCardProduct";
+import RankigCardProduct from "./RankigCardProduct";
+
 
 export default function CardProduct({ product, index }) {
   return (
@@ -12,7 +14,7 @@ export default function CardProduct({ product, index }) {
       </div>
       <div>
         <div className='product-info'>
-          <p className='name-info'>{formatText(product.categoria.toUpperCase())}</p> 
+          <p className='name-info'>{formatText(product.categoria.toUpperCase())} <RankigCardProduct product={product} /></p> 
           <p className='titulo-info'>{product.titulo}</p>
           {/* TO DO ICONO DE UBICACION */}
           <p className='ciudad-info' ><i class="fa-solid fa-location-dot"></i> {product.ciudad}</p>

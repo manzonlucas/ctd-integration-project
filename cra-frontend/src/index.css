@@ -411,8 +411,14 @@ color: #FFFFFF;
   display: flex;
   gap: 10px;
   margin-top: 10px;
+  color: #383B58;
 }
 
+.rankingCardProduct .rankingCards {
+  font-size: 15px;
+  color: #1DBEB4;
+  margin-left: 5px;
+}
 
 
 /* FOOTER */
