@@ -308,11 +308,12 @@ line-height: 16px;
 }
 
 .card div {
-  width: 80%;
+  width: 90%;
   height: 100%;
 }
 
 .card img {
+  height: 50%;
   display: inline-block;
   margin: auto;
   width: 100%;
@@ -324,55 +325,63 @@ line-height: 16px;
 
 .card div:nth-child(2) {
   display: flex;
-  text-align: center;
+  text-align: start;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
 .product-info {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
+  margin-top: 15px;
 }
 
 
 
 .name-info {
-  display: flex;
-  justify-content: start;
   line-height: 18px;
   color: #383B58;
   opacity: 0.5;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  transform: rotate(-0.16deg);
   
 }
 
 .titulo-info {
-display: flex;
-justify-content: start;
 font-style: normal;
 font-weight: 700;
 font-size: 24px;
 line-height: 28px;
 color: #383B58;
+margin-top: 5px;
+font-family: 'Roboto';
+transform: rotate(-0.16deg);
 }
 
 .ciudad-info {
-  font-family: 'Roboto';
+margin-top: 20px;
+font-family: 'Roboto';
 font-style: normal;
 font-weight: 500;
 font-size: 14px;
 line-height: 16px;
 color: #383B58;
-
 }
 
 .descripcion-info {
-  font-style: normal;
+  margin-top: 75px;
+font-style: normal;
 font-weight: 500;
 font-size: 14px;
 line-height: 16px;
 color: #383B58;
+font-family: 'Roboto';
+
 }
 
 .moreInfo{
@@ -384,6 +393,7 @@ font-size: 16px;
 line-height: 19px;
 text-align: center;
 color: #FFFFFF;
+
 }
 
 
@@ -469,7 +479,7 @@ footer section span {
 }
 
 /* MOBILE */
-@media (max-width: 414px) {
+@media (max-width: 450px) {
 
   .user-buttons,
   .slogan,
@@ -547,4 +557,8 @@ footer section span {
   .searchBar button {
     padding: 0px;
   }
+
+
+
+
 }
