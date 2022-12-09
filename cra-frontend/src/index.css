@@ -339,6 +339,7 @@ line-height: 16px;
 
 
 .name-info {
+  display: flex;
   line-height: 18px;
   color: #383B58;
   opacity: 0.5;
@@ -373,7 +374,7 @@ color: #383B58;
 }
 
 .descripcion-info {
-  margin-top: 75px;
+  margin-top: 40px;
 font-style: normal;
 font-weight: 500;
 font-size: 14px;
@@ -395,8 +396,6 @@ color: #FFFFFF;
 
 }
 
-
-
 .card .moreInfo {
   margin: auto;
   margin-bottom: 10px;
@@ -407,6 +406,14 @@ color: #FFFFFF;
   border: none;
   border-radius: 10px;
 }
+
+.featuresContainerCards {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
 
 /* FOOTER */
 footer {
