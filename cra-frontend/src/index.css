@@ -354,7 +354,9 @@ line-height: 16px;
   
 }
 
+
 .titulo-info {
+  display: flex;
 font-style: normal;
 font-weight: 700;
 font-size: 24px;
@@ -376,7 +378,7 @@ color: #383B58;
 }
 
 .descripcion-info {
-  margin-top: 40px;
+  margin-top: 30px;
 font-style: normal;
 font-weight: 500;
 font-size: 14px;
@@ -395,6 +397,7 @@ font-size: 16px;
 line-height: 19px;
 text-align: center;
 color: #FFFFFF;
+
 
 }
 
@@ -421,6 +424,30 @@ color: #FFFFFF;
   color: #1DBEB4;
   margin-left: 5px;
 }
+
+.numberRanking{
+  box-sizing: border-box;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1px;
+  color:white;
+  background-color: #383B58;
+  border: 15px solid #383B58;
+  border-radius: 10px;
+  margin-left: auto;
+
+}
+
+.textRanking{
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 13px;
+  color: #383B58;
+  margin-left: auto;
+}
+
 
 
 /* FOOTER */
@@ -612,4 +639,10 @@ footer section span {
     height: 250px;
     
   }
+  
+  .boton{
+margin-left: 40px;
+  }
+
+
 }
