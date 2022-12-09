@@ -605,4 +605,11 @@ footer section span {
     color: white;
   
   }
+
+  .category {
+
+    width:  400px;
+    height: 300px;
+    
+  }
 }
