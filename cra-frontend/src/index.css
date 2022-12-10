@@ -51,7 +51,6 @@ a.logo-link {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-family: "Roboto";
   font-style: italic;
   font-weight: 300;
   font-size: 20px;
@@ -247,7 +246,6 @@ section.categories div.container {
 
 .categoryInfo h2 {
   padding-top: 8px;
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -257,7 +255,6 @@ section.categories div.container {
 
 .categoryInfo p {
   color: gray;
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -278,7 +275,6 @@ section.categories div.container {
 .recommendations h2 {
   padding-top: 19px;
   padding-left: 20px;
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -307,8 +303,6 @@ section.categories div.container {
   height: 300px;
   border-radius: 10px;
   background-color: white;
-
-
 }
 
 .card div {
@@ -340,8 +334,6 @@ section.categories div.container {
   margin-top: 15px;
 }
 
-
-
 .name-info {
   display: flex;
   line-height: 18px;
@@ -356,7 +348,6 @@ section.categories div.container {
 
 }
 
-
 .titulo-info {
   display: flex;
   font-style: normal;
@@ -365,13 +356,11 @@ section.categories div.container {
   line-height: 28px;
   color: #383B58;
   margin-top: 5px;
-  font-family: 'Roboto';
   transform: rotate(-0.16deg);
 }
 
 .ciudad-info {
   margin-top: 20px;
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -386,21 +375,15 @@ section.categories div.container {
   font-size: 14px;
   line-height: 16px;
   color: #383B58;
-  font-family: 'Roboto';
-
 }
 
 .moreInfo {
-
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
   color: #FFFFFF;
-
-
 }
 
 .card .moreInfo {
@@ -429,7 +412,6 @@ section.categories div.container {
 
 .numberRanking {
   box-sizing: border-box;
-  font-family: 'Roboto';
   font-style: normal;
   font-size: 20px;
   line-height: 1px;
@@ -438,19 +420,14 @@ section.categories div.container {
   border: 15px solid #383B58;
   border-radius: 10px;
   margin-left: auto;
-
 }
 
 .textRanking {
-
-  font-family: 'Roboto';
   font-style: normal;
   font-size: 13px;
   color: #383B58;
   margin-left: auto;
 }
-
-
 
 /* FOOTER */
 footer {
