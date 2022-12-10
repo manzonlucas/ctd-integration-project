@@ -223,7 +223,6 @@
 .categoryInfo {
   width: 100%;
   height: 100%;
-  padding-left: 10px;
 }
 
 .categoryInfo h2 {
@@ -232,11 +231,11 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
-  color: #383B58;
+  /* color: #383B58; */
 }
 
 .categoryInfo p {
-  color: gray;
+  /* color: gray; */
   font-style: normal;
   font-weight: 700;
   font-size: 14px;

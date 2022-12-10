@@ -146,6 +146,10 @@ center {
   margin: auto;
 }
 
+.m-10 {
+  margin: 10px;
+}
+
 .m-sides {
   margin: auto 5px;
 }
@@ -248,6 +252,34 @@ center {
 
 .decoration-none {
   text-decoration: none;
+}
+
+/* SKELETONS */
+.skeleton-h2,
+.skeleton-p {
+  color: rgba(255, 255, 255, 0);
+  background-color: #e9eef0;
+  border-radius: 20px;
+}
+
+.skeleton-container {
+  animation-name: skeleton;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes skeleton {
+  0% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 50%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }
 
 /* CUSTOM */

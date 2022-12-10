@@ -46,6 +46,7 @@ function App() {
   async function fetchCategories() {
     const response = await axios.get(baseUrl + 'categoria');
     setCategories(response.data);
+    setIsLoading(false);
   }
 
   async function fetchCities() {
