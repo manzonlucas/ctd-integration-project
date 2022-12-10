@@ -338,14 +338,11 @@ section.categories div.container {
   display: flex;
   line-height: 18px;
   color: #383B58;
-  opacity: 0.5;
   font-family: 'Quicksand';
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
-  transform: rotate(-0.16deg);
-
 }
 
 .titulo-info {
@@ -356,7 +353,6 @@ section.categories div.container {
   line-height: 28px;
   color: #383B58;
   margin-top: 5px;
-  transform: rotate(-0.16deg);
 }
 
 .ciudad-info {
