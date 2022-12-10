@@ -5,7 +5,7 @@ import CardSkeleton from './CardSkeleton';
 
 export default function Categories() {
 
-  const { categories, isLoading, setIsLoading } = useContext(UserContext);
+  const { categories, isLoading } = useContext(UserContext);
 
   return (
     <section className='categories bg-white p-30 flex column wrap justify-evenly gap-30'>
@@ -28,7 +28,6 @@ export default function Categories() {
               <CardCategory key={index} category={category} />
             )
           })}
-
       </div>
     </section>
   )

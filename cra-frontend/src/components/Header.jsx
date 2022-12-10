@@ -30,7 +30,7 @@ export default function Header() {
   }
 
   return (
-    <header className='bg-white flex p-25'>
+    <header className='bg-white flex p-25 sticky-top'>
       <section className='logo-container w-50'>
         <Link to={'/'} className='logo-link flex justify-center align-center gap-10 decoration-none'>
           <img src='https://imagenesg4c7.s3.us-east-2.amazonaws.com/public/logo1.png' alt="" />

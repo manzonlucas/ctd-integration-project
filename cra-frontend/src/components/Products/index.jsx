@@ -4,9 +4,10 @@ import { UserContext } from '../../contexts/UserContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { formatText } from "../../util";
+import CardProductSkeleton from "./CardProductSkeleton";
 
 export default function Products() {
-  const { products, fetchProducts, actualCategory } = useContext(UserContext);
+  const { products, fetchProducts, actualCategory, isLoading } = useContext(UserContext);
 
   return (
     <section className="recommendations">
@@ -23,12 +24,22 @@ export default function Products() {
         </>
       }
 
+
       <div className="container">
-        {products.map((product, index) => {
-          return (
-            <CardProduct key={index} product={product} />
-          )
-        })}
+
+        {isLoading ?
+          <>
+            <CardProductSkeleton />
+            <CardProductSkeleton />
+            <CardProductSkeleton />
+            <CardProductSkeleton />
+          </>
+          :
+          products.map((product, index) => {
+            return (
+              <CardProduct key={index} product={product} />
+            )
+          })}
       </div>
     </section >
   )
