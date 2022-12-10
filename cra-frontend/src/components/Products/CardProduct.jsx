@@ -7,7 +7,11 @@ export default function CardProduct({ product, index }) {
     <article className="card shadow" key={index}>
       {/* REEMPLAZAR INDEX POR ID UNA VEZ CONECTADO A DB */}
       <div>
-        <img src={product.imagenes[0].url} alt="" />
+
+        {product.imagenes !== undefined ?
+          <img src={product.imagenes[0].url} alt="" />
+          : ''}
+
       </div>
       <div>
         <div className='product-info'>
