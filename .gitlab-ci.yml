@@ -16,7 +16,7 @@ frontend_build_job:
     paths:
       - cra-frontend/build/
 
-test-backend: 
+test-frontend: 
   stage: test   
   script:
     - echo "Running unit tests...."

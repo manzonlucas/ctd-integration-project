@@ -93,7 +93,7 @@ export default function Login() {
           </form>
 
           <p>Aún no tienes cuenta?</p>
-          <Link to='/signup'>Regístrate</Link>
+          <Link style={{textDecoration: "none"}}to='/signup'>Regístrate</Link>
           <p style={{ color: 'red', fontWeight: 'normal' }}> {loginErrorMsg}</p>
         </section>
       </Layout>

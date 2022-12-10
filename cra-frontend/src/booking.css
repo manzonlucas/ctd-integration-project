@@ -13,6 +13,7 @@
   grid-area: 1 / 1 / 2 / 3;
   flex-wrap: wrap;
   gap: 10px;
+  height: 325px;
 }
 
 .formItemDiv input {

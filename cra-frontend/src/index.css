@@ -233,16 +233,34 @@ section.categories div.container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid black;
-  width: 310px;
-  height: 283px;
+  width:  280px;
+  height: 255px;
   border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
 }
 
 .categoryInfo {
   width: 100%;
   height: 100%;
   padding-left: 10px;
+}
+
+.categoryInfo h2{
+  padding-top: 8px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #383B58;
+}
+.categoryInfo p {
+  color: gray;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
 }
 
 .category img {
@@ -255,9 +273,21 @@ section.categories div.container {
 }
 
 /* RECOMMENDATIONS */
+
+.recommendations h2{
+  padding-top: 19px;
+  padding-left: 20px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #383B58;
+
+}
 .recommendations {
   background-color: #f3f1ed;
-  padding: 30px;
+  padding: 10px;
 }
 
 .recommendations div.container {
@@ -265,20 +295,22 @@ section.categories div.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 30px;
+  gap: 20px;
 }
 
 .card {
   display: flex;
   justify-content: space-around;
-  border: 1px solid black;
-  width: 635px;
-  height: 283px;
+  width: 600px;
+  height: 300px;
   border-radius: 10px;
+  background-color: white;
+  
+  
 }
 
 .card div {
-  width: 80%;
+  width: 90%;
   height: 100%;
 }
 
@@ -289,21 +321,84 @@ section.categories div.container {
   height: 100%;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  border-radius: 10px;
 }
 
 .card div:nth-child(2) {
-  margin: auto;
   display: flex;
-  text-align: center;
+  text-align: start;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
 
 .product-info {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
+  margin-top: 15px;
+}
+
+
+
+.name-info {
+  display: flex;
+  line-height: 18px;
+  color: #383B58;
+  opacity: 0.5;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  transform: rotate(-0.16deg);
+  
+}
+
+
+.titulo-info {
+  display: flex;
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+color: #383B58;
+margin-top: 5px;
+font-family: 'Roboto';
+transform: rotate(-0.16deg);
+}
+
+.ciudad-info {
+margin-top: 20px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+color: #383B58;
+}
+
+.descripcion-info {
+  margin-top: 30px;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+color: #383B58;
+font-family: 'Roboto';
+
+}
+
+.moreInfo{
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #FFFFFF;
+
+
 }
 
 .card .moreInfo {
@@ -316,6 +411,44 @@ section.categories div.container {
   border: none;
   border-radius: 10px;
 }
+
+.featuresContainerCards {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  color: #383B58;
+}
+
+.rankingCardProduct .rankingCards {
+  font-size: 15px;
+  color: #1DBEB4;
+  margin-left: 5px;
+}
+
+.numberRanking{
+  box-sizing: border-box;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1px;
+  color:white;
+  background-color: #383B58;
+  border: 15px solid #383B58;
+  border-radius: 10px;
+  margin-left: auto;
+
+}
+
+.textRanking{
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 13px;
+  color: #383B58;
+  margin-left: auto;
+}
+
+
 
 /* FOOTER */
 footer {
@@ -387,7 +520,7 @@ footer section span {
 }
 
 /* MOBILE */
-@media (max-width: 414px) {
+@media (max-width: 500px) {
 
   .user-buttons,
   .slogan,
@@ -465,4 +598,51 @@ footer section span {
   .searchBar button {
     padding: 0px;
   }
+
+  .card {
+    display: flex;
+    width: 600px;
+    height: 550px;
+    border-radius: 10px;
+    background-color: white;
+    flex-direction: column;
+    
+  }
+
+  .card img {
+    width: 111%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-radius: 10px;
+  }
+
+  .descripcion-info {
+  margin-top: 15px;
+  
+  }
+
+  .recommendations {
+    background-color: #383B58;
+
+  }
+
+  .recommendations h2{
+  
+    color: white;
+  
+  }
+
+  .category {
+
+    width:  310px;
+    height: 250px;
+    
+  }
+  
+  .boton{
+margin-left: 40px;
+  }
+
+
 }
