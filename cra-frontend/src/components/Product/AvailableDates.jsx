@@ -2,7 +2,7 @@ import { DateRange } from "react-date-range";
 import { useParams, Link } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
-import '../../availableDates.css'
+import '../../classes.css';
 
 export default function AvailableDates({ product }) {
 

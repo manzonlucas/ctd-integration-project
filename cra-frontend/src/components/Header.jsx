@@ -30,24 +30,24 @@ export default function Header() {
   }
 
   return (
-    <header>
-      <section className='logo-container'>
-        <Link to={'/'} className='logo-link'>
+    <header className='bg-white flex p-25'>
+      <section className='logo-container w-50'>
+        <Link to={'/'} className='logo-link flex justify-center align-center gap-10 decoration-none'>
           <img src='https://imagenesg4c7.s3.us-east-2.amazonaws.com/public/logo1.png' alt="" />
           <span className='slogan'>Sentite como en tu hogar</span>
         </Link>
       </section>
 
-      <section className='header-placeholder'>
+      <section className='header-placeholder w-50'>
       </section>
 
       <section
-        className={!isBurgerOpen ? 'user-buttons' : 'user-buttons-open'} >
+        className={`w-50 flex justify-evenly align-center ${!isBurgerOpen ? 'user-buttons' : 'user-buttons-open'}`} >
 
         {isBurgerOpen ?
           <div>
-            <input type="checkbox" id='check' onClick={handleBurgerClick} />
-            <label htmlFor="check" className="checkbtn">
+            <input type="checkbox" id='check' onClick={handleBurgerClick} className='display-none' />
+            <label htmlFor="check" className="checkbtn display-none">
               <i className="fa-solid fa-bars"></i>
             </label>
           </div> :
@@ -57,41 +57,41 @@ export default function Header() {
         {!user.isLogged ?
           <>
             {window.location.pathname !== '/signup' ?
-              <Link to='/signup' className='header-button'>
+              <Link to='/signup' className='cyan bold bg-white border-cyan radius-5 p-10-20 decoration-none'>
                 Crear cuenta
               </Link>
               : ''}
 
             {window.location.pathname !== '/login' ?
-              <Link to='/login' className='header-button'>
+              <Link to='/login' className='cyan bold bg-white border-cyan radius-5 p-10-20 decoration-none'>
                 Iniciar sesión
               </Link>
               : ''}
           </>
           :
           <>
-            <Link to='/' className='loggedUserBlock'>
+            <Link to='/' className='grey flex justify-around bold decoration-none'>
               <span className='user-logo'>
                 {userInitials()}
               </span>
               <div>
                 <p>Hola,</p>
-                <span className='userName'>
+                <span className='userName cyan'>
                   {`${user.name} ${user.lastName}`}
                 </span>
               </div>
             </Link>
 
-            <Link to='/' className='header-button' onClick={clickHandlerLogout}>
+            <Link to='/' className='cyan bold bg-white border-cyan radius-5 p-10-20 decoration-none' onClick={clickHandlerLogout}>
               Cerrar sesión
             </Link>
           </>
         }
 
       </section>
-      <div className='divBurger'>
-        <input type="checkbox" id='check' onClick={handleBurgerClick} />
-        <label htmlFor="check" className="burgerButton">
+      <div className='divBurger inline-block absolute'>
+        <input type="checkbox" id='check' onClick={handleBurgerClick} className='display-none' />
+        <label htmlFor="check" className="burgerButton display-none">
           <i className="fa-solid fa-bars"></i>
         </label>
       </div>

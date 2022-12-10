@@ -1,0 +1,310 @@
+/* CYAN #1DBEB4 */
+/* GRIS OSCURO #383B58 */
+/* GRIS CLARO #545776 */
+/* BLANCO #F3F1ED */
+
+* {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TEXT */
+center {
+  text-align: center;
+}
+
+.size-2 {
+  font-size: 2em;
+}
+
+/* COLORS */
+.cyan {
+  color: #1dbeb4;
+}
+
+.grey {
+  color: #545776;
+}
+
+.white {
+  color: white;
+}
+
+/* DISPLAY */
+.flex {
+  display: flex;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/* FLEX SETTINGS */
+
+.column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-30 {
+  gap: 30px;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.itemContainer {
+  border-radius: 20px;
+  margin: 10px;
+  padding: 20px;
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* WIDTH */
+.w-30 {
+  width: 30%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* HEIGHT */
+.h-150px {
+  height: 150px;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+/* MARGIN */
+.m-auto {
+  margin: auto;
+}
+
+.m-sides {
+  margin: auto 5px;
+}
+
+.m-bottom {
+  margin-bottom: 100px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/* PADDING */
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-25 {
+  padding: 25px;
+}
+
+.p-30 {
+  padding: 30px;
+}
+
+.p-10-20 {
+  padding: 10px 20px;
+}
+
+/* CURSOR */
+.cursor-default {
+  cursor: default
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* OTROS */
+.underline {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* STANDARD SHADOW */
+.shadow {
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* BORDER */
+.border-none {
+  border: none;
+  outline: none;
+}
+
+.border-cyan {
+  border: 2px solid #1dbeb4;
+}
+
+.border-grey {
+  border: 2px solid grey;
+}
+
+.radius-5 {
+  border-radius: 5px;
+}
+
+/* BG */
+.bg-white {
+  background-color: white;
+}
+
+.bg-grey {
+  background-color: #545776;
+}
+
+.bg-cyan {
+  background-color: #1dbeb4;
+}
+
+/* POSITION */
+.sticky-top {
+  position: sticky;
+  top: 0;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.decoration-none {
+  text-decoration: none;
+}
+
+/* CUSTOM */
+.divBurger {
+  /* display: inline-block; */
+  /* position: absolute; */
+  right: 20px;
+  z-index: 2;
+}
+
+.logo-link {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 20px;
+  color: black;
+}
+
+.user-logo {
+  font-size: 1.5em;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  margin: auto 10px;
+  background-color: #545776;
+}
+
+.formItem {
+  height: 40px;
+  flex-grow: 0.3;
+}
+
+.citiesList {
+  top: 50px;
+}
+
+.city {
+  padding-left: 10px;
+  height: 40px;
+  border-top: none;
+}
+
+.city:hover {
+  background-color: #545776;
+  color: #f3f1ed;
+}
+
+/* .dateRangeInput {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 10px auto;
+  outline: 1px solid #383B58;
+  background: white;
+} */
+
+.rdrMonths,
+.rdrMonthsHorizontal {
+  justify-content: space-around;
+}

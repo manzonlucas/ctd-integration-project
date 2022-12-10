@@ -48,7 +48,7 @@ export default function CitiesDropdown({ query, setQuery }) {
         onFocus={changeDropdownDisplay}
         // FIX THIS
         // onBlur={changeDropdownDisplay}
-        className="formItem dropdown"
+        className="formItem flex align-center border-none radius-5 shadow bold bg-white relative"
       >
         <input
           type="text"
@@ -59,7 +59,7 @@ export default function CitiesDropdown({ query, setQuery }) {
         />
 
         <ul
-          className={citiesDisplay ? "citiesList citiesListShow" : "citiesList"}
+          className={`citiesList absolute w-100 top-50 ${citiesDisplay ? 'display-block' : 'display-none'}`}
         >
           {citiesList.map((city) => {
             return (
@@ -67,7 +67,7 @@ export default function CitiesDropdown({ query, setQuery }) {
                 value={city.city}
                 id={city.id}
                 key={city.id}
-                className="city"
+                className="city flex align-center bold bg-white border-grey"
                 onClick={handleClickOption}
               >
                 <FontAwesomeIcon

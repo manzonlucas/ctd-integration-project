@@ -46,10 +46,10 @@ export default function SearchBar() {
 
   return (
     <>
-      <section className="searchBar">
-        <h1>Busca ofertas en hoteles, casas y mucho más</h1>
+      <section className="h-150px bg-grey p-25 gap-2 center flex column justify-around align-center">
+        <h1 className="size-2 white">Busca ofertas en hoteles, casas y mucho más</h1>
 
-        <form action="" className="searchBarForm">
+        <form action="" className="w-80 flex justify-around align-center">
 
           <CitiesDropdown
             query={query}
@@ -63,7 +63,7 @@ export default function SearchBar() {
               onClick={handleClickDateInput}
               // FIX
               // onBlur={handleClickDateInput}
-              className='searchBarFormInput m-5 p-10 border-none'
+              className='w-100 h-100 m-5 p-10 border-none radius-5 shadow'
 
               value={
                 query.startDate && query.endDate ?
@@ -73,7 +73,7 @@ export default function SearchBar() {
           </div>
 
           <div className="formItem">
-            <button onClick={handleSearch} className='searchBarFormButton'>Buscar</button>
+            <button onClick={handleSearch} className='w-100 h-100 m-5 p-10 border-none radius-5 shadow white bold bg-cyan border-none'>Buscar</button>
           </div>
         </form>
       </section>
