@@ -11,6 +11,7 @@ import SuccessfulReservation from './pages/SuccessfulReservation';
 import SuccessfulProductCreation from './pages/SuccessfulProductCreation';
 import { baseUrl } from './services/api';
 import Booking from './components/Product/Booking';
+import NewProduct from './pages/NewProduct';
 
 function App() {
 
@@ -88,6 +89,7 @@ function App() {
             <Route path="/successful" element={<SuccessfulReservation />}></Route>
             <Route path="/successfulProduct" element={<SuccessfulProductCreation />}></Route>
             <Route path="producto/:id/booking" element={<Booking />}></Route>
+            <Route path="/newproduct" element={<NewProduct/>}></Route>
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>
