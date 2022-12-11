@@ -1,30 +1,30 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-faPersonSwimming,
-faCar,
-faSnowflake,
-faWifi,
-faWheelchairAlt,
-faSmokingBan,
-faMartiniGlassCitrus,
-faPaw,
-faBellConcierge,
-faMugSaucer,
-faUtensils,
-faShield,
-faFire,
-faDroplet,
-faCoffee,
-faTv,
-faClock,
-faCartFlatbedSuitcase,
-faDumbbell,
-faSmile,
-faLeaf,
-faFireBurner,
-faBroom,
-faWater,
-faCircleExclamation
+  faPersonSwimming,
+  faCar,
+  faSnowflake,
+  faWifi,
+  faWheelchairAlt,
+  faSmokingBan,
+  faMartiniGlassCitrus,
+  faPaw,
+  faBellConcierge,
+  faMugSaucer,
+  faUtensils,
+  faShield,
+  faFire,
+  faDroplet,
+  faCoffee,
+  faTv,
+  faClock,
+  faCartFlatbedSuitcase,
+  faDumbbell,
+  faSmile,
+  faLeaf,
+  faFireBurner,
+  faBroom,
+  faWater,
+  faCircleExclamation
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function FeaturesCards({ product }) {
@@ -123,17 +123,15 @@ export default function FeaturesCards({ product }) {
   }
 
   return (
-    <section className="featuresCards">
-      <div className="featuresContainerCards">
-        {product.caracteristicas ?
-          product.caracteristicas.map((feature, id) => {
-            return (
-              <p key={feature.id}>
+    <div className="flex wrap grey gap-10">
+      {product.caracteristicas ?
+        product.caracteristicas.map((feature, id) => {
+          return (
+            <p key={feature.id} >
               {iconCallCards(feature.id)}
-              </p>
-            );
-          }) : ''}
-      </div>
-    </section>
+            </p>
+          );
+        }) : ''}
+    </div>
   );
 }

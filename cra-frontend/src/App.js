@@ -89,7 +89,7 @@ function App() {
             <Route path="/successful" element={<SuccessfulReservation />}></Route>
             <Route path="/successfulProduct" element={<SuccessfulProductCreation />}></Route>
             <Route path="producto/:id/booking" element={<Booking />}></Route>
-            <Route path="/newproduct" element={<NewProduct/>}></Route>
+            <Route path="/newproduct" element={<NewProduct />}></Route>
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>

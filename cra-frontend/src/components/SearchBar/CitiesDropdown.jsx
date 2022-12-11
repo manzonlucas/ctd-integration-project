@@ -58,9 +58,7 @@ export default function CitiesDropdown({ query, setQuery }) {
           value={actualDestination}
         />
 
-        <ul
-          className={`citiesList absolute w-100 top-50 ${citiesDisplay ? 'display-block' : 'display-none'}`}
-        >
+        <ul className={`citiesList absolute w-100 top-50 ${citiesDisplay ? "display-block" : "display-none"}`}>
           {citiesList.map((city) => {
             return (
               <li

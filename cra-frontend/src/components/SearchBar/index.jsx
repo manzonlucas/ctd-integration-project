@@ -47,7 +47,7 @@ export default function SearchBar() {
   return (
     <>
       <section className="h-150px bg-grey p-25 gap-2 center flex column justify-around align-center">
-        <h1 className="size-2 white">Busca ofertas en hoteles, casas y mucho más</h1>
+        <h1 className="white">Busca ofertas en hoteles, casas y mucho más</h1>
 
         <form action="" className="w-80 flex justify-around align-center">
 

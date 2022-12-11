@@ -49,6 +49,10 @@ center {
   display: inline-block;
 }
 
+.z-1 {
+  z-index: 1;
+}
+
 /* FLEX SETTINGS */
 
 .column {
@@ -91,6 +95,10 @@ center {
   flex-wrap: wrap;
 }
 
+.grow-1 {
+  flex-grow: 1;
+}
+
 .itemContainer {
   border-radius: 20px;
   margin: 10px;
@@ -108,6 +116,11 @@ center {
 }
 
 /* WIDTH */
+
+.w-20 {
+  width: 20%;
+}
+
 .w-30 {
   width: 30%;
 }
@@ -158,19 +171,27 @@ center {
   margin-bottom: 100px;
 }
 
-.m-bottom-20{
+.m-bottom-5 {
+  margin-bottom: 5px;
+}
+
+.m-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.m-bottom-20 {
   margin-bottom: 20px;
 }
 
-.m-bottom-50{
+.m-bottom-50 {
   margin-bottom: 50px;
 }
 
-.m-top-20{
+.m-top-20 {
   margin-top: 20px;
 }
 
-.m-top-70{
+.m-top-70 {
   margin-top: 70px;
 }
 
@@ -178,10 +199,21 @@ center {
   display: inline-block;
 }
 
+.fit-cover {
+  object-fit: cover
+}
+
 /* PADDING */
+.p-5 {
+  padding: 5px;
+}
 
 .p-10 {
   padding: 10px;
+}
+
+.p-20 {
+  padding: 20px;
 }
 
 .p-25 {
@@ -192,9 +224,14 @@ center {
   padding: 30px;
 }
 
+.p-5-0 {
+  padding: 5px 0px;
+}
+
 .p-10-20 {
   padding: 10px 20px;
 }
+
 
 /* CURSOR */
 .cursor-default {
@@ -239,6 +276,10 @@ center {
   border-radius: 5px;
 }
 
+.radius-10 {
+  border-radius: 10px;
+}
+
 /* BG */
 .bg-white {
   background-color: white;
@@ -258,6 +299,11 @@ center {
   top: 0;
 }
 
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+}
+
 .absolute {
   position: absolute;
 }
@@ -270,7 +316,7 @@ center {
   text-decoration: none;
 }
 
-.text-decoration-line{
+.text-decoration-line {
   text-decoration-line: none;
 }
 
@@ -303,6 +349,11 @@ center {
 }
 
 /* CUSTOM */
+.socialMediaIcon {
+  width: 20px;
+  height: 20px;
+}
+
 .divBurger {
   /* display: inline-block; */
   /* position: absolute; */
@@ -346,6 +397,11 @@ center {
   color: #f3f1ed;
 }
 
+.category-img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 /* .dateRangeInput {
   width: 50%;
   position: absolute;
@@ -359,4 +415,146 @@ center {
 .rdrMonths,
 .rdrMonthsHorizontal {
   justify-content: space-around;
+}
+
+/* MEDIA QUERIES */
+
+/* TABLET */
+@media (max-width: 768px) {
+  .t-display-none {
+    display: none;
+  }
+
+  section.user-buttons {
+    justify-content: space-between;
+  }
+
+  /* TABLET SEARCHBAR */
+  .dateRangeInput {
+    width: 80%;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+  .m-display-none {
+    display: none;
+  }
+
+  /* SEGUIR TRABANDO EN MOBILE A PARTIR DE ACA */
+
+  /* MOBILE BURGER */
+  .burgerButton {
+    font-size: 30px;
+    color: black;
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+    display: block;
+  }
+
+  .user-buttons-open {
+    position: fixed;
+    height: 100vh;
+    width: 50%;
+    padding-top: 102px;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #f3f1ed;
+
+    box-shadow: 1px -1px 28px 9px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px -1px 28px 9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px -1px 28px 9px rgba(0, 0, 0, 0.75);
+  }
+
+  .user-buttons-open a {
+    color: #1dbeb4;
+    font-weight: bold;
+    background-color: #f3f1ed;
+    border: 2px solid #1dbeb4;
+    border-radius: 5px;
+    padding: 10px 50px;
+    margin: 10px;
+  }
+
+  /* MOBILE HEADER */
+  .logo {
+    justify-content: space-between;
+  }
+
+  header section.logo {
+    flex-grow: 6;
+    color: #545776;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  /* MOBILE SEARCHBAR */
+  .searchBar {
+    height: auto;
+  }
+
+  .searchBar form {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .formItem {
+    width: 100%;
+  }
+
+  .searchBar button {
+    padding: 0px;
+  }
+
+  .card {
+    display: flex;
+    width: 600px;
+    height: 550px;
+    border-radius: 10px;
+    background-color: white;
+    flex-direction: column;
+
+  }
+
+  .card img {
+    width: 111%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-radius: 10px;
+  }
+
+  .descripcion-info {
+    margin-top: 15px;
+  }
+
+  .recommendations {
+    background-color: #383B58;
+  }
+
+  .recommendations h2 {
+    color: white;
+  }
+
+  .category {
+    width: 310px;
+    height: 250px;
+  }
+
+  .boton {
+    margin-left: 40px;
+  }
+
+  .logo-container {
+    width: 20%;
+  }
 }
