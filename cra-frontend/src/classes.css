@@ -158,6 +158,22 @@ center {
   margin-bottom: 100px;
 }
 
+.m-bottom-20{
+  margin-bottom: 20px;
+}
+
+.m-bottom-50{
+  margin-bottom: 50px;
+}
+
+.m-top-20{
+  margin-top: 20px;
+}
+
+.m-top-70{
+  margin-top: 70px;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -252,6 +268,10 @@ center {
 
 .decoration-none {
   text-decoration: none;
+}
+
+.text-decoration-line{
+  text-decoration-line: none;
 }
 
 /* SKELETONS */

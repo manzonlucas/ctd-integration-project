@@ -436,6 +436,11 @@ footer section span {
   .searchBar form {
     width: 100%;
   }
+  .logo-container{
+
+    width: 60%;
+    margin-right: 40%;
+  }
 }
 
 /* TABLET */
@@ -471,10 +476,16 @@ footer section span {
   footer {
     height: 50px;
   }
+
+  .logo-container{
+
+    width: 20%;
+    margin-right: 60%;
+  }
 }
 
 /* MOBILE */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
   .user-buttons,
   .slogan,
@@ -598,5 +609,9 @@ footer section span {
     margin-left: 40px;
   }
 
+  .logo-container{
+
+    width: 20%;
+  }
 
 }
