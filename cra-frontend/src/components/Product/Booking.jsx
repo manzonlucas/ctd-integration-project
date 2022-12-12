@@ -103,7 +103,12 @@ export default function Booking() {
 
           <div className="reservationDetails reservationItem">
             <h4>Detalle de la reserva</h4>
-            <img src="https://imagenesg4c7.s3.us-east-2.amazonaws.com/public/hotelroom/room2.jpg" alt="Habitacion de ejemplo" />
+
+            {product.imagenes != undefined ?
+              <img src={product.imagenes[0].url} alt="Habitacion de ejemplo" />
+              :
+              ''
+            }
 
             <p>{product.categoria}</p>
             <p>{product.titulo}</p>
