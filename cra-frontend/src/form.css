@@ -79,10 +79,10 @@ h1 {
 }
 
 /* MOBILE */
-@media (max-width: 414px) {
+@media (max-width: 720px) {
 
   .form {
-    width: 90%;
+    width: 60%;
   }
 
   .formView {

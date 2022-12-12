@@ -10,11 +10,11 @@ export default function CardCategory({ category }) {
   }
 
   return (
-    <article className="category shadow" onClick={handleClick}>
-      <img src={category.url_imagen} alt="" />
-      <div className='categoryInfo'>
+    <article className="flex column radius-10 shadow" onClick={handleClick} style={{ width: '280px', height: '255px' }}>
+      <img src={category.url_imagen} alt="" className="inline-block category-img" />
+      <div className='w-100 h-100'>
         <h2>{formatText(category.tipo)}</h2>
-        <p>10.000 opciones</p>
+        <p>10000 opciones</p>
       </div>
     </article >
   )

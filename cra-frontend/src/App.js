@@ -53,33 +53,28 @@ function App() {
   async function fetchCities() {
     const response = await axios.get(baseUrl + 'ciudad');
     setCities(response.data);
+    setIsLoading(false);
   }
 
-  async function fetchProductsByCategoryName(name) {
+  async function fetchProductsByQuery(destinationId, destinationName, startDate, endDate) {
+    if (destinationId === undefined) {
+      destinationId = '';
+      destinationName = '';
+    }
+    const response = await axios.get(baseUrl + `producto?ciudad=${destinationId}&from=${startDate}&to=${endDate}`);
+    setProducts(response.data.resultados);
+    setActualCategory(`Busqueda realizada: ${destinationName} | Check-in: ${startDate} | Check-out: ${endDate}`);
+  }
+
+  async function fetchProductsByCategory(name) {
     const response = await axios.get(baseUrl + 'producto?categoria=' + name);
     setProducts(response.data.resultados);
     setActualCategory(name);
   }
 
-  // CHEQUEAR EL ENDPOINT PQ EL ACTUAL SOLO TRAE LA CIUDAD EN LUGAR DE LISTADO DE PRODUCTOS
-  async function fetchProductsByCityId(id) {
-    // const response = await axios.get(baseUrl + 'ciudad/' + id);
-    // setProducts(response.data.resultados);
-    console.log('fetching products by city id');
-    console.log(`City id: ${id}`);
-  }
-
-  // PENDING BACKEND
-  async function fetchProductsByDate(startDate, endDate) {
-    // const response = await axios.get(baseUrl + ???)
-    // setProducts(response.data.resultados);
-    console.log('fetching products by input date');
-    console.log(`Start date: ${startDate} - End date: ${endDate}`);
-  }
-
   return (
     <>
-      <UserContext.Provider value={{ userDb, user, setUser, products, fetchProducts, isLoading, setIsLoading, fetchProductsByCityId, fetchProductsByCategoryName, fetchProductsByDate, cities, categories, actualCategory }}>
+      <UserContext.Provider value={{ userDb, user, setUser, products, fetchProducts, isLoading, setIsLoading, fetchProductsByQuery, fetchProductsByCategoryName: fetchProductsByCategory, cities, categories, actualCategory }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />}></Route>
@@ -89,7 +84,7 @@ function App() {
             <Route path="/successful" element={<SuccessfulReservation />}></Route>
             <Route path="/successfulProduct" element={<SuccessfulProductCreation />}></Route>
             <Route path="producto/:id/booking" element={<Booking />}></Route>
-            <Route path="/newproduct" element={<NewProduct/>}></Route>
+            <Route path="/newproduct" element={<NewProduct />}></Route>
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>

@@ -3,13 +3,14 @@ import Calendar from "./Calendar";
 import CitiesDropdown from "./CitiesDropdown";
 import { UserContext } from "../../contexts/UserContext";
 import { useEffect } from "react";
+import { formatDate } from "../../util";
 
 export default function SearchBar() {
 
-  const { fetchProductsByCityId, fetchProductsByDate } = useContext(UserContext);
+  const { fetchProductsByQuery } = useContext(UserContext);
 
   const [query, setQuery] = useState({
-    destination: '',
+    destination: {},
     startDate: '',
     endDate: ''
   });
@@ -39,9 +40,11 @@ export default function SearchBar() {
 
   function handleSearch(e) {
     e.preventDefault();
-    // PENDING BACKEND
-    fetchProductsByCityId(query.destination);
-    fetchProductsByDate(query.startDate, query.endDate);
+    const destinationId = query.destination.id;
+    const destinationName = query.destination.innerText;
+    const startDate = formatDate(query.startDate);
+    const endDate = formatDate(query.endDate);
+    fetchProductsByQuery(destinationId, destinationName, startDate, endDate);
   }
 
   return (
