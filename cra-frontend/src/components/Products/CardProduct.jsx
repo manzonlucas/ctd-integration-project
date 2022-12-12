@@ -9,6 +9,10 @@ export default function CardProduct({ product, index }) {
     return RANKING.slice(5 - ranking, 10 - ranking);
   }
 
+  function randomNum() {
+    return Math.round(Math.random() * 5);
+  }
+
   return (
 
     <article className="flex justify-around radius-10 bg-white shadow m-auto" key={product.id} style={{ width: '600px', height: '300px' }}>
@@ -25,7 +29,7 @@ export default function CardProduct({ product, index }) {
       <div className='w-90 h-100 p-10 flex column justify-around'>
         <div className='flex align-center'>
           <p>{formatText(product.categoria.toUpperCase())}</p>
-          <p className="cyan m-sides">{getRankingCard(4)}</p>
+          <p className="cyan m-sides">{getRankingCard(randomNum())}</p>
           <p className='white bg-grey bold radius-10 p-5' style={{ width: '25px', textAlign: 'center', marginLeft: 'auto' }}>8</p>
         </div>
 
@@ -44,7 +48,7 @@ export default function CardProduct({ product, index }) {
         <p className='descripcion-info'>{product.descripcion.length > 150 ? `${product.descripcion.substring(0, 150)}...` : product.descripcion}
         </p>
 
-        <Link to={`/producto/${product.id}`} className='white bold bg-cyan radius-5 p-10-20 decoration-none w-50' style={{ margin: '0 auto' }}>Ver detalle</Link>
+        <Link to={`/producto/${product.id}`} className='white bold bg-cyan radius-5 p-10-20 decoration-none w-50 center' style={{ margin: '0 auto' }}>Ver detalle</Link>
       </div>
 
     </article >

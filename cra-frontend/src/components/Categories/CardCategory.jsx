@@ -14,7 +14,7 @@ export default function CardCategory({ category }) {
       <img src={category.url_imagen} alt="" className="inline-block category-img" />
       <div className='w-100 h-100'>
         <h2>{formatText(category.tipo)}</h2>
-        <p>10.000 opciones</p>
+        <p>10000 opciones</p>
       </div>
     </article >
   )

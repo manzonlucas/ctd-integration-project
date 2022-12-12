@@ -3,13 +3,14 @@ import Calendar from "./Calendar";
 import CitiesDropdown from "./CitiesDropdown";
 import { UserContext } from "../../contexts/UserContext";
 import { useEffect } from "react";
+import { formatDate } from "../../util";
 
 export default function SearchBar() {
 
-  const { fetchProductsByCityId, fetchProductsByDate } = useContext(UserContext);
+  const { fetchProductsByQuery } = useContext(UserContext);
 
   const [query, setQuery] = useState({
-    destination: '',
+    destination: {},
     startDate: '',
     endDate: ''
   });
@@ -39,15 +40,17 @@ export default function SearchBar() {
 
   function handleSearch(e) {
     e.preventDefault();
-    // PENDING BACKEND
-    fetchProductsByCityId(query.destination);
-    fetchProductsByDate(query.startDate, query.endDate);
+    const destinationId = query.destination.id;
+    const destinationName = query.destination.innerText;
+    const startDate = formatDate(query.startDate);
+    const endDate = formatDate(query.endDate);
+    fetchProductsByQuery(destinationId, destinationName, startDate, endDate);
   }
 
   return (
     <>
       <section className="h-150px bg-grey p-25 gap-2 center flex column justify-around align-center">
-        <h1 className="white">Busca ofertas en hoteles, casas y mucho más</h1>
+        <h1 className="size-2 white">Busca ofertas en hoteles, casas y mucho más</h1>
 
         <form action="" className="w-80 flex justify-around align-center">
 

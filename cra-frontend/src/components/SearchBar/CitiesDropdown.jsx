@@ -15,10 +15,9 @@ export default function CitiesDropdown({ query, setQuery }) {
   }
 
   function handleClickOption(e) {
-    setQuery({ ...query, destination: e.target.id });
+    setQuery({ ...query, destination: e.target });
     setActualDestination(e.target.innerText);
     changeDropdownDisplay();
-
     // FIX THIS AND DIV ONBLUR
     // console.log('clicked!');
     // e.stopPropagation(e);
@@ -59,6 +58,7 @@ export default function CitiesDropdown({ query, setQuery }) {
         />
 
         <ul className={`citiesList absolute w-100 top-50 ${citiesDisplay ? "display-block" : "display-none"}`}>
+
           {citiesList.map((city) => {
             return (
               <li
@@ -72,7 +72,7 @@ export default function CitiesDropdown({ query, setQuery }) {
                   icon={faLocationDot}
                   style={{ display: "inline-block", marginRight: "5px" }}
                 />
-                {formatText(city.nombre)}, {formatText(city.pais)}
+                {city.nombre}, {city.pais}
               </li>
             );
           })}
