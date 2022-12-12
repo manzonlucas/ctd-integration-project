@@ -15,7 +15,7 @@ export default function CardProduct({ product, index }) {
 
   return (
 
-    <article className="flex justify-around radius-10 bg-white shadow m-auto m-cardProduct" key={product.id}>
+    <article className="flex justify-around radius-10 bg-white shadow m-auto cardProduct m-cardProduct" key={product.id}>
       <div className='w-90 h-100'>
 
         {product.imagenes !== undefined ?
