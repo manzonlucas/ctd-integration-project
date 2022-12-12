@@ -15,10 +15,10 @@ export default function NewProduct() {
                 <h2 className="grey m-bottom-10">Crear propiedad</h2>
 
                 <form className="flex column gap-20 shadow w-95 grey bg-white radius-5 p-20">
-                    <section>
+                    <section className="flex column gap-10">
                         <h4>Agregar datos</h4>
 
-                        <div className="bg-cream p-10 radius-10 flex wrap sm-column">
+                        <div className="bg-cream p-10 radius-10 flex wrap sm-column shadow">
                             <div className="w-50 sm-w-100">
                                 <label htmlFor="productName" className="display-block">Nombre de la propiedad</label>
                                 <input
@@ -70,10 +70,10 @@ export default function NewProduct() {
                         </div>
                     </section>
 
-                    <section>
+                    <section className="flex column gap-10">
                         <h4>Agregar características</h4>
 
-                        <div className="bg-cream p-10 radius-10 flex wrap">
+                        <div className="bg-cream p-10 radius-10 flex wrap shadow">
                             <div className="w-50 sm-w-100">
                                 <label htmlFor="features" className="display-block">Nombre</label>
                                 <input
@@ -98,9 +98,9 @@ export default function NewProduct() {
                         </div>
                     </section>
 
-                    <section>
+                    <section className="flex column gap-10">
                         <h4>Políticas del producto</h4>
-                        <div className="bg-cream p-10 radius-10 flex justify-between wrap sm-column">
+                        <div className="bg-cream p-10 radius-10 flex justify-between wrap sm-column shadow">
                             <div className="w-30 sm-w-100">
                                 <label htmlFor="norma" className="display-block">Normas de la casa</label>
                                 <input type="text" id="norma" className="w-90 sm-w-100" />
@@ -118,68 +118,67 @@ export default function NewProduct() {
 
                     <section className="flex column gap-10">
                         <h4>Cargar imágenes</h4>
-                        <div className="bg-cream p-10 radius-10">
+                        <div className="bg-cream p-10 radius-10 shadow">
                             <label htmlFor="img1" className="m-sides">#1</label>
                             <input
                                 type="url"
                                 id="img1"
                                 name="img1"
-                                placeholder="url...."
+                                placeholder="URL"
                                 className="w-30 sm-w-100"
                             ></input>
                         </div>
-                        <div className="bg-cream p-10 radius-10">
+                        <div className="bg-cream p-10 radius-10 shadow">
                             <label htmlFor="img2" className="m-sides">#2</label>
                             <input
                                 type="url"
                                 id="img2"
                                 name="img2"
-                                placeholder="url...."
+                                placeholder="URL"
                                 className="w-30 sm-w-100"
                             ></input>
                         </div>
-                        <div className="bg-cream p-10 radius-10">
+                        <div className="bg-cream p-10 radius-10 shadow">
                             <label htmlFor="img3" className="m-sides">#3</label>
                             <input
                                 type="url"
                                 id="img3"
                                 name="img3"
-                                placeholder="url...."
+                                placeholder="URL"
                                 className="w-30 sm-w-100"
                             ></input>
                         </div>
-                        <div className="bg-cream p-10 radius-10">
+                        <div className="bg-cream p-10 radius-10 shadow">
                             <label htmlFor="img4" className="m-sides">#4</label>
                             <input
                                 type="url"
                                 id="img4"
                                 name="img4"
-                                placeholder="url...."
+                                placeholder="URL"
                                 className="w-30 sm-w-100"
                             ></input>
                         </div>
-                        <div className="bg-cream p-10 radius-10">
+                        <div className="bg-cream p-10 radius-10 shadow">
                             <label htmlFor="img5" className="m-sides">#5</label>
                             <input
                                 type="url"
                                 id="img5"
                                 name="img5"
-                                placeholder="url...."
+                                placeholder="URL"
                                 className="w-30 sm-w-100"
                             ></input>
                         </div>
                     </section>
 
 
-                    <section>
+                    <section className="flex column gap-10">
                         <h4>Cargar ubicación</h4>
-                        <div className="bg-cream p-10 radius-10">
+                        <div className="bg-cream p-10 radius-10 shadow">
                             <label htmlFor="location" className="m-sides">URL de Google Maps</label>
                             <input
-                                type="text"
+                                type="url"
                                 id="location"
                                 name="location"
-                                placeholder="ubicacion? como cargar?"
                                 className="w-30 sm-w-100"
                             ></input>
                         </div>
