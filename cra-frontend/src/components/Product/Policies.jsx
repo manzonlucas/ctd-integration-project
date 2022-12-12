@@ -1,13 +1,12 @@
 export default function Policies({ product }) {
-  function formatPolicies(policy) {
-    return policy.split('\n');
-  }
+  // function formatPolicies(policy) {
+  // return policy.split('\n');
+  // }
 
   return (
     <section className="policies">
       <h3>Qué tenes que saber</h3>
 
-      {console.log(formatPolicies(product.norma))}
       <div className="policiesContainer">
         <article className="policiesItem">
           <h4>Normas de la casa</h4>
