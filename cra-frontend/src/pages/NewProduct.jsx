@@ -1,118 +1,194 @@
 import Layout from "../components/Layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquarePlus } from "@fortawesome/free-solid-svg-icons";
-import "../../src/classes.css";
 import { Link } from "react-router-dom";
+import "../../src/classes.css";
 
 export default function NewProduct() {
-
     return (
-        <>
-            <Layout>
-                <section className="h-60px bg-grey p-15 gap-2 column justify-around align-center">
-                    <h1 className="white" >Administración</h1>
-                </section>
+        <Layout>
+            <section className="bg-grey p-15 gap-2 column justify-around align-center">
+                <h1 className="white">Administración</h1>
+            </section>
 
-                <div className="m-50 grey">
-                    <h2>Crear propiedad</h2>
-                </div>
+            <section className="bg-cream p-30 p-bottom">
+                <h2 className="grey m-bottom-10">Crear propiedad</h2>
 
-                <div className="m-50 shadow">
-                    <form action="" className="w-95 m-sides15">
-                        <div className="flex gap-10 wrap m-10 justify-center">
-                            <div className="w-40 h-40px m-10 m-top-20">
-                                <h4 className="m-bottom-10">Nombre de la propiedad</h4>
-                                <input type="text" id="productname" name="productname" className="formInput " placeholder="Hotel Hermitage"></input>
+                <form className="flex column gap-20 shadow w-95 grey bg-white radius-5 p-20">
+                    <section>
+                        <h4>Agregar datos</h4>
+
+                        <div className="bg-cream p-10 radius-10 flex wrap sm-column">
+                            <div className="w-50 sm-w-100">
+                                <label htmlFor="productName" className="display-block">Nombre de la propiedad</label>
+                                <input
+                                    type="text"
+                                    id="productName"
+                                    name="productName"
+                                    placeholder="Hotel Hermitage"
+                                    className="w-50 sm-w-100"
+                                ></input>
                             </div>
 
-                            <div className="w-40 h-40px m-10 m-top-20">
-                                <h4 className="m-bottom-10">Categoría</h4>
-                                <select name="category" id="category">
-                                </select>
+                            <div className="w-50 sm-w-100">
+                                <label htmlFor="category" className="display-block">Categoría</label>
+                                <input
+                                    type="text"
+                                    className="w-50 sm-w-100"
+                                ></input>
                             </div>
 
-                            <div className="w-40 h-40px m-10 m-top-20">
-                                <h4 className="m-bottom-10">Dirección</h4>
-                                <input type="text" id="productadress" name="productadress" className="formInput" placeholder="Av. Colón 1643"></input>
+                            <div className="w-50 sm-w-100">
+                                <label htmlFor="productAdress" className="display-block">Dirección</label>
+                                <input
+                                    type="text"
+                                    id="productAdress"
+                                    name="productAdress"
+                                    placeholder="Av. Colón 1643"
+                                    className="w-50 sm-w-100"
+                                ></input>
                             </div>
 
-                            <div className="w-40 h-40px m-10 m-top-20">
-                                <h4 className="m-bottom-10">Ciudad</h4>
-                                <select name="city" id="city">
-                                </select>
+                            <div className="w-50 sm-w-100">
+                                <label htmlFor="city" className="display-block">Ciudad</label>
+                                <input
+                                    type="text"
+                                    className="w-50 sm-w-100"
+                                ></input>
                             </div>
 
-                            <div className="flex column gap-10 w-100 h-150px m-top-20">
-                                <h4>Descripción</h4>
-                                <input type="text" id="productname" name="productname" className="formInput-newproduct" placeholder="Escribir aquí"></input>
-                            </div>
-                        </div>
-
-                        <div className="m-10 m-top-20">
-                            <h4>Agregar atributos</h4>
-                        </div>
-
-                        <div className="flex gap-10 wrap m-10 shadow-grey h-110px">
-                            <div className="w-60 h-40px m-10">
-                                <h4 className="m-bottom-10">Nombre</h4>
-                                <input type="text" id="attributes" name="attributes" className="formInput" placeholder="wifi"></input>
-                            </div>
-
-                            <div className="w-30 h-40px m-10">
-                                <h4 className="m-bottom-10">Ícono</h4>
-                                <input type="text" id="icon" name="icon" className="formInput" placeholder="fa-wifi"></input>
-                            </div>
-
-                        </div>
-
-                        <div className="m-10 m-top-20">
-                            <h4>Políticas del producto</h4>
-                        </div>
-
-                        <div className="flex h-300px wrap justify-center shadow">
-                            <div className="w-30 h-200px m-10 m-top-20">
-                                <h4>Normas de la casa</h4>
-                                <h5 className="m-top-20 m-bottom-10">Descripción</h5>
-                                <input type="text" id="description" name="description" className="formInput" placeholder="Escribir aquí"></input>
-                            </div>
-
-                            <div className="w-30 h-200px m-10 m-top-20">
-                                <h4>Salud y seguridad</h4>
-                                <h5 className="m-top-20 m-bottom-10">Descripción</h5>
-                                <input type="text" id="security" name="security" className="formInput" placeholder="Escribir aquí"></input>
-                            </div>
-
-                            <div className="w-30 h-200px m-10 m-top-20">
-                                <h4>Políticas de cancelación</h4>
-                                <h5 className="m-top-20 m-bottom-10">Descripción</h5>
-                                <input type="text" id="policies" name="policies" className="formInput" placeholder="Escribir aquí"></input>
+                            <div className="w-100">
+                                <label htmlFor='productDescription' className="display-block">Descripción</label>
+                                <input
+                                    type="text"
+                                    id="productDescription"
+                                    name="productDescription"
+                                    placeholder="Escribir aquí"
+                                    className="w-100"
+                                ></input>
                             </div>
                         </div>
+                    </section>
 
-                        <div className="flex column gap-10 wrap shadow-grey m-top-30 h-200px">
-                            <div className="w-95 h-55px m-10">
-                                <h4 className="m-bottom-10">Cargar imágenes</h4>
-                                <input type="text" id="urlimg" name="urlimg" className="formInput" placeholder="Insertar https://"></input>
+                    <section>
+                        <h4>Agregar características</h4>
 
+                        <div className="bg-cream p-10 radius-10 flex wrap">
+                            <div className="w-50 sm-w-100">
+                                <label htmlFor="features" className="display-block">Nombre</label>
+                                <input
+                                    type="text"
+                                    id="features"
+                                    name="features"
+                                    placeholder="wifi"
+                                    className="w-5 sm-w-100"
+                                ></input>
                             </div>
 
-                            <div className="w-95 h-55px m-10 m-top-20">
-                                <h4 className="m-bottom-10">Cargar ubicación</h4>
-                                <input type="text" id="urlmapa" name="urlmapa" className="formInput" placeholder="Insertar https://"></input>
-                                <FontAwesomeIcon icon={faSquarePlus} style={{ display: "inline-block", marginRight: '5px', color: '#1DBEB4' }} />
-
+                            <div className="w-50 sm-w-100">
+                                <label htmlFor="icon" className="display-block">Icono</label>
+                                <input
+                                    type="text"
+                                    id="icon"
+                                    name="icon"
+                                    placeholder="fa-wifi"
+                                    className="w-50 sm-w-100"
+                                ></input>
                             </div>
                         </div>
+                    </section>
 
-                        <div className="justify-center h-60px m-50 flex">
-                            <Link to={'/successfulProduct'} className='okButton-newproduct'>
-                                <p>Crear</p>
-                            </Link>
+                    <section>
+                        <h4>Políticas del producto</h4>
+                        <div className="bg-cream p-10 radius-10 flex justify-between wrap sm-column">
+                            <div className="w-30 sm-w-100">
+                                <label htmlFor="norma" className="display-block">Normas de la casa</label>
+                                <input type="text" id="norma" className="w-90 sm-w-100" />
+                            </div>
+                            <div className="w-30 sm-w-100">
+                                <label htmlFor="seguridad" className="display-block">Salud y seguridad</label>
+                                <input type="text" id="seguridad" className="w-90 sm-w-100" />
+                            </div>
+                            <div className="w-30 sm-w-100">
+                                <label htmlFor="cancelacion" className="display-block">Políticas de cancelación</label>
+                                <input type="text" id="cancelacion" className="w-90 sm-w-100" />
+                            </div>
                         </div>
+                    </section>
 
-                    </form>
-                </div>
-            </Layout>
-        </>
-    );
+                    <section className="flex column gap-10">
+                        <h4>Cargar imágenes</h4>
+                        <div className="bg-cream p-10 radius-10">
+                            <label htmlFor="img1" className="m-sides">#1</label>
+                            <input
+                                type="url"
+                                id="img1"
+                                name="img1"
+                                placeholder="url...."
+                                className="w-30 sm-w-100"
+                            ></input>
+                        </div>
+                        <div className="bg-cream p-10 radius-10">
+                            <label htmlFor="img2" className="m-sides">#2</label>
+                            <input
+                                type="url"
+                                id="img2"
+                                name="img2"
+                                placeholder="url...."
+                                className="w-30 sm-w-100"
+                            ></input>
+                        </div>
+                        <div className="bg-cream p-10 radius-10">
+                            <label htmlFor="img3" className="m-sides">#3</label>
+                            <input
+                                type="url"
+                                id="img3"
+                                name="img3"
+                                placeholder="url...."
+                                className="w-30 sm-w-100"
+                            ></input>
+                        </div>
+                        <div className="bg-cream p-10 radius-10">
+                            <label htmlFor="img4" className="m-sides">#4</label>
+                            <input
+                                type="url"
+                                id="img4"
+                                name="img4"
+                                placeholder="url...."
+                                className="w-30 sm-w-100"
+                            ></input>
+                        </div>
+                        <div className="bg-cream p-10 radius-10">
+                            <label htmlFor="img5" className="m-sides">#5</label>
+                            <input
+                                type="url"
+                                id="img5"
+                                name="img5"
+                                placeholder="url...."
+                                className="w-30 sm-w-100"
+                            ></input>
+                        </div>
+                    </section>
+
+
+                    <section>
+                        <h4>Cargar ubicación</h4>
+                        <div className="bg-cream p-10 radius-10">
+                            <label htmlFor="location" className="m-sides">URL de Google Maps</label>
+                            <input
+                                type="text"
+                                id="location"
+                                name="location"
+                                placeholder="ubicacion? como cargar?"
+                                className="w-30 sm-w-100"
+                            ></input>
+                        </div>
+                    </section>
+
+                    <Link to={"/successfulProduct"} className="cyan bold bg-white border-cyan radius-5 p-10-20 decoration-none center m-auto">Crear</Link>
+
+                </form>
+            </section>
+        </Layout >
+    )
 }
