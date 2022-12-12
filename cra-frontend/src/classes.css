@@ -14,6 +14,9 @@
 .center {
   text-align: center;
 }
+.center-right {
+  text-align: right;
+}
 
 .size-2 {
   font-size: 2em;
@@ -157,6 +160,10 @@
   height: 40px;
 }
 
+.h-55px {
+  height: 55px;
+}
+
 .h-60px {
   height: 60px;
 }
@@ -165,8 +172,16 @@
   height: 110px;
 }
 
+.h-150px {
+  height: 150px;
+}
+
 .h-200px {
   height: 200px;
+}
+
+.h-300px {
+  height: 300px;
 }
 
 .h-100 {
@@ -218,6 +233,10 @@
   margin-top: 20px;
 }
 
+.m-top-30 {
+  margin-top: 30px;
+}
+
 .m-top-70 {
   margin-top: 70px;
 }
@@ -237,6 +256,10 @@
 
 .p-10 {
   padding: 10px;
+}
+
+.p-15 {
+  padding: 15px;
 }
 
 .p-20 {
@@ -259,7 +282,6 @@
   padding: 10px 20px;
 }
 
-
 /* CURSOR */
 .cursor-default {
   cursor: default
@@ -278,11 +300,20 @@
   font-weight: bold;
 }
 
+
+
 /* STANDARD SHADOW */
 .shadow {
   box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-grey {
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  background-color: #e9e9e9;
 }
 
 /* BORDER */
@@ -409,6 +440,10 @@
   flex-grow: 0.3;
 }
 
+.citiesList {
+  top: 50px;
+}
+
 .city {
   padding-left: 10px;
   height: 40px;
@@ -423,6 +458,37 @@
 .category-img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.okButton-newproduct {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  background-color: #1DBEB4;
+  font-weight: bold;
+  height: 5vh;
+  width: 40vh;
+  border-color: #1DBEB4;
+  border-radius: 5px;
+  box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.formInput-newproduct {
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .cardProduct {
@@ -466,37 +532,8 @@
 /* MOBILE */
 @media (max-width: 600px) {
 
-  .m-size-1 {
-    font-size: 1em;
-  }
-
-  .m-column {
-    flex-direction: column;
-    gap: 5px;
-    height: auto;
-  }
-
   .m-display-none {
     display: none;
-  }
-
-  .m-display-block {
-    display: block;
-  }
-
-  .m-cardProduct {
-    flex-direction: column;
-    width: 90%;
-    height: auto;
-  }
-
-  .m-cardProduct div {
-    width: 100%;
-  }
-
-  .m-cardProduct img {
-    width: 100%;
-    border-radius: 10px;
   }
 
   /* SEGUIR TRABANDO EN MOBILE A PARTIR DE ACA */
