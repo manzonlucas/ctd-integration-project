@@ -1,6 +1,6 @@
 export default function CardProductSkeleton() {
   return (
-    <article className="category shadow skeleton-container">
+    <article className="flex justify-around radius-10 bg-white shadow m-auto cardProduct shadow skeleton-container">
       <img src={'http://atrilco.com/wp-content/uploads/2017/11/ef3-placeholder-image.jpg'} alt="" />
       <div className='categoryInfo flex column justify-around'>
         <h2 className="skeleton-h2 m-sides">Skeleton title</h2>

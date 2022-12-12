@@ -382,10 +382,6 @@
   flex-grow: 0.3;
 }
 
-.citiesList {
-  top: 50px;
-}
-
 .city {
   padding-left: 10px;
   height: 40px;
@@ -400,6 +396,11 @@
 .category-img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.cardProduct {
+  width: 600px;
+  height: 300px;
 }
 
 /* .dateRangeInput {

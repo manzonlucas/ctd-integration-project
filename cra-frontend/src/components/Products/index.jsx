@@ -10,7 +10,7 @@ export default function Products() {
   const { products, fetchProducts, actualCategory, isLoading } = useContext(UserContext);
 
   return (
-    <section className="bg-white p-30 flex column wrap justify-evenly gap-30">
+    <section className="bg-white p-30 flex column wrap justify-evenly gap-20">
 
       {!actualCategory ?
         <h2 onClick={fetchProducts} className='inline-block cursor-default'>Recomendaciones</h2>
@@ -22,7 +22,7 @@ export default function Products() {
         </div>
       }
 
-      <div className="flex wrap justify-between gap-20 wrap">
+      <div className="flex wrap justify-between gap-10 wrap">
 
         {isLoading ?
           <>
