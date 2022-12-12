@@ -57,13 +57,13 @@ export default function Header() {
         {!user.isLogged ?
           <>
             {window.location.pathname !== '/signup' ?
-              <Link to='/signup' className='cyan bold bg-white border-cyan radius-5 p-10-20 decoration-none m-display-none'>
+              <Link to='/signup' className='cyan bold bg-white border-cyan radius-5 p-10-20 decoration-none center'>
                 Crear cuenta
               </Link>
               : ''}
 
             {window.location.pathname !== '/login' ?
-              <Link to='/login' className='cyan bold bg-white border-cyan radius-5 p-10-20 decoration-none m-display-none'>
+              <Link to='/login' className='cyan bold bg-white border-cyan radius-5 p-10-20 decoration-none center'>
                 Iniciar sesión
               </Link>
               : ''}

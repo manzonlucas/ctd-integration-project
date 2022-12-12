@@ -512,6 +512,10 @@
     -moz-box-shadow: 1px -1px 28px 9px rgba(0, 0, 0, 0.75);
   }
 
+  .user-buttons a {
+    display: none;
+  }
+
   .user-buttons-open a {
     color: #1dbeb4;
     font-weight: bold;

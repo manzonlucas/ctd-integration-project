@@ -438,6 +438,7 @@
 
 /* MOBILE */
 @media (max-width: 600px) {
+
   .m-size-1 {
     font-size: 1em;
   }
@@ -450,6 +451,10 @@
 
   .m-display-none {
     display: none;
+  }
+
+  .m-display-block {
+    display: block;
   }
 
   .m-cardProduct {
