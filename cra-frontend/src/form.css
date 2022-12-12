@@ -79,7 +79,7 @@ h1 {
 }
 
 /* MOBILE */
-@media (max-width: 720px) {
+@media (max-width: 600px) {
 
   .form {
     width: 60%;

@@ -566,13 +566,13 @@
 
   }
 
-  .card img {
-    width: 111%;
+  /* .card img {
+    width: 100%;
     height: 100%;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-radius: 10px;
-  }
+  } */
 
   .descripcion-info {
     margin-top: 15px;

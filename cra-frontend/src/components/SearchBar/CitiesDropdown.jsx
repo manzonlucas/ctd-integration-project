@@ -25,7 +25,6 @@ export default function CitiesDropdown({ query, setQuery }) {
 
   useEffect(() => {
     setCitiesList(cities);
-    console.log(cities);
   }, [cities]);
 
   function handleSearch(e) {

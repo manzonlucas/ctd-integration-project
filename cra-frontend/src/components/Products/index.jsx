@@ -16,7 +16,7 @@ export default function Products() {
         <h2 onClick={fetchProducts} className='inline-block cursor-default'>Recomendaciones</h2>
         :
         <div className="flex align-center">
-          <h2 onClick={fetchProducts} className='inline-block underline cursor-pointer bold '>Recomendaciones</h2>
+          <h2 onClick={fetchProducts} className='inline-block underline cursor-pointer bold'>Recomendaciones</h2>
           <FontAwesomeIcon icon={faChevronRight} className='icon inline-block m-sides' />
           <h2 className="inline-block">{formatText(actualCategory)}</h2>
         </div>
@@ -32,9 +32,9 @@ export default function Products() {
             <CardProductSkeleton />
           </>
           :
-          products.map((product, index) => {
+          products.map((product) => {
             return (
-              <CardProduct key={index} product={product} />
+              <CardProduct key={product.id} product={product} />
             )
           })}
       </div>

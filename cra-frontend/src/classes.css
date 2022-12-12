@@ -438,9 +438,33 @@
 
 /* MOBILE */
 @media (max-width: 600px) {
+  .m-size-1 {
+    font-size: 1em;
+  }
+
+  .m-column {
+    flex-direction: column;
+    gap: 5px;
+    height: auto;
+  }
 
   .m-display-none {
     display: none;
+  }
+
+  .m-cardProduct {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .m-cardProduct div {
+    width: 100%;
+  }
+
+  .m-cardProduct img {
+    width: 100%;
+    border-radius: 10px;
   }
 
   /* SEGUIR TRABANDO EN MOBILE A PARTIR DE ACA */
