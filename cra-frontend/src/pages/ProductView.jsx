@@ -11,6 +11,7 @@ import ProductSubheader from "../components/Product/ProductSubheader";
 import ProductHeader from "../components/Product/ProductHeader";
 import AvailableDates from "../components/Product/AvailableDates";
 import { baseUrl } from "../services/api";
+import Policies from "../components/Product/Policies";
 
 export default function ProductView() {
 
@@ -57,30 +58,7 @@ export default function ProductView() {
 
       <Features product={product} />
 
-      <section className="policies">
-        <h3>Qué tenes que saber</h3>
-        <div className="policiesContainer">
-          <article className="policiesItem">
-            <h4>Normas de la casa</h4>
-            <p>Checkout: 10:00</p>
-            <p>No se permiten fiestas</p>
-            <p>No fumar</p>
-
-          </article>
-
-          <article className="policiesItem">
-            <h4>Salud y seguridad</h4>
-            <p>Se aplican las pautas de distanciamiento social y otras normas relacionadas al coronavirus</p>
-            <p>Detector de humo</p>
-            <p>Depósito de seguridad</p>
-          </article>
-
-          <article className="policiesItem">
-            <h4>Políticas de cancelación</h4>
-            Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía
-          </article>
-        </div>
-      </section>
+      <Policies product={product} />
 
       <AvailableDates product={product} />
 

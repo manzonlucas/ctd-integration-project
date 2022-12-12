@@ -512,6 +512,10 @@
     -moz-box-shadow: 1px -1px 28px 9px rgba(0, 0, 0, 0.75);
   }
 
+  .user-buttons a {
+    display: none;
+  }
+
   .user-buttons-open a {
     color: #1dbeb4;
     font-weight: bold;
@@ -566,13 +570,13 @@
 
   }
 
-  .card img {
-    width: 111%;
+  /* .card img {
+    width: 100%;
     height: 100%;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-radius: 10px;
-  }
+  } */
 
   .descripcion-info {
     margin-top: 15px;

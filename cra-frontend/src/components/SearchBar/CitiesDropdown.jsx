@@ -57,7 +57,7 @@ export default function CitiesDropdown({ query, setQuery }) {
           value={actualDestination}
         />
 
-        <ul className={`citiesList absolute w-100 top-50 ${citiesDisplay ? "display-block" : "display-none"}`}>
+        <ul className={`citiesList absolute w-100 top-50 ${citiesDisplay ? "display-block" : "display-none"}`} style={{ top: '50px' }}>
 
           {citiesList.map((city) => {
             return (
@@ -72,7 +72,7 @@ export default function CitiesDropdown({ query, setQuery }) {
                   icon={faLocationDot}
                   style={{ display: "inline-block", marginRight: "5px" }}
                 />
-                {city.nombre}, {city.pais}
+                {formatText(city.nombre)}, {formatText(city.pais)}
               </li>
             );
           })}
