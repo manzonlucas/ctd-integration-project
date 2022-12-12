@@ -8,13 +8,13 @@ import { baseUrl } from "../services/api";
 
 export default function Login() {
   const { userDb, user, setUser } = useContext(UserContext);
-  const [loginInput, setLoginInput] = useState({ email: "", password: "" });
+  const [loginInput, setLoginInput] = useState({ username: "", password: "" });
   const [loginErrorMsg, setLoginErrorMsg] = useState("");
 
   const navigate = useNavigate();
 
   function emailHandler(e) {
-    setLoginInput({ ...loginInput, email: e.target.value });
+    setLoginInput({ ...loginInput, username: e.target.value });
   }
 
   function passwordHandler(e) {
@@ -29,33 +29,29 @@ export default function Login() {
 
   // TO DO API LOGIN:
   async function login(credentials) {
-    const jwtSimulator = "this is a JWT";
 
     try {
-      // const response = await axios
-      // .get(
-      // chequear endpoint
-      // baseUrl + '/usuario', {
-      // chequear estructura que se debe enviar
-      // params: { credentials }
-      // });
-      // console.log(response);
+      const response = await axios
+        .post(baseUrl + 'authenticate', credentials);
+      console.log(response);
 
-      // Si API devuelve 200:
-      if (loginSimulator(credentials)) {
-        console.log(credentials);
-        console.log(jwtSimulator);
-        localStorage.setItem("jwt", JSON.stringify(jwtSimulator));
+      if (response.status === 200) {
+        const token = response.data.token
+        localStorage.setItem("jwt", token);
         navigate("/");
+        setUser({
+          email: '',
+          password: '',
+          name: 'Login',
+          lastName: 'Test',
+          isLogged: true
+        })
       }
-      // Si API no loggea
-      else {
-        console.log("wrong credentials");
-        setLoginErrorMsg(
-          "Por favor vuelva a intentarlo, sus credenciales son inválidas."
-        );
-      }
+
     } catch (error) {
+      setLoginErrorMsg(
+        "Por favor vuelva a intentarlo, sus credenciales son inválidas."
+      );
       console.log(error);
     }
   }
