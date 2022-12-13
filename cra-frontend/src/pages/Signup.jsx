@@ -48,7 +48,7 @@ export default function Signup() {
       <Layout>
         <section className="formView ">
           <h1 className="m-bottom-50 m-top-70">Crear cuenta</h1>
-          <form action="" className="form" onSubmit={signUp}>
+          <form action="" className="form">
 
             <div className="formItemDiv m-bottom-20">
               <label htmlFor="name">Nombre</label>
