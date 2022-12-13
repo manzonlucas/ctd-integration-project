@@ -5,9 +5,10 @@ import { UserContext } from "../contexts/UserContext";
 import { useContext } from "react";
 import axios from "axios";
 import { baseUrl } from "../services/api";
+import { useEffect } from "react";
 
 export default function Login() {
-  const { user, setUser } = useContext(UserContext);
+  const { user, setUser, decodedToken } = useContext(UserContext);
   const [loginInput, setLoginInput] = useState({ username: "", password: "" });
   const [loginErrorMsg, setLoginErrorMsg] = useState('');
   const navigate = useNavigate();
@@ -35,10 +36,9 @@ export default function Login() {
         localStorage.setItem("jwt", token);
         navigate("/");
         setUser({
-          email: '',
-          password: '',
-          name: 'Login',
-          lastName: 'Test',
+          ...user,
+          name: 'Usuario',
+          lastName: 'Apellido',
           isLogged: true
         });
       }

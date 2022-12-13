@@ -6,7 +6,6 @@ import Signup from "./pages/Signup";
 import ProductView from './pages/ProductView';
 import { UserContext } from './contexts/UserContext';
 import { useState, useEffect } from 'react';
-import userImport from './userDb.json';
 import SuccessfulReservation from './pages/SuccessfulReservation';
 import SuccessfulProductCreation from './pages/SuccessfulProductCreation';
 import { baseUrl } from './services/api';
@@ -18,7 +17,6 @@ function App() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [actualCategory, setActualCategory] = useState('');
-  const [userDb, setUserDb] = useState(userImport);
   const [products, setProducts] = useState([]);
   const [cities, setCities] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -37,14 +35,19 @@ function App() {
     fetchProducts();
     fetchCities();
     fetchCategories();
-    decodeToken();
-    setUser({ ...user, role: decodedToken.role })
   }, []);
 
+  useEffect(() => {
+    decodeToken();
+  }, [user])
+
+
   async function decodeToken() {
-    const jwt = await localStorage.getItem("jwt");
-    const decoded = await jwt_decode(jwt);
-    setDecodedToken(decoded);
+    if (localStorage.getItem('jwt')) {
+      const jwt = await localStorage.getItem("jwt");
+      const decoded = await jwt_decode(jwt);
+      setDecodedToken(decoded);
+    }
   }
 
   async function fetchProducts() {
@@ -84,7 +87,7 @@ function App() {
 
   return (
     <>
-      <UserContext.Provider value={{ userDb, user, setUser, products, fetchProducts, isLoading, setIsLoading, fetchProductsByQuery, fetchProductsByCategory, cities, categories, actualCategory, decodedToken }}>
+      <UserContext.Provider value={{ user, setUser, products, decodeToken, fetchProducts, isLoading, setIsLoading, fetchProductsByQuery, fetchProductsByCategory, cities, categories, actualCategory, decodedToken }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />}></Route>

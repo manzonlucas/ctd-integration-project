@@ -535,6 +535,20 @@
     width: 100%;
   }
 
+  .sm-cardProduct {
+    width: 90%;
+    height: auto;
+  }
+
+  .sm-cardProduct div {
+    width: auto;
+  }
+
+  .sm-cardProduct div img {
+    width: 100%;
+
+  }
+
   section.user-buttons {
     justify-content: space-between;
   }

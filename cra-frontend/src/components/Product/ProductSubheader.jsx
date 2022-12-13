@@ -8,8 +8,6 @@ export default function ProductSubheader({ product }) {
     return RANKING.slice(5 - ranking, 10 - ranking);
   }
 
-
-
   return (
     <section className="productSubheader">
       <div>

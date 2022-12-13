@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
 
-  const { user, setUser, decodedToken } = useContext(UserContext);
+  const { user, setUser, setDecodedToken, decodedToken } = useContext(UserContext);
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   function handleBurgerClick() {
@@ -28,7 +28,8 @@ export default function Header() {
       role: '',
       isLogged: false
     });
-    localStorage.setItem("jwt", '');
+    localStorage.removeItem("jwt");
+    setDecodedToken('');
   }
 
   return (
