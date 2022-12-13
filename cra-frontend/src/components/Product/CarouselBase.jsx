@@ -25,7 +25,7 @@ export default function CarouselBase({ product }) {
           return (
             <div key={img.id}>
               <img src={img.url} />
-              <p className="legend">Pendiente titulo descriptivo</p>
+              {/* <p className="legend">Pendiente titulo descriptivo</p> */}
             </div>)
         }) : ''}
     </Carousel>
