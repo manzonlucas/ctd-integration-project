@@ -1,13 +1,54 @@
 import Layout from "../components/Layout";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState, useSyncExternalStore } from "react";
+import axios from "axios";
+import { baseUrl } from "../services/api";
 
 export default function Signup() {
+
+  const navigate = useNavigate();
+
+  const [signUpErrorMsg, setSignUpErrorMsg] = useState('');
+  const [signUpInput, setSignUpInput] = useState({ username: "", password: "" });
+
+  function handleChangeEmail(e) {
+    setSignUpInput({ ...signUpInput, username: e.target.value })
+  }
+
+  function handleChangePassword(e) {
+    setSignUpInput({ ...signUpInput, password: e.target.value })
+  }
+
+  // async function signUpRequest(credentials) {
+  //   try {
+  //     const response = await axios
+  //       .post(baseUrl + 'usuario', credentials);
+  //     console.log(response);
+
+  // if (response.status === 200) {
+  //   navigate("/");
+  //   console.log(response);
+  // }
+
+  //   } catch (error) {
+  //     setSignUpErrorMsg(
+  //       "Error."
+  //     );
+  //     console.log(error);
+  //   }
+  // }
+
+  function signUp() {
+    // signUpRequest(signUpInput);
+  }
+
+
   return (
     <>
       <Layout>
         <section className="formView ">
           <h1 className="m-bottom-50 m-top-70">Crear cuenta</h1>
-          <form action="" className="form">
+          <form action="" className="form" onSubmit={signUp}>
 
             <div className="formItemDiv m-bottom-20">
               <label htmlFor="name">Nombre</label>
@@ -21,12 +62,12 @@ export default function Signup() {
 
             <div className="formItemDiv m-bottom-20">
               <label htmlFor="email" >Correo electrónico</label>
-              <input type="email" id="email" name="email" className="formInput" />
+              <input type="email" id="email" name="email" className="formInput" onChange={handleChangeEmail} />
             </div>
 
             <div className="formItemDiv m-bottom-20">
               <label htmlFor="password">Contraseña</label>
-              <input type="password" id="password" name="password" className="formInput" />
+              <input type="password" id="password" name="password" className="formInput" onChange={handleChangePassword} />
             </div>
 
             <div className="formItemDiv m-bottom-20">
@@ -38,9 +79,13 @@ export default function Signup() {
           </form>
 
           <p className="m-top-20">Ya tienes cuenta?</p>
-          <Link style={{textDecoration: "none"}} to='/login' >
+          <Link style={{ textDecoration: "none" }} to='/login' >
             Iniciar sesión
           </Link>
+
+          {signUpErrorMsg
+            ? 'Error en crear la cuenta.'
+            : ''}
         </section>
       </Layout>
     </>

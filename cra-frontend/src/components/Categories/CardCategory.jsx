@@ -3,10 +3,10 @@ import { useContext } from 'react';
 import { formatText } from "../../util";
 
 export default function CardCategory({ category }) {
-  const { fetchProductsByCategoryName } = useContext(UserContext);
+  const { fetchProductsByCategory } = useContext(UserContext);
 
   function handleClick(e) {
-    fetchProductsByCategoryName(category.tipo);
+    fetchProductsByCategory(category.tipo);
   }
 
   return (
