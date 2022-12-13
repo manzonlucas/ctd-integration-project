@@ -12,30 +12,40 @@ import SuccessfulProductCreation from './pages/SuccessfulProductCreation';
 import { baseUrl } from './services/api';
 import Booking from './components/Product/Booking';
 import NewProduct from './pages/NewProduct';
+import jwt_decode from 'jwt-decode';
 
 function App() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [actualCategory, setActualCategory] = useState('');
   const [userDb, setUserDb] = useState(userImport);
+  const [products, setProducts] = useState([]);
+  const [cities, setCities] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [user, setUser] = useState({
     email: '',
     password: '',
     name: '',
     lastName: '',
     city: '',
+    role: '',
     isLogged: false
   });
-
-  const [products, setProducts] = useState([]);
-  const [cities, setCities] = useState([]);
-  const [categories, setCategories] = useState([]);
+  const [decodedToken, setDecodedToken] = useState('');
 
   useEffect(() => {
     fetchProducts();
     fetchCities();
     fetchCategories();
-  }, [])
+    decodeToken();
+    setUser({ ...user, role: decodedToken.role })
+  }, []);
+
+  async function decodeToken() {
+    const jwt = await localStorage.getItem("jwt");
+    const decoded = await jwt_decode(jwt);
+    setDecodedToken(decoded);
+  }
 
   async function fetchProducts() {
     const response = await axios.get(baseUrl + 'producto/findall');
@@ -74,7 +84,7 @@ function App() {
 
   return (
     <>
-      <UserContext.Provider value={{ userDb, user, setUser, products, fetchProducts, isLoading, setIsLoading, fetchProductsByQuery, fetchProductsByCategoryName: fetchProductsByCategory, cities, categories, actualCategory }}>
+      <UserContext.Provider value={{ userDb, user, setUser, products, fetchProducts, isLoading, setIsLoading, fetchProductsByQuery, fetchProductsByCategory, cities, categories, actualCategory, decodedToken }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />}></Route>

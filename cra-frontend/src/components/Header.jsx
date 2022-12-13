@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
 
-  const { user, setUser } = useContext(UserContext);
+  const { user, setUser, decodedToken } = useContext(UserContext);
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   function handleBurgerClick() {
@@ -25,8 +25,10 @@ export default function Header() {
       password: '',
       name: '',
       lastName: '',
+      role: '',
       isLogged: false
-    })
+    });
+    localStorage.setItem("jwt", '');
   }
 
   return (
@@ -82,9 +84,15 @@ export default function Header() {
               </div>
             </Link>
 
+            {decodedToken.role === 'USER_ADMIN' ?
+              <Link to='/newproduct' className='cyan bold bg-white border-cyan radius-5 p-10-20 decoration-none'>Administrar</Link>
+              : ''
+            }
+
             <Link to='/' className='cyan bold bg-white border-cyan radius-5 p-10-20 decoration-none' onClick={clickHandlerLogout}>
               Cerrar sesión
             </Link>
+
           </>
         }
 

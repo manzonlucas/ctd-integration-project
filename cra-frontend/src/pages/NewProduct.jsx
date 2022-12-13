@@ -1,10 +1,26 @@
 import Layout from "../components/Layout";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSquarePlus } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "../../src/classes.css";
+import { useState } from "react";
+import CitiesDropdown from '../components/SearchBar/CitiesDropdown';
 
 export default function NewProduct() {
+
+    const [newProduct, setNewProduct] = useState({
+        categoria: '',
+        ciudad: ''
+    })
+
+    function setQuery(e) {
+        setNewProduct({ ...newProduct, destination: e })
+        console.log(e);
+        console.log(newProduct);
+    }
+
+    function returnId(city) {
+        console.log(city);
+    }
+
     return (
         <Layout>
             <section className="bg-grey p-15 gap-2 column justify-around align-center">
@@ -32,10 +48,12 @@ export default function NewProduct() {
 
                             <div className="w-50 sm-w-100">
                                 <label htmlFor="category" className="display-block">Categoría</label>
-                                <input
-                                    type="text"
-                                    className="w-50 sm-w-100"
-                                ></input>
+                                <select name="" id="">
+                                    <option value="">Hoteles</option>
+                                    <option value="">Hostels</option>
+                                    <option value="">Departamentos</option>
+                                    <option value="">Bed and breakfast</option>
+                                </select>
                             </div>
 
                             <div className="w-50 sm-w-100">
@@ -51,10 +69,7 @@ export default function NewProduct() {
 
                             <div className="w-50 sm-w-100">
                                 <label htmlFor="city" className="display-block">Ciudad</label>
-                                <input
-                                    type="text"
-                                    className="w-50 sm-w-100"
-                                ></input>
+                                <CitiesDropdown setQuery={setQuery} />
                             </div>
 
                             <div className="w-100">

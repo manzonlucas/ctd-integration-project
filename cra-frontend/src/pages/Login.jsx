@@ -7,10 +7,9 @@ import axios from "axios";
 import { baseUrl } from "../services/api";
 
 export default function Login() {
-  const { userDb, user, setUser } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
   const [loginInput, setLoginInput] = useState({ username: "", password: "" });
-  const [loginErrorMsg, setLoginErrorMsg] = useState("");
-
+  const [loginErrorMsg, setLoginErrorMsg] = useState('');
   const navigate = useNavigate();
 
   function emailHandler(e) {
@@ -24,16 +23,12 @@ export default function Login() {
   function submitHandler(e) {
     e.preventDefault();
     login(loginInput);
-    // loginSimulator(loginInput);
   }
 
-  // TO DO API LOGIN:
   async function login(credentials) {
-
     try {
       const response = await axios
         .post(baseUrl + 'authenticate', credentials);
-      console.log(response);
 
       if (response.status === 200) {
         const token = response.data.token
@@ -45,27 +40,13 @@ export default function Login() {
           name: 'Login',
           lastName: 'Test',
           isLogged: true
-        })
+        });
       }
 
     } catch (error) {
       setLoginErrorMsg(
         "Por favor vuelva a intentarlo, sus credenciales son inválidas."
       );
-      console.log(error);
-    }
-  }
-
-  function loginSimulator(userInput) {
-    const foundedIndex = userDb.findIndex(
-      (user) =>
-        userInput.email === user.email && userInput.password === user.password
-    );
-    if (foundedIndex !== -1) {
-      setUser(userDb[foundedIndex]);
-      return true;
-    } else {
-      return false;
     }
   }
 

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { formatText } from "../../util";
 
-export default function CitiesDropdown({ query, setQuery }) {
+export default function CitiesDropdown({ query, setQuery, returnId }) {
   const { cities } = useContext(UserContext);
   const [citiesList, setCitiesList] = useState([]);
   const [citiesDisplay, setCitiesDisplay] = useState(false);
