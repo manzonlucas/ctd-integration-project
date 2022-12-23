@@ -47,7 +47,7 @@ export default function CitiesDropdown({ query, setQuery, returnId }) {
         onFocus={changeDropdownDisplay}
         // FIX THIS
         // onBlur={changeDropdownDisplay}
-        className="formItem flex align-center border-none radius-5 shadow bold bg-white relative"
+        className="formItem flex align-center border-none radius-5 shadow bold bg-white relative sm-w-100"
       >
         <input
           type="text"

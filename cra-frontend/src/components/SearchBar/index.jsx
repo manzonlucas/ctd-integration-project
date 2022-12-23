@@ -49,17 +49,17 @@ export default function SearchBar() {
 
   return (
     <>
-      <section className="h-150px bg-grey p-25 gap-2 center flex column justify-around align-center">
+      <section className="h-150px bg-grey p-25 gap-2 center flex column justify-around align-center sm-height-250">
         <h1 className="size-2 m-size-1 white">Busca ofertas en hoteles, casas y mucho más</h1>
 
-        <form action="" className="w-80 flex justify-around align-center m-column">
+        <form action="" className="w-80 flex justify-around align-center m-column sm-column sm-height-400 gap-10">
 
           <CitiesDropdown
             query={query}
             setQuery={setQuery}
           />
 
-          <div className="formItem">
+          <div className="formItem sm-w-100">
             <input
               type="text"
               readOnly
@@ -75,7 +75,7 @@ export default function SearchBar() {
             />
           </div>
 
-          <div className="formItem">
+          <div className="formItem sm-w-100">
             <button onClick={handleSearch} className='w-100 h-100 m-5 p-10 border-none radius-5 shadow white bold bg-cyan border-none'>Buscar</button>
           </div>
         </form>

@@ -544,6 +544,10 @@
     width: auto;
   }
 
+  .sm-height-250 {
+    height: 250px;
+  }
+
   .sm-cardProduct div img {
     width: 100%;
 
