@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
 
-  const { user, setUser } = useContext(UserContext);
+  const { user, setUser, setDecodedToken, decodedToken } = useContext(UserContext);
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   function handleBurgerClick() {
@@ -25,29 +25,32 @@ export default function Header() {
       password: '',
       name: '',
       lastName: '',
+      role: '',
       isLogged: false
-    })
+    });
+    localStorage.removeItem("jwt");
+    setDecodedToken('');
   }
 
   return (
-    <header>
-      <section className='logo-container'>
-        <Link to={'/'} className='logo-link'>
-          <img src='/logo1.png' alt="" />
-          <span className='slogan'>Sentite como en tu hogar</span>
+    <header className='bg-white flex p-25 sticky-top z-1 justify-between'>
+      <section className='logo-container w-30'>
+        <Link to={'/'} className='logo-link flex justify-center align-center gap-10 decoration-none'>
+          <img src='https://imagenesg4c7.s3.us-east-2.amazonaws.com/public/logo1.png' alt="" />
+          <span className='t-display-none'>Sentite como en tu hogar</span>
         </Link>
       </section>
 
-      <section className='header-placeholder'>
-      </section>
+      {/* <section className='header-placeholder w-50 t:display-none'>
+      </section> */}
 
       <section
-        className={!isBurgerOpen ? 'user-buttons' : 'user-buttons-open'} >
+        className={`w-30 flex justify-evenly align-center ${!isBurgerOpen ? 'user-buttons' : 'user-buttons-open'}`} >
 
         {isBurgerOpen ?
           <div>
-            <input type="checkbox" id='check' onClick={handleBurgerClick} />
-            <label htmlFor="check" className="checkbtn">
+            <input type="checkbox" id='check' onClick={handleBurgerClick} className='display-none' />
+            <label htmlFor="check" className="checkbtn display-none">
               <i className="fa-solid fa-bars"></i>
             </label>
           </div> :
@@ -57,41 +60,47 @@ export default function Header() {
         {!user.isLogged ?
           <>
             {window.location.pathname !== '/signup' ?
-              <Link to='/signup' className='header-button'>
+              <Link to='/signup' className='cyan bold bg-white border-cyan radius-5 p-10-20 decoration-none center'>
                 Crear cuenta
               </Link>
               : ''}
 
             {window.location.pathname !== '/login' ?
-              <Link to='/login' className='header-button'>
+              <Link to='/login' className='cyan bold bg-white border-cyan radius-5 p-10-20 decoration-none center'>
                 Iniciar sesión
               </Link>
               : ''}
           </>
           :
           <>
-            <Link to='/' className='loggedUserBlock'>
+            <Link to='/' className='grey flex justify-around bold decoration-none'>
               <span className='user-logo'>
                 {userInitials()}
               </span>
               <div>
                 <p>Hola,</p>
-                <span className='userName'>
+                <span className='userName cyan'>
                   {`${user.name} ${user.lastName}`}
                 </span>
               </div>
             </Link>
 
-            <Link to='/' className='header-button' onClick={clickHandlerLogout}>
+            {decodedToken.role === 'USER_ADMIN' ?
+              <Link to='/newproduct' className='cyan bold bg-white border-cyan radius-5 p-10-20 decoration-none'>Administrar</Link>
+              : ''
+            }
+
+            <Link to='/' className='cyan bold bg-white border-cyan radius-5 p-10-20 decoration-none' onClick={clickHandlerLogout}>
               Cerrar sesión
             </Link>
+
           </>
         }
 
       </section>
-      <div className='divBurger'>
-        <input type="checkbox" id='check' onClick={handleBurgerClick} />
-        <label htmlFor="check" className="burgerButton">
+      <div className='divBurger inline-block absolute'>
+        <input type="checkbox" id='check' onClick={handleBurgerClick} className='display-none' />
+        <label htmlFor="check" className="burgerButton display-none">
           <i className="fa-solid fa-bars"></i>
         </label>
       </div>

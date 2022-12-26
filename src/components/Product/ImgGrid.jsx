@@ -6,7 +6,7 @@ export default function ImgGrid({ handleClickCarouselState, product }) {
         <img src={product.imagenes[0].url} alt="" className="mainImg" />
 
         <div className="secondaryImgs">
-          {product.imagenes.slice(1).map((img) => {
+          {product.imagenes.slice(1, 5).map((img) => {
             return <img key={img.id} src={img.url} className="gridItem" />
           })
           }

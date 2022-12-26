@@ -1,24 +1,56 @@
 import { Link } from 'react-router-dom';
+import { formatText } from '../../util';
+import FeaturesCards from "./FeaturesCardProduct";
 
 export default function CardProduct({ product, index }) {
+
+  const RANKING = '★★★★★☆☆☆☆☆';
+  function getRankingCard(ranking) {
+    return RANKING.slice(5 - ranking, 10 - ranking);
+  }
+
+  function randomNum() {
+    return Math.round(Math.random() * 5);
+  }
+
   return (
 
-    <article className="card" key={index}>
-      {/* REEMPLAZAR INDEX POR ID UNA VEZ CONECTADO A DB */}
-      <div>
-        <img src={product.imagenes[0].url} alt="" />
+    <article className="flex justify-around radius-10 bg-white shadow m-auto cardProduct sm-cardProduct sm-column" key={product.id}>
+      <div className='w-90 h-100'>
+
+        {product.imagenes !== undefined ?
+          <img src={product.imagenes[0].url} alt="" className='inline-block m-auto w-100 h-100 fit-cover' style={{
+            borderTopLeftRadius: '10px',
+            borderBottomLeftRadius: '10px'
+          }} />
+          : ''}
       </div>
-      <div>
-        <div className='product-info'>
-          <p>{product.categoria.toUpperCase()}</p>
-          <p>{product.titulo}</p>
-          {/* TO DO ICONO DE UBICACION */}
-          <p>{product.ciudad}</p>
-          <p>{product.descripcion} </p>
+
+      <div className='w-90 h-100 p-10 flex column justify-around'>
+        <div className='flex align-center'>
+          <p>{formatText(product.categoria.toUpperCase())}</p>
+          <p className="cyan m-sides">{getRankingCard(randomNum())}</p>
+          <p className='white bg-grey bold radius-10 p-5' style={{ width: '25px', textAlign: 'center', marginLeft: 'auto' }}>8</p>
         </div>
-        {/* TODO CHEQUEAR ESTE LINK */}
-        <Link to={`/producto/${product.id}`} className='moreInfo'>Ver detalle</Link>
+
+        <div className='flex bold grey align-center'>
+          <h2>{product.titulo}</h2>
+          <p style={{ marginLeft: 'auto' }}>Muy Bueno</p>
+        </div>
+
+        <p className=''>
+          <i className='fa-solid fa-location-dot grey' style={{ marginRight: '5px' }} />
+          {product.ciudad}
+        </p>
+
+        <FeaturesCards product={product} />
+
+        <p className='descripcion-info'>{product.descripcion.length > 150 ? `${product.descripcion.substring(0, 150)}...` : product.descripcion}
+        </p>
+
+        <Link to={`/producto/${product.id}`} className='white bold bg-cyan radius-5 p-10-20 decoration-none w-50 center' style={{ margin: '0 auto' }}>Ver detalle</Link>
       </div>
+
     </article >
   )
 }

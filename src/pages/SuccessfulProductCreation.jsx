@@ -4,7 +4,7 @@ import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import "../../src/successfulReservation.css";
 import { Link } from "react-router-dom";
 
-export default function SuccessfulReservation() {
+export default function SuccessfulProductCreation() {
   return (
     <>
       <Layout>
@@ -20,10 +20,9 @@ export default function SuccessfulReservation() {
                 width: "18%",
               }}
             />
-            <h2>¡Muchas gracias!</h2>
-            <h4>Su reserva se ha realizado con éxito</h4>
+            <h4>Tu propiedad se ha creado con éxito</h4>
             <Link to={"/"} style={{ textDecoration: "none" }}>
-              <button className="okButton">ok</button>
+              <button className="okButton">volver</button>
             </Link>
           </div>
         </div>

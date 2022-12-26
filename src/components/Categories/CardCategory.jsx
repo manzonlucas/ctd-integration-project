@@ -1,17 +1,20 @@
-// import categories from '../../categories.json';
+import { UserContext } from "../../contexts/UserContext";
+import { useContext } from 'react';
+import { formatText } from "../../util";
 
 export default function CardCategory({ category }) {
+  const { fetchProductsByCategory } = useContext(UserContext);
 
-  function formatText(text) {
-    return text.charAt(0).toUpperCase() + text.slice(1).replaceAll('_', ' ');
+  function handleClick(e) {
+    fetchProductsByCategory(category.tipo);
   }
 
   return (
-    <article className="category">
-      <img src={category.url_imagen} alt="" />
-      <div className='categoryInfo'>
+    <article className="flex column radius-10 shadow" onClick={handleClick} style={{ width: '280px', height: '255px' }}>
+      <img src={category.url_imagen} alt="" className="inline-block category-img" />
+      <div className='w-100 h-100'>
         <h2>{formatText(category.tipo)}</h2>
-        <p>100.000 opciones</p>
+        <p>10000 opciones</p>
       </div>
     </article >
   )

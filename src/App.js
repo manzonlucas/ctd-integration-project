@@ -6,86 +6,88 @@ import Signup from "./pages/Signup";
 import ProductView from './pages/ProductView';
 import { UserContext } from './contexts/UserContext';
 import { useState, useEffect } from 'react';
-import userImport from './userDb.json';
 import SuccessfulReservation from './pages/SuccessfulReservation';
+import SuccessfulProductCreation from './pages/SuccessfulProductCreation';
+import { baseUrl } from './services/api';
+import Booking from './components/Product/Booking';
+import NewProduct from './pages/NewProduct';
+import jwt_decode from 'jwt-decode';
 
 function App() {
 
   const [isLoading, setIsLoading] = useState(true);
-  const [userDb, setUserDb] = useState(userImport);
+  const [actualCategory, setActualCategory] = useState('');
+  const [products, setProducts] = useState([]);
+  const [cities, setCities] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [user, setUser] = useState({
     email: '',
     password: '',
     name: '',
     lastName: '',
+    city: '',
+    role: '',
     isLogged: false
   });
-
-  // const baseUrl = 'http://localhost:8080/';
-  const baseUrl = 'http://ec2-18-191-158-71.us-east-2.compute.amazonaws.com:8080/api/';
-  // producto?categoria=hoteles
-  const [products, setProducts] = useState([]);
-  const [cities, setCities] = useState([]);
-  const [categories, setCategories] = useState([]);
+  const [decodedToken, setDecodedToken] = useState('');
 
   useEffect(() => {
     fetchProducts();
     fetchCities();
     fetchCategories();
-  }, [])
+  }, []);
+
+  useEffect(() => {
+    decodeToken();
+  }, [user])
+
+
+  async function decodeToken() {
+    if (localStorage.getItem('jwt')) {
+      const jwt = await localStorage.getItem("jwt");
+      const decoded = await jwt_decode(jwt);
+      setDecodedToken(decoded);
+    }
+  }
 
   async function fetchProducts() {
-
     const response = await axios.get(baseUrl + 'producto/findall');
-    await setProducts(response.data.resultados);
+    setProducts(response.data.resultados);
     setIsLoading(false);
-    // const fakeProductsFetch = async () => {
-    // try {
-    // const res = await .....;
-    // return res;
-    //     return new Promise((res, rej) => {
-    //       setTimeout(() => res(productsMock), 3000)
-    //     })
-    //   } catch (err) {
-    //     throw new Error("error.unknown");
-    //   }
-    // };
-
-    // fakeProductsFetch()
-    //   .then(response => {
-    //     setProducts(response);
-    //     setIsLoading(false);
-    //     console.log(isLoading);
-    //   })
+    setActualCategory('');
   }
 
   async function fetchCategories() {
     const response = await axios.get(baseUrl + 'categoria');
-    await setCategories(response.data);
-
-    // IDEM SIN AXIOS
-    // fetch(baseUrl + 'categoria')
-    // .then(response => response.json())
-    // .then(data => setCategories(data));
+    setCategories(response.data);
+    setIsLoading(false);
   }
 
-  function fetchCities() {
-    fetch(baseUrl + 'ciudad')
-      .then(response => response.json())
-      .then(data => setCities(data));
+  async function fetchCities() {
+    const response = await axios.get(baseUrl + 'ciudad');
+    setCities(response.data);
+    setIsLoading(false);
   }
 
-  // A CARGO DE BACK. HACER GET ENVIANDO ID Y ACTUALIZANDO CONTENIDO DE STATE PRODUCTS CON SETPRODUCTS
-  //  IMPLEMENTAR EN PRODUCTS.JSX
-  function fetchProductsByCityId(id) {
-    // fetch(baseUrl + 'ciudad')
-    // .then(response => response.json())
-    // .then(data => setProducts(data));
+  async function fetchProductsByQuery(destinationId, destinationName, startDate, endDate) {
+    if (destinationId === undefined) {
+      destinationId = '';
+      destinationName = '';
+    }
+    const response = await axios.get(baseUrl + `producto?ciudad=${destinationId}&from=${startDate}&to=${endDate}`);
+    setProducts(response.data.resultados);
+    setActualCategory(`Busqueda realizada: ${destinationName} | Check-in: ${startDate} | Check-out: ${endDate}`);
+  }
+
+  async function fetchProductsByCategory(name) {
+    const response = await axios.get(baseUrl + 'producto?categoria=' + name);
+    setProducts(response.data.resultados);
+    setActualCategory(name);
   }
 
   return (
     <>
-      <UserContext.Provider value={{ userDb, user, setUser, products, fetchProducts, isLoading, setIsLoading, fetchProductsByCityId, cities, categories }}>
+      <UserContext.Provider value={{ user, setUser, products, decodeToken, fetchProducts, isLoading, setIsLoading, fetchProductsByQuery, fetchProductsByCategory, cities, categories, actualCategory, decodedToken }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />}></Route>
@@ -93,6 +95,9 @@ function App() {
             <Route path="/signup" element={<Signup />}></Route>
             <Route path='producto/:id' element={<ProductView />}></Route>
             <Route path="/successful" element={<SuccessfulReservation />}></Route>
+            <Route path="/successfulProduct" element={<SuccessfulProductCreation />}></Route>
+            <Route path="producto/:id/booking" element={<Booking />}></Route>
+            <Route path="/newproduct" element={<NewProduct />}></Route>
           </Routes>
         </BrowserRouter>
       </UserContext.Provider>
