@@ -13,6 +13,8 @@ import Booking from './components/Product/Booking';
 import NewProduct from './pages/NewProduct';
 import jwt_decode from 'jwt-decode';
 
+import fakeProducts from './fakeApi/fakeProducts.json';
+
 function App() {
 
   const [isLoading, setIsLoading] = useState(true);
@@ -51,8 +53,11 @@ function App() {
   }
 
   async function fetchProducts() {
-    const response = await axios.get(baseUrl + 'producto/findall');
-    setProducts(response.data.resultados);
+    // const response = await axios.get(baseUrl + 'producto/findall');
+    // setProducts(response.data.resultados);
+
+    setProducts(fakeProducts);
+
     setIsLoading(false);
     setActualCategory('');
   }
