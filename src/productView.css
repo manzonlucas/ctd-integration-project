@@ -1,0 +1,169 @@
+/* CYAN #1DBEB4 */
+/* GRIS OSCURO #383B58 */
+/* GRIS CLARO #545776 */
+/* BLANCO #F3F1ED */
+
+.productHeader {
+  color: #F3F1ED;
+  background-color: #545776;
+  height: 60px;
+  display: flex;
+  padding: 10px 30px;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 102px;
+  z-index: 1;
+}
+
+.productHeader .icon {
+  color: #F3F1ED;
+  font-size: 2em;
+}
+
+.productSubheader {
+  color: #545776;
+  background-color: #54577610;
+  height: 60px;
+  display: flex;
+  padding: 10px 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productSubheader .ranking {
+  font-size: 2em;
+  color: #1DBEB4;
+}
+
+/* IMG GRID CONTAINER */
+.imgGrid {
+  width: 90%;
+  height: 400px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-gap: 5px;
+}
+
+.mainImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.secondaryImgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50% 50%;
+  grid-gap: 5px;
+}
+
+.gridItem {
+  width: 100%;
+  height: 97%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.carouselOpener {
+  width: 20%;
+  margin: auto 0 auto auto;
+  text-align: center;
+  grid-column: 2 / 3;
+}
+
+/* DESCRIPCION */
+.description,
+.reservation {
+  width: 90%;
+  margin: auto;
+}
+
+/* CARACTERISTICAS/FEATURES */
+.features {
+  width: 90%;
+  margin: 50px auto;
+}
+
+h3 {
+  border-bottom: 1px solid #1DBEB4;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.featuresContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 100px;
+  gap: 10px;
+}
+
+.featuresItem {
+  height: 50px;
+  margin: auto;
+}
+
+.featureIcon {
+  margin: auto 5px;
+}
+
+/* POLITICAS */
+.policies {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.policiesContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 100px;
+  gap: 10px;
+}
+
+.policiesItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+
+  /* CARACTERISTICAS */
+  .featuresContainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 100px;
+    gap: 10px;
+  }
+
+  /* POLITICAS */
+  .policiesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 100px;
+    gap: 10px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 414px) {
+
+  /* CARACTERISTICAS */
+  .featuresContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    margin-bottom: 100px;
+  }
+
+  /* POLITICAS */
+  .policiesContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 100px;
+    gap: 10px;
+  }
+}

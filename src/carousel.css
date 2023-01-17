@@ -1,0 +1,52 @@
+.carouselDesktopHidden {
+  display: none;
+}
+
+.carouselDesktopShown {
+  display: inline-block;
+  position: fixed;
+  width: 900px;
+  height: 700px;
+  top: 50%;
+  left: 50%;
+  margin-left: -450px;
+  margin-top: -350px;
+  z-index: 2;
+}
+
+.carouselTabletMobile {
+  display: none;
+  width: 100%;
+}
+
+.carouselOverlayShown {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(111, 111, 111, 0.5);
+  z-index: 1;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+  .carouselTabletMobile {
+    display: inline-block;
+  }
+
+  div .imgGrid {
+    display: none;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 414px) {
+  .carouselTabletMobile {
+    display: inline-block;
+  }
+
+  div .imgGrid {
+    display: none;
+  }
+}
