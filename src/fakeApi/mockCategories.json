@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "tipo": "hoteles",
+    "url_imagen": ""
+  },
+  {
+    "id": 2,
+    "tipo": "bed and breakfast",
+    "url_imagen": ""
+  },
+  {
+    "id": 3,
+    "tipo": "casas",
+    "url_imagen": ""
+  },
+  {
+    "id": 4,
+    "tipo": "hostels",
+    "url_imagen": ""
+  }
+]

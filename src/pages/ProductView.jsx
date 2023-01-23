@@ -13,6 +13,8 @@ import AvailableDates from "../components/Product/AvailableDates";
 import { baseUrl } from "../services/api";
 import Policies from "../components/Product/Policies";
 
+import mockProducts from '../fakeApi/mockProducts.json'
+
 export default function ProductView() {
 
   const { isLoading, setIsLoading } = useContext(UserContext);
@@ -21,14 +23,16 @@ export default function ProductView() {
   const { id } = useParams();
 
   async function getProductById(id) {
-    const response = await axios.get(baseUrl + 'producto/' + id);
-    setProduct(response.data);
+    // const response = await axios.get(baseUrl + 'producto/' + id);
+    // setProduct(response.data);
+
     setIsLoading(false);
   }
 
   useEffect(() => {
     setIsLoading(true);
     setProduct(getProductById(id));
+    setProduct(mockProducts[0]);
   }, []);
 
   function handleClickCarouselState() {
