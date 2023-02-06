@@ -1,11 +1,6 @@
 # Getting Started with Create React App
 
-Project created as a final integration project for Certified Tech Developer career @ Digital House, co-created with Mercado Libre and Globant.
-This version is the same that was presented on career final presentation, it lack some features due to have reached deadline.
-I was in charge of 100% of the frontend. The java backend was hosted in AWS but it was deleted by the career management.
-
-I will start improving the frontend and also developing a full Node.js backend with MongoDB from scratch by myself for showing the web full potential. As I am working on it, the project will be hosted in this repo:
-[https://github.com/manzonlucas/dh-booking]
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 

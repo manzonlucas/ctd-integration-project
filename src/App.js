@@ -13,10 +13,6 @@ import Booking from './components/Product/Booking';
 import NewProduct from './pages/NewProduct';
 import jwt_decode from 'jwt-decode';
 
-import mockProducts from './fakeApi/mockProducts.json';
-import mockCategories from './fakeApi/mockCategories.json';
-import mockCities from './fakeApi/mockCities.json';
-
 function App() {
 
   const [isLoading, setIsLoading] = useState(true);
@@ -55,50 +51,38 @@ function App() {
   }
 
   async function fetchProducts() {
-    // const response = await axios.get(baseUrl + 'producto/findall');
-    // setProducts(response.data.resultados);
-
-    setProducts(mockProducts);
-
+    const response = await axios.get(baseUrl + 'producto/findall');
+    setProducts(response.data.resultados);
     setIsLoading(false);
     setActualCategory('');
   }
 
   async function fetchCategories() {
-    // const response = await axios.get(baseUrl + 'categoria');
-    // setCategories(response.data);
-
-    setCategories(mockCategories);
-
+    const response = await axios.get(baseUrl + 'categoria');
+    setCategories(response.data);
     setIsLoading(false);
   }
 
   async function fetchCities() {
-    // const response = await axios.get(baseUrl + 'ciudad');
-    // setCities(response.data);
-
-    setCities(mockCities);
+    const response = await axios.get(baseUrl + 'ciudad');
+    setCities(response.data);
     setIsLoading(false);
   }
 
   async function fetchProductsByQuery(destinationId, destinationName, startDate, endDate) {
-    // if (destinationId === undefined) {
-    //   destinationId = '';
-    //   destinationName = '';
-    // }
-    // const response = await axios.get(baseUrl + `producto?ciudad=${destinationId}&from=${startDate}&to=${endDate}`);
-    // setProducts(response.data.resultados);
-    // setActualCategory(`Busqueda realizada: ${destinationName} | Check-in: ${startDate} | Check-out: ${endDate}`);
-
-    console.log('fetch products by query: destination id and name + start date and end date. Pending');
-
+    if (destinationId === undefined) {
+      destinationId = '';
+      destinationName = '';
+    }
+    const response = await axios.get(baseUrl + `producto?ciudad=${destinationId}&from=${startDate}&to=${endDate}`);
+    setProducts(response.data.resultados);
+    setActualCategory(`Busqueda realizada: ${destinationName} | Check-in: ${startDate} | Check-out: ${endDate}`);
   }
 
   async function fetchProductsByCategory(name) {
-    // const response = await axios.get(baseUrl + 'producto?categoria=' + name);
-    // setProducts(response.data.resultados);
-    // setActualCategory(name);
-    console.log('fetch products by category. Pending');
+    const response = await axios.get(baseUrl + 'producto?categoria=' + name);
+    setProducts(response.data.resultados);
+    setActualCategory(name);
   }
 
   return (
