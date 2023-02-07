@@ -10,7 +10,7 @@ export default function Home() {
       <Layout>
         <SearchBar />
         <Categories />
-        {/* <Products /> */}
+        <Products />
       </Layout>
     </>
   )

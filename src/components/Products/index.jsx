@@ -36,7 +36,8 @@ export default function Products() {
             return (
               <CardProduct key={product.id} product={product} />
             )
-          })}
+          })
+        }
       </div>
     </section >
   )

@@ -52,10 +52,11 @@ function App() {
 
   async function fetchProducts() {
     // const response = await axios.get(baseUrl + 'producto/findall');
-    const response = await axios.get('https://run.mocky.io/v3/43a38278-d6c9-4bd7-83c7-eac9f4c0ef68');
-    setProducts(response.data.resultados);
+    const response = await axios.get('https://run.mocky.io/v3/065741a4-097d-4006-ae18-98c1e63df2a3');
+    setProducts(response.data);
     setIsLoading(false);
     setActualCategory('');
+    console.log(products);
   }
 
   async function fetchCategories() {
