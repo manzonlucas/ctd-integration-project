@@ -1,28 +1,56 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import { useNavigate, Link } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
 import { useContext } from "react";
 import axios from "axios";
-import { baseUrl } from "../services/api";
+import { baseUrl, mockyUsers } from "../services/api";
 
 export default function Login() {
   const { user, setUser, decodedToken } = useContext(UserContext);
-  const [loginInput, setLoginInput] = useState({ username: "", password: "" });
+  const [usersList, setUsersList] = useState([])
+  const [loginInput, setLoginInput] = useState({ email: "", password: "" });
   const [loginErrorMsg, setLoginErrorMsg] = useState('');
   const navigate = useNavigate();
 
+  useEffect(() => {
+    getUsersFromDb();
+  }, [])
+
+  async function getUsersFromDb() {
+    const response = await axios.get(mockyUsers);
+    return setUsersList(response.data);
+  }
+
   function emailHandler(e) {
-    setLoginInput({ ...loginInput, username: e.target.value });
+    setLoginInput({ ...loginInput, email: e.target.value });
   }
 
   function passwordHandler(e) {
     setLoginInput({ ...loginInput, password: e.target.value });
   }
 
-  function submitHandler(e) {
+  async function submitHandler(e) {
     e.preventDefault();
-    login(loginInput);
+    // login(loginInput);
+    mockyLogin(loginInput);
+  }
+
+  async function mockyLogin(credentials) {
+    const found = usersList.find(user => user.email == credentials.email && user.password == credentials.password);
+    if (found) {
+      navigate("/");
+      setUser({
+        ...user,
+        name: 'Usuario',
+        lastName: 'Apellido',
+        isLogged: true
+      });
+    } else {
+      setLoginErrorMsg(
+        "Por favor vuelva a intentarlo, sus credenciales son inválidas."
+      );
+    }
   }
 
   async function login(credentials) {

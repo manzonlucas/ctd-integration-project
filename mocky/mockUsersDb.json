@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "email": "abc@dh.com",
-    "password": "1234567",
-    "name": "abc",
-    "lastName": "abc",
+    "email": "admin@admin.com",
+    "password": "admin",
+    "name": "Admin",
+    "lastName": "Admin",
     "city": "Rosario",
-    "isLogged": true
+    "isLogged": false
   },
   {
     "id": 2,
@@ -15,6 +15,6 @@
     "name": "Lucas",
     "lastName": "Manzon",
     "city": "Rosario",
-    "isLogged": true
+    "isLogged": false
   }
 ]
