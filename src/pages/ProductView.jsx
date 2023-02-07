@@ -20,17 +20,17 @@ export default function ProductView() {
   const [carouselIsOpen, setcarouselIsOpen] = useState(false);
   const { id } = useParams();
 
-  async function getProductById(id) {
+  async function getAndSetProductById(id) {
     // const response = await axios.get(baseUrl + 'producto/' + id);
     const response = await axios.get(mockyProducts);
     const data = await response.data;
-    console.log(data.find(item => item.id === parseInt(id)));
+    setProduct(data.find(item => item.id === parseInt(id)));
     setIsLoading(false);
   }
 
   useEffect(() => {
     setIsLoading(true);
-    setProduct(getProductById(id));
+    getAndSetProductById(id);
   }, []);
 
   function handleClickCarouselState() {

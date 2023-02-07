@@ -56,7 +56,6 @@ function App() {
     setProducts(response.data);
     setIsLoading(false);
     setActualCategory('');
-    console.log(products);
   }
 
   async function fetchCategories() {
