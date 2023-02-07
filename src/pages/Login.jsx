@@ -5,7 +5,6 @@ import { UserContext } from "../contexts/UserContext";
 import { useContext } from "react";
 import axios from "axios";
 import { baseUrl } from "../services/api";
-import { useEffect } from "react";
 
 export default function Login() {
   const { user, setUser, decodedToken } = useContext(UserContext);

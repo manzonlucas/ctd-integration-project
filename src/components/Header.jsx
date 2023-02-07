@@ -36,7 +36,7 @@ export default function Header() {
     <header className='bg-white flex p-25 sticky-top z-1 justify-between'>
       <section className='logo-container w-30'>
         <Link to={'/'} className='logo-link flex justify-center align-center gap-10 decoration-none'>
-          <img src='https://imagenesg4c7.s3.us-east-2.amazonaws.com/public/logo1.png' alt="" />
+          {/* <img src='https://imagenesg4c7.s3.us-east-2.amazonaws.com/public/logo1.png' alt="" /> */}
           <span className='t-display-none'>Sentite como en tu hogar</span>
         </Link>
       </section>

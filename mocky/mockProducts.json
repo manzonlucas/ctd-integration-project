@@ -1,0 +1,292 @@
+[
+  {
+    "id": 1,
+    "titulo": "Grand Hotel",
+    "descripcion": "Luxury hotel located in the heart of the city, offering stunning views and top-notch amenities.",
+    "ciudad": "New York",
+    "imagenes": [
+      {
+        "id": 1,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 2,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 3,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 4,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 5,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      }
+    ],
+    "categoria": "categoria test"
+  },
+  {
+    "id": 2,
+    "titulo": "Sea Breeze Resort",
+    "descripcion": "Beachfront resort offering a relaxing escape with tropical gardens and a crystal-clear pool.",
+    "ciudad": "Miami",
+    "imagenes": [
+      {
+        "id": 1,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 2,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 3,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 4,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 5,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      }
+    ],
+    "categoria": "categoria test"
+  },
+  {
+    "id": 3,
+    "titulo": "Mountain View Lodge",
+    "descripcion": "Rustic lodge in the mountains, perfect for a peaceful getaway with stunning views and outdoor activities.",
+    "ciudad": "Aspen",
+    "imagenes": [
+      {
+        "id": 1,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 2,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 3,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 4,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 5,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      }
+    ],
+    "categoria": "categoria test"
+  },
+  {
+    "id": 4,
+    "titulo": "City Center Inn",
+    "descripcion": "Comfortable and affordable hotel in the center of the city, offering easy access to local attractions.",
+    "ciudad": "Los Angeles",
+    "imagenes": [
+      {
+        "id": 1,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 2,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 3,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 4,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 5,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      }
+    ],
+    "categoria": "categoria test"
+  },
+  {
+    "id": 5,
+    "titulo": "Beachside Hotel",
+    "descripcion": "Beachfront hotel with a casual atmosphere, perfect for a fun and sun-filled vacation.",
+    "ciudad": "Cancun",
+    "imagenes": [
+      {
+        "id": 1,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 2,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 3,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 4,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 5,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      }
+    ],
+    "categoria": "categoria test"
+  },
+  {
+    "id": 6,
+    "titulo": "Luxury Spa Hotel",
+    "descripcion": "Luxury hotel featuring a world-class spa, elegant rooms and gourmet dining.",
+    "ciudad": "Paris",
+    "imagenes": [
+      {
+        "id": 1,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 2,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 3,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 4,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 5,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      }
+    ],
+    "categoria": "categoria test"
+  },
+  {
+    "id": 7,
+    "titulo": "Boutique Hotel",
+    "descripcion": "Charming and intimate hotel with unique character and a stylish décor, offering personalized service.",
+    "ciudad": "Rome",
+    "imagenes": [
+      {
+        "id": 1,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 2,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 3,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 4,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 5,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      }
+    ],
+    "categoria": "categoria test"
+  },
+  {
+    "id": 8,
+    "titulo": "Family-Friendly Hotel",
+    "descripcion": "Comfortable hotel suitable for families, offering a variety of amenities and activities for all ages.",
+    "ciudad": "Orlando",
+    "imagenes": [
+      {
+        "id": 1,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 2,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 3,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 4,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 5,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      }
+    ],
+    "categoria": "categoria test"
+  },
+  {
+    "id": 9,
+    "titulo": "Budget-Friendly Motel",
+    "descripcion": "Affordable motel with basic amenities, perfect for travelers on a budget.",
+    "ciudad": "Las Vegas",
+    "imagenes": [
+      {
+        "id": 1,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 2,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 3,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 4,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 5,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      }
+    ],
+    "categoria": "categoria test"
+  },
+  {
+    "id": 10,
+    "titulo": "Luxury Castle Hotel",
+    "descripcion": "Luxury hotel set in a restored castle, offering a unique and romantic getaway experience.",
+    "ciudad": "Edinburgh",
+    "imagenes": [
+      {
+        "id": 1,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 2,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 3,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 4,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      },
+      {
+        "id": 5,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+      }
+    ],
+    "categoria": "categoria test"
+  }
+]

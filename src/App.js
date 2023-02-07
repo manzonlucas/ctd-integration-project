@@ -33,7 +33,7 @@ function App() {
 
   useEffect(() => {
     fetchProducts();
-    fetchCities();
+    // fetchCities();
     fetchCategories();
   }, []);
 
@@ -51,14 +51,16 @@ function App() {
   }
 
   async function fetchProducts() {
-    const response = await axios.get(baseUrl + 'producto/findall');
+    // const response = await axios.get(baseUrl + 'producto/findall');
+    const response = await axios.get('https://run.mocky.io/v3/43a38278-d6c9-4bd7-83c7-eac9f4c0ef68');
     setProducts(response.data.resultados);
     setIsLoading(false);
     setActualCategory('');
   }
 
   async function fetchCategories() {
-    const response = await axios.get(baseUrl + 'categoria');
+    // const response = await axios.get(baseUrl + 'categoria');
+    const response = await axios.get('https://run.mocky.io/v3/8ecd6ee1-8bcd-4858-8db7-9ab6cad7cf7e');
     setCategories(response.data);
     setIsLoading(false);
   }
