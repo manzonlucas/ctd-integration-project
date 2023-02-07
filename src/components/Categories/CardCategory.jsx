@@ -7,6 +7,7 @@ export default function CardCategory({ category }) {
 
   function handleClick(e) {
     fetchProductsByCategory(category.tipo);
+    console.log(category);
   }
 
   return (

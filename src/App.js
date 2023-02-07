@@ -83,8 +83,10 @@ function App() {
   }
 
   async function fetchProductsByCategory(name) {
-    const response = await axios.get(baseUrl + 'producto?categoria=' + name);
-    setProducts(response.data.resultados);
+    // const response = await axios.get(mockyCategories);
+    // const data = await response.data;
+    const filteredProducts = products.filter(product => product.categoria === name);
+    setProducts(filteredProducts);
     setActualCategory(name);
   }
 
