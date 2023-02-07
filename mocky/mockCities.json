@@ -1,7 +1,102 @@
 [
   {
     "id": 1,
-    "nombre": "Rosario",
-    "pais": "Argentina"
+    "nombre": "New York",
+    "pais": "United States"
+  },
+  {
+    "id": 2,
+    "nombre": "London",
+    "pais": "United Kingdom"
+  },
+  {
+    "id": 3,
+    "nombre": "Paris",
+    "pais": "France"
+  },
+  {
+    "id": 4,
+    "nombre": "Tokyo",
+    "pais": "Japan"
+  },
+  {
+    "id": 5,
+    "nombre": "Beijing",
+    "pais": "China"
+  },
+  {
+    "id": 6,
+    "nombre": "Mexico City",
+    "pais": "Mexico"
+  },
+  {
+    "id": 7,
+    "nombre": "Mumbai",
+    "pais": "India"
+  },
+  {
+    "id": 8,
+    "nombre": "São Paulo",
+    "pais": "Brazil"
+  },
+  {
+    "id": 9,
+    "nombre": "Shanghai",
+    "pais": "China"
+  },
+  {
+    "id": 10,
+    "nombre": "Osaka",
+    "pais": "Japan"
+  },
+  {
+    "id": 11,
+    "nombre": "Cairo",
+    "pais": "Egypt"
+  },
+  {
+    "id": 12,
+    "nombre": "Rio de Janeiro",
+    "pais": "Brazil"
+  },
+  {
+    "id": 13,
+    "nombre": "Kolkata",
+    "pais": "India"
+  },
+  {
+    "id": 14,
+    "nombre": "Istanbul",
+    "pais": "Turkey"
+  },
+  {
+    "id": 15,
+    "nombre": "Lima",
+    "pais": "Peru"
+  },
+  {
+    "id": 16,
+    "nombre": "Jakarta",
+    "pais": "Indonesia"
+  },
+  {
+    "id": 17,
+    "nombre": "Tehran",
+    "pais": "Iran"
+  },
+  {
+    "id": 18,
+    "nombre": "Bangkok",
+    "pais": "Thailand"
+  },
+  {
+    "id": 19,
+    "nombre": "Hong Kong",
+    "pais": "China"
+  },
+  {
+    "id": 20,
+    "nombre": "Moscow",
+    "pais": "Russia"
   }
 ]

@@ -10,7 +10,7 @@ import Description from "../components/Product/Description";
 import ProductSubheader from "../components/Product/ProductSubheader";
 import ProductHeader from "../components/Product/ProductHeader";
 import AvailableDates from "../components/Product/AvailableDates";
-import { baseUrl } from "../services/api";
+import { baseUrl, mockyProducts } from "../services/api";
 import Policies from "../components/Product/Policies";
 
 export default function ProductView() {
@@ -21,8 +21,10 @@ export default function ProductView() {
   const { id } = useParams();
 
   async function getProductById(id) {
-    const response = await axios.get(baseUrl + 'producto/' + id);
-    setProduct(response.data);
+    // const response = await axios.get(baseUrl + 'producto/' + id);
+    const response = await axios.get(mockyProducts);
+    const data = await response.data;
+    console.log(data.find(item => item.id === parseInt(id)));
     setIsLoading(false);
   }
 

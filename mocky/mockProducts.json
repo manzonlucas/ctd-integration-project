@@ -7,23 +7,23 @@
     "imagenes": [
       {
         "id": 1,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places01.jpg"
       },
       {
         "id": 2,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places02.jpg"
       },
       {
         "id": 3,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places03.jpg"
       },
       {
         "id": 4,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places04.jpg"
       },
       {
         "id": 5,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places05.jpg"
       }
     ],
     "categoria": "categoria test"
@@ -36,23 +36,23 @@
     "imagenes": [
       {
         "id": 1,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places06.jpg"
       },
       {
         "id": 2,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places07.jpg"
       },
       {
         "id": 3,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places08.jpg"
       },
       {
         "id": 4,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places09.jpg"
       },
       {
         "id": 5,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places10.jpg"
       }
     ],
     "categoria": "categoria test"
@@ -65,23 +65,23 @@
     "imagenes": [
       {
         "id": 1,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places11.jpg"
       },
       {
         "id": 2,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places12.jpg"
       },
       {
         "id": 3,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places13.jpg"
       },
       {
         "id": 4,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places14.jpg"
       },
       {
         "id": 5,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places15.jpg"
       }
     ],
     "categoria": "categoria test"
@@ -94,23 +94,23 @@
     "imagenes": [
       {
         "id": 1,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places16.jpg"
       },
       {
         "id": 2,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places17.jpg"
       },
       {
         "id": 3,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places18.jpg"
       },
       {
         "id": 4,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places19.jpg"
       },
       {
         "id": 5,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places20.jpg"
       }
     ],
     "categoria": "categoria test"
@@ -123,23 +123,23 @@
     "imagenes": [
       {
         "id": 1,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places21.jpg"
       },
       {
         "id": 2,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places22.jpg"
       },
       {
         "id": 3,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places23.jpg"
       },
       {
         "id": 4,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places24.jpg"
       },
       {
         "id": 5,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places25.jpg"
       }
     ],
     "categoria": "categoria test"
@@ -152,23 +152,23 @@
     "imagenes": [
       {
         "id": 1,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places26.jpg"
       },
       {
         "id": 2,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places27.jpg"
       },
       {
         "id": 3,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places28.jpg"
       },
       {
         "id": 4,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places29.jpg"
       },
       {
         "id": 5,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places30.jpg"
       }
     ],
     "categoria": "categoria test"
@@ -181,23 +181,23 @@
     "imagenes": [
       {
         "id": 1,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places31.jpg"
       },
       {
         "id": 2,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places32.jpg"
       },
       {
         "id": 3,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places33.jpg"
       },
       {
         "id": 4,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places34.jpg"
       },
       {
         "id": 5,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places35.jpg"
       }
     ],
     "categoria": "categoria test"
@@ -210,23 +210,23 @@
     "imagenes": [
       {
         "id": 1,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places36.jpg"
       },
       {
         "id": 2,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places37.jpg"
       },
       {
         "id": 3,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places38.jpg"
       },
       {
         "id": 4,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places39.jpg"
       },
       {
         "id": 5,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places40.jpg"
       }
     ],
     "categoria": "categoria test"
@@ -239,23 +239,23 @@
     "imagenes": [
       {
         "id": 1,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places41.jpg"
       },
       {
         "id": 2,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places42.jpg"
       },
       {
         "id": 3,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places43.jpg"
       },
       {
         "id": 4,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places44.jpg"
       },
       {
         "id": 5,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places45.jpg"
       }
     ],
     "categoria": "categoria test"
@@ -268,23 +268,23 @@
     "imagenes": [
       {
         "id": 1,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places46.jpg"
       },
       {
         "id": 2,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places47.jpg"
       },
       {
         "id": 3,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places48.jpg"
       },
       {
         "id": 4,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places49.jpg"
       },
       {
         "id": 5,
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/25/fb/8c/46/hotel-exterior.jpg"
+        "url": "/img/pictures/places50.jpg"
       }
     ],
     "categoria": "categoria test"
