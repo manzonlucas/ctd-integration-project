@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "tipo": "hoteles",
+    "tipo": "hotels",
     "url_imagen": "/img/categories/hotels.jpg"
   },
   {
     "id": 2,
-    "tipo": "bed and breakfast",
+    "tipo": "bedandbreakfast",
     "url_imagen": "/img/categories/bed-and-breakfast.jpg"
   },
   {
     "id": 3,
-    "tipo": "casas",
+    "tipo": "houses",
     "url_imagen": "/img/categories/houses.jpg"
   },
   {

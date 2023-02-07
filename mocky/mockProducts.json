@@ -26,7 +26,7 @@
         "url": "/img/pictures/places05.jpg"
       }
     ],
-    "categoria": "categoria test"
+    "categoria": "hotels"
   },
   {
     "id": 2,
@@ -55,7 +55,7 @@
         "url": "/img/pictures/places10.jpg"
       }
     ],
-    "categoria": "categoria test"
+    "categoria": "hotels"
   },
   {
     "id": 3,
@@ -84,7 +84,7 @@
         "url": "/img/pictures/places15.jpg"
       }
     ],
-    "categoria": "categoria test"
+    "categoria": "houses"
   },
   {
     "id": 4,
@@ -113,7 +113,7 @@
         "url": "/img/pictures/places20.jpg"
       }
     ],
-    "categoria": "categoria test"
+    "categoria": "hotels"
   },
   {
     "id": 5,
@@ -142,7 +142,7 @@
         "url": "/img/pictures/places25.jpg"
       }
     ],
-    "categoria": "categoria test"
+    "categoria": "hotels"
   },
   {
     "id": 6,
@@ -171,7 +171,7 @@
         "url": "/img/pictures/places30.jpg"
       }
     ],
-    "categoria": "categoria test"
+    "categoria": "hotels"
   },
   {
     "id": 7,
@@ -200,7 +200,7 @@
         "url": "/img/pictures/places35.jpg"
       }
     ],
-    "categoria": "categoria test"
+    "categoria": "hotels"
   },
   {
     "id": 8,
@@ -229,7 +229,7 @@
         "url": "/img/pictures/places40.jpg"
       }
     ],
-    "categoria": "categoria test"
+    "categoria": "bedandbreakfast"
   },
   {
     "id": 9,
@@ -258,7 +258,7 @@
         "url": "/img/pictures/places45.jpg"
       }
     ],
-    "categoria": "categoria test"
+    "categoria": "hostels"
   },
   {
     "id": 10,
@@ -287,6 +287,6 @@
         "url": "/img/pictures/places50.jpg"
       }
     ],
-    "categoria": "categoria test"
+    "categoria": "hotels"
   }
 ]
